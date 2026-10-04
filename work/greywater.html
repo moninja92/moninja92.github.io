@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Greywater | Maurice Birchard</title>
+<meta name="description" content="UI/UX system for a first-person narrative exploration game: menus, HUD, dialogue and style guide.">
+<meta property="og:title" content="Greywater | Maurice Birchard">
+<meta property="og:description" content="UI/UX system for a first-person narrative exploration game: menus, HUD, dialogue and style guide.">
+<link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;800;900&family=JetBrains+Mono:wght@400;600&display=swap">
+<link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="../index.html" aria-label="Maurice Birchard, home">
+      <span class="brand-mark" aria-hidden="true">MB</span>
+      <span class="brand-name">Maurice Birchard</span>
+    </a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav">Menu</button>
+    <nav id="site-nav" class="site-nav" aria-label="Main">
+      <ul>
+        <li><a href="../index.html#work" aria-current="page">Work</a></li>
+        <li><a href="../about.html">About</a></li>
+        <li><a href="../assets/Maurice-Birchard-Resume.pdf">Resume</a></li>
+        <li><a class="nav-signal" href="https://moninja.itch.io/" rel="noopener">itch.io &#8599;</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<main id="main">
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Newsreader:opsz,wght@6..72,300&display=swap">
+<section class="case-hero">
+  <div class="wrap">
+    <div class="eyebrow">Case file 02 &middot; Game UI/UX</div>
+    <h1>Greywater</h1>
+    <p class="lede">UI/UX for a first-person narrative exploration game set in an abandoned town that fell off the map in the 1970s. A complete interface system: title menu, exploration HUD, dialogue and a style guide built to keep the town, not the UI, at the center of the screen.</p>
+    <dl class="meta">
+      <div><dt>Role</dt><dd>UI/UX design</dd></div>
+      <div><dt>Tools</dt><dd>Figma</dd></div>
+      <div><dt>Platform</dt><dd>PC, keyboard and mouse</dd></div>
+      <div><dt>Scope</dt><dd>Menus, HUD, dialogue, style guide</dd></div>
+    </dl>
+  </div>
+</section>
+
+<section class="band gallery" aria-label="Greywater title menu, live">
+  <div class="wrap">
+    <div class="tag" style="margin-bottom:12px">Try it &middot; hover, or use &uarr;&darr; and Enter</div>
+    <div class="gw-scene">
+      <div class="gw-panel">
+        <div class="gw-chapter">Chapter one</div>
+        <div class="gw-title">Greywater</div>
+        <div class="gw-sub">More Silent than the Grave</div>
+        <div class="gw-rule"></div>
+        <ul class="gw-menu" role="menu" aria-label="Greywater main menu">
+          <li role="none"><button role="menuitem" class="gw-row is-selected" tabindex="0">Continue <span class="gw-meta">Ferry Road &middot; 42 min</span></button></li>
+          <li role="none"><button role="menuitem" class="gw-row" tabindex="-1">New game</button></li>
+          <li role="none"><button role="menuitem" class="gw-row" tabindex="-1">Settings</button></li>
+          <li role="none"><button role="menuitem" class="gw-row" tabindex="-1">Credits</button></li>
+          <li role="none"><button role="menuitem" class="gw-row gw-quiet" tabindex="-1">Quit</button></li>
+        </ul>
+        <div class="gw-hints" aria-hidden="true"><span>&uarr;&darr; Navigate</span><span>Enter Select</span><span>Esc Back</span></div>
+        <p class="gw-status" aria-live="polite"></p>
+      </div>
+    </div>
+    <p style="font-family:var(--font-mono);font-size:12px;color:var(--console-muted);margin:12px 0 0">Rebuilt in HTML and CSS from the Figma component, so hover and keyboard both resolve to the same selected state.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap prose">
+    <h2>Three rules for the whole interface</h2>
+    <ul>
+      <li><strong>Darker while playing, lighter at rest.</strong> Gameplay overlays are near black and translucent so the town stays the brightest thing on screen. Menus, inventory and pause are opaque paper panels that slide over a dimmed scene, a clear signal that the world has stopped.</li>
+      <li><strong>Blue means "this is what your next key affects."</strong> Slate blue marks the current selection and nothing decorative uses it, so the eye never has to search.</li>
+      <li><strong>Few keys, simple controls.</strong> Arrows or WS to navigate, Enter to select, E to interact, I for the satchel, Esc to back out, 1 through 6 for quick select.</li>
+    </ul>
+  </div>
+  <div class="wrap">
+    <figure class="wide-figure">
+      <img src="../assets/img/greywater/hud.webp" width="1280" height="720" alt="Greywater exploration HUD: objective top left reading Find another way into the chapel, a hold E prompt to pry the shutter at center, a Shift keycap hint for moving quietly, and the equipped oil lamp bottom right" loading="lazy">
+      <figcaption>Exploration HUD: objective, contextual hold prompt, movement hint and equipped item, all inside a 48px safe margin</figcaption>
+    </figure>
+  </div>
+  <div class="wrap prose">
+    <h2>A HUD that gets out of the way</h2>
+    <p>The objective sits top left and fades to 40% opacity after eight seconds, returning when the objective changes or the player taps Q. The interaction prompt is the only element allowed to animate, which is exactly what makes it readable at the edge of vision.</p>
+    <p>Hold prompts fill over 450ms, cancel on release, and can be switched to a single press for players who need it.</p>
+  </div>
+  <div class="wrap">
+    <figure class="wide-figure">
+      <img src="../assets/img/greywater/dialogue.webp" width="1600" height="882" alt="Greywater dialogue: Margaret Hollis, caretaker, says the ferry stopped running on the Sunday and nobody asked why. Three numbered reply choices, the second tagged Ledger page" loading="lazy">
+      <figcaption>Dialogue: spoken lines in serif, numbered choices, and a tag showing which reply an item unlocks</figcaption>
+    </figure>
+  </div>
+  <div class="wrap prose">
+    <h2>Dialogue with consequences you can see</h2>
+    <p>Spoken lines are set in Newsreader, a serif, so voice always reads differently from interface text. Choices are numbered for one-key answers, and a choice unlocked by something in the satchel carries a small tag, here "Ledger page," so the player knows why it is available.</p>
+
+    <h2>Player flow</h2>
+    <p>Every state is reachable in one or two keys, and Esc always takes the player one step back toward exploration.</p>
+  </div>
+  <div class="wrap">
+    <figure class="wide-figure">
+      <img src="../assets/img/greywater/player-flow.webp" width="1504" height="185" alt="Player flow: Main menu, Continue or New game, Exploration HUD, Esc to Pause, then Settings. From exploration: Hold E to interact, Dialogue choice, back to HUD, or I for Satchel and Esc back to HUD" loading="lazy">
+    </figure>
+    <figure class="wide-figure">
+      <img src="../assets/img/greywater/style-guide.webp" width="1504" height="1205" alt="Greywater style guide: IBM Plex Mono and Newsreader type scale, eight-color palette, 4px spacing scale, menu row states, keycaps, hold prompt, item slots, and accessibility notes" loading="lazy">
+      <figcaption>Style guide: type, palette, spacing, menu row states and in-game components</figcaption>
+    </figure>
+  </div>
+  <div class="wrap prose">
+    <h2>Accessibility built in</h2>
+    <ul>
+      <li>Interface text scales to 175% without pushing panels off screen.</li>
+      <li>Selection is never color alone: the 3px bar and the fill always travel together.</li>
+      <li>Nothing in the HUD depends on telling hues apart.</li>
+      <li>Hold-to-interact can become a single press.</li>
+    </ul>
+
+    <nav class="next" aria-label="Next project">
+      <a href="project-titan.html"><span class="tag">Previous</span>&larr; Project Titan</a>
+      <a href="midas.html"><span class="tag">Next</span>Midas &rarr;</a>
+    </nav>
+  </div>
+</section>
+<script src="../assets/js/greywater-menu.js"></script>
+
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <span>&copy; <span id="year">2026</span> Maurice Birchard &middot; Game UI/UX</span>
+    <ul>
+      <li><a href="https://moninja.itch.io/" rel="noopener">itch.io</a></li>
+      <li><a href="https://github.com/moninja92" rel="noopener">GitHub</a></li>
+      <li><a href="[YOUR-LINKEDIN-URL]" rel="noopener">LinkedIn</a></li>
+      <li><a href="mailto:[YOUR-EMAIL]">Email</a></li>
+    </ul>
+  </div>
+</footer>
+<script src="../assets/js/main.js"></script>
+</body>
+</html>

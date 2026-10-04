@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Midas: The Accursed King | Maurice Birchard</title>
+<meta name="description" content="A GBJAM 14 narrative RPG built in Godot under Game Boy constraints.">
+<meta property="og:title" content="Midas: The Accursed King | Maurice Birchard">
+<meta property="og:description" content="A GBJAM 14 narrative RPG built in Godot under Game Boy constraints.">
+<link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;800;900&family=JetBrains+Mono:wght@400;600&display=swap">
+<link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="../index.html" aria-label="Maurice Birchard, home">
+      <span class="brand-mark" aria-hidden="true">MB</span>
+      <span class="brand-name">Maurice Birchard</span>
+    </a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav">Menu</button>
+    <nav id="site-nav" class="site-nav" aria-label="Main">
+      <ul>
+        <li><a href="../index.html#work" aria-current="page">Work</a></li>
+        <li><a href="../about.html">About</a></li>
+        <li><a href="../assets/Maurice-Birchard-Resume.pdf">Resume</a></li>
+        <li><a class="nav-signal" href="https://moninja.itch.io/" rel="noopener">itch.io &#8599;</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<main id="main">
+
+<section class="case-hero">
+  <div class="wrap">
+    <div class="eyebrow">Case file 03 &middot; Game jam</div>
+    <h1>Midas: The Accursed King</h1>
+    <p class="lede">A narrative-driven top-down RPG made for GBJAM 14. Midas, a disgraced king, works to restore his form and memories while chasing wealth and power, with multiple endings to uncover.</p>
+    <div class="btn-row">
+      <a class="btn btn-signal" href="https://moninja.itch.io/midas-the-accursed-king" rel="noopener">Play in browser on itch.io</a>
+    </div>
+    <dl class="meta">
+      <div><dt>My role</dt><dd>Programming and story</dd></div>
+      <div><dt>Engine</dt><dd>Godot, HTML5</dd></div>
+      <div><dt>Jam</dt><dd>GBJAM 14, Sept 2026</dd></div>
+      <div><dt>Constraints</dt><dd>160&times;144, four colors, Game Boy inputs</dd></div>
+    </dl>
+  </div>
+</section>
+
+<section class="band gallery" aria-label="Midas screenshots">
+  <div class="wrap gallery-2">
+    <figure class="shot pixel">
+      <img src="../assets/img/midas/dialogue.webp" width="312" height="255" alt="Forest path with a ghost NPC and a dialogue box reading Ghosty: Oh... good morning!">
+      <figcaption>Dialogue UI built to fit a 160&times;144 screen</figcaption>
+    </figure>
+    <figure class="shot pixel">
+      <img src="../assets/img/midas/village.webp" width="312" height="264" alt="Village with houses, ghosts and a skeleton enemy in a muted four-tone palette">
+      <figcaption>Village hub in the four-tone palette</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap prose">
+    <h2>Designing inside a tiny box</h2>
+    <p>GBJam's rules are the point: a 160&times;144 screen, four colors per frame, and only the Game Boy's buttons. Every piece of UI, from dialogue boxes to menus, has to earn its pixels and stay legible with almost no color to separate information.</p>
+
+    <h2>Systems over content</h2>
+    <p>With a jam timeline, I leaned on systems that generate variety instead of hand-authoring everything:</p>
+    <ul>
+      <li><strong>Two power tracks:</strong> slaying unique enemies grows LEAD powers, while gold grows GOLD powers, so how you play shapes how Midas grows.</li>
+      <li><strong>Gold as a resource:</strong> healing costs gold from the SELECT menu, which turns wealth into a running decision.</li>
+      <li><strong>Branching endings:</strong> after finishing, players can continue and choose differently to see another ending.</li>
+    </ul>
+
+    <h2>Controls</h2>
+    <p>Keyboard maps to the Game Boy layout (Z for A, X for B, arrows to move, Shift for SELECT, Enter for START), and gamepads work out of the box.</p>
+
+    <div class="callout">
+      <span class="tag">Credits</span>
+      <p>Programming and story: Maurice Birchard (Moninja). Art: Lexiianna. Music and SFX: PhantomAxis Studios and Haphaeu.</p>
+    </div>
+
+    <h2>What I took from it</h2>
+    <p>Hard constraints make UI decisions faster and sharper. With four colors, hierarchy has to come from shape, spacing and placement, which is good practice for any HUD.</p>
+
+    <nav class="next" aria-label="Next project">
+      <a href="greywater.html"><span class="tag">Previous</span>&larr; Greywater</a>
+      <a href="dreamland.html"><span class="tag">Next</span>Dreamland &rarr;</a>
+    </nav>
+  </div>
+</section>
+
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <span>&copy; <span id="year">2026</span> Maurice Birchard &middot; Game UI/UX</span>
+    <ul>
+      <li><a href="https://moninja.itch.io/" rel="noopener">itch.io</a></li>
+      <li><a href="https://github.com/moninja92" rel="noopener">GitHub</a></li>
+      <li><a href="[YOUR-LINKEDIN-URL]" rel="noopener">LinkedIn</a></li>
+      <li><a href="mailto:[YOUR-EMAIL]">Email</a></li>
+    </ul>
+  </div>
+</footer>
+<script src="../assets/js/main.js"></script>
+</body>
+</html>

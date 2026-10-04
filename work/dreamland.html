@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dreamland Timeline | Maurice Birchard</title>
+<meta name="description" content="A declassified-archive style timeline for a fictional world, built in TypeScript.">
+<meta property="og:title" content="Dreamland Timeline | Maurice Birchard">
+<meta property="og:description" content="A declassified-archive style timeline for a fictional world, built in TypeScript.">
+<link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;800;900&family=JetBrains+Mono:wght@400;600&display=swap">
+<link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="../index.html" aria-label="Maurice Birchard, home">
+      <span class="brand-mark" aria-hidden="true">MB</span>
+      <span class="brand-name">Maurice Birchard</span>
+    </a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav">Menu</button>
+    <nav id="site-nav" class="site-nav" aria-label="Main">
+      <ul>
+        <li><a href="../index.html#work" aria-current="page">Work</a></li>
+        <li><a href="../about.html">About</a></li>
+        <li><a href="../assets/Maurice-Birchard-Resume.pdf">Resume</a></li>
+        <li><a class="nav-signal" href="https://moninja.itch.io/" rel="noopener">itch.io &#8599;</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<main id="main">
+
+<section class="case-hero">
+  <div class="wrap">
+    <div class="eyebrow">Case file 04 &middot; Data interface</div>
+    <h1>Dreamland Timeline</h1>
+    <p class="lede">An interactive archive covering 160 years of a fictional world's history, styled as a declassified records system. Built so a writing team can update the lore in a spreadsheet and see it live on the site.</p>
+    <div class="btn-row">
+      <a class="btn btn-signal" href="https://moninja92.github.io/dreamland-timeline/" rel="noopener">Open the live site</a>
+      <a class="btn btn-outline" href="https://github.com/moninja92/dreamland-timeline" rel="noopener">View source</a>
+    </div>
+    <dl class="meta">
+      <div><dt>Role</dt><dd>Design and development</dd></div>
+      <div><dt>Stack</dt><dd>TypeScript, Vite</dd></div>
+      <div><dt>Data</dt><dd>Google Sheet via CSV, local fallback</dd></div>
+      <div><dt>Deploy</dt><dd>GitHub Actions to Pages</dd></div>
+    </dl>
+  </div>
+</section>
+
+<section class="band gallery" aria-label="Dreamland screenshots">
+  <div class="wrap">
+    <figure class="shot">
+      <img src="../assets/img/dreamland/file-panel.webp" width="1600" height="997" alt="Dreamland archive with an entry selected, showing a File No. 001 detail panel with start and end dates, length and concurrent events">
+      <figcaption>Selecting an entry opens its case file: dates, duration, who was alive, what overlapped</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap prose">
+    <h2>The problem</h2>
+    <p>A fictional world with a long history gets hard to keep straight. Writers need to check what happened when, who was alive at the time and what overlapped, without digging through a spreadsheet.</p>
+
+    <h2>An archive, not a table</h2>
+    <p>The interface leans into the setting. Searching is a "records request," entries open as numbered case files, and monospace labels and stamped headers make it feel like declassified documents. The theme does real work: it makes a dense data tool feel like part of the world.</p>
+
+    <h2>Features</h2>
+    <ul>
+      <li>Search across events, characters and years, with a keyboard shortcut to jump to search.</li>
+      <li>Color-coded category filters with live counts.</li>
+      <li>A decade histogram that shows where history clusters at a glance.</li>
+      <li>Case file panels with computed duration, characters alive at the start, and events happening at the same time.</li>
+      <li>A spoiler toggle so the archive is safe for readers who are not caught up.</li>
+      <li>A custom calendar with 28-day months and 336-day years, with all date math built around it.</li>
+      <li>Light and dark modes, plus shareable links to individual entries.</li>
+    </ul>
+
+    <h2>Built for the people maintaining it</h2>
+    <p>The data lives in a Google Sheet. Edit the sheet, refresh the page, and everyone sees the change. If the sheet is unreachable, the site falls back to a bundled CSV snapshot so it never shows an empty archive.</p>
+
+    <figure>
+      <img src="../assets/img/dreamland/archive.webp" width="1600" height="876" alt="Dreamland archive overview with records search, category filters and decade histogram" loading="lazy">
+      <figcaption>Overview: records search, category filters with counts, decade histogram</figcaption>
+    </figure>
+
+    <nav class="next" aria-label="Next project">
+      <a href="midas.html"><span class="tag">Previous</span>&larr; Midas</a>
+      <a href="shopping-list.html"><span class="tag">Next</span>UI Explorations &rarr;</a>
+    </nav>
+  </div>
+</section>
+
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <span>&copy; <span id="year">2026</span> Maurice Birchard &middot; Game UI/UX</span>
+    <ul>
+      <li><a href="https://moninja.itch.io/" rel="noopener">itch.io</a></li>
+      <li><a href="https://github.com/moninja92" rel="noopener">GitHub</a></li>
+      <li><a href="[YOUR-LINKEDIN-URL]" rel="noopener">LinkedIn</a></li>
+      <li><a href="mailto:[YOUR-EMAIL]">Email</a></li>
+    </ul>
+  </div>
+</footer>
+<script src="../assets/js/main.js"></script>
+</body>
+</html>

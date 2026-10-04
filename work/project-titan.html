@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Project Titan | Maurice Birchard</title>
+<meta name="description" content="Skirmish HUD UI/UX for an isometric tactics card battler in Unity.">
+<meta property="og:title" content="Project Titan | Maurice Birchard">
+<meta property="og:description" content="Skirmish HUD UI/UX for an isometric tactics card battler in Unity.">
+<link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;800;900&family=JetBrains+Mono:wght@400;600&display=swap">
+<link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="../index.html" aria-label="Maurice Birchard, home">
+      <span class="brand-mark" aria-hidden="true">MB</span>
+      <span class="brand-name">Maurice Birchard</span>
+    </a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav">Menu</button>
+    <nav id="site-nav" class="site-nav" aria-label="Main">
+      <ul>
+        <li><a href="../index.html#work" aria-current="page">Work</a></li>
+        <li><a href="../about.html">About</a></li>
+        <li><a href="../assets/Maurice-Birchard-Resume.pdf">Resume</a></li>
+        <li><a class="nav-signal" href="https://moninja.itch.io/" rel="noopener">itch.io &#8599;</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<main id="main">
+
+<section class="case-hero">
+  <div class="wrap">
+    <div class="eyebrow">Case file 01 &middot; Game UI/UX</div>
+    <h1>Project Titan</h1>
+    <p class="lede">Designing the Skirmish HUD for an isometric grid-tactics card battler, where the player spends most of each round watching orders resolve rather than giving them.</p>
+    <dl class="meta">
+      <div><dt>Role</dt><dd>UI/UX owner</dd></div>
+      <div><dt>Engine</dt><dd>Unity, uGUI + TextMeshPro</dd></div>
+      <div><dt>Team</dt><dd>Small team, collaborative on Miro</dd></div>
+      <div><dt>Status</dt><dd>In development, 2026</dd></div>
+    </dl>
+  </div>
+</section>
+
+<section class="band gallery" aria-label="Project Titan screenshots">
+  <div class="wrap gallery-2">
+    <figure class="shot tall">
+      <img src="../assets/img/titan/hud-panel.webp" width="528" height="1248" alt="Skirmish HUD in Unity: Kaiju threat meter with commander portrait, Unit Inspector with four order buttons, and a riveted command seal button">
+      <figcaption>Skirmish HUD in engine: threat meter, Unit Inspector, command seal</figcaption>
+    </figure>
+    <div class="prose" style="color:var(--console-text)">
+      <div class="tag">The brief</div>
+      <h2 style="margin-top:8px">A HUD that narrates</h2>
+      <p style="color:var(--console-muted)">Titan's hook is risk: every kill feeds a shared meter that can summon a Kaiju neither player controls. The HUD has to make that tension readable at a glance, keep the board clear, and reskin cleanly for three factions.</p>
+      <p style="color:var(--console-muted)">Visual direction landed on cream panels with heavy dark outlines and riveted metal borders: cartoony, easy to read, and easy to swap.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap prose">
+    <h2>Scope first</h2>
+    <p>The first pass covered the Skirmish HUD only. The War Room, deck builder and card anatomy are later passes. Keeping scope tight meant the team could react to something concrete instead of a sprawling system.</p>
+
+    <h2>Three directions, not three skins</h2>
+    <p>I wireframed three structurally different layouts in grayscale before any color decisions:</p>
+    <ul>
+      <li><strong>Command Table:</strong> a diegetic, holographic table the player leans over.</li>
+      <li><strong>Clean Tactical:</strong> a readability-first baseline.</li>
+      <li><strong>Card-Forward:</strong> the hand dominates the screen.</li>
+    </ul>
+    <p>Grayscale kept the conversation on hierarchy and layout. Color came later, built on a neutral dead-world base with faction colors layered on top.</p>
+
+    <h2>The finding that shaped everything</h2>
+    <p>I mapped every HUD element against every phase of a round in a phase-state matrix. Four of the seven phases have no player input at all. That led to two terms the team now uses:</p>
+    <div class="callout">
+      <span class="tag">Design vocabulary</span>
+      <p><span class="term">FOCUS</span> is where the hands go: interactive and dominant. <span class="term">BEAT</span> is where the eyes go: dominant but not interactive. Titan spends most of its round in BEAT, so the HUD's job is often to tell the story of what just happened.</p>
+    </div>
+
+    <h2>Readability risks, called early</h2>
+    <p>Blue-for-you, red-for-them collides with a faction whose identity color is red, and it breaks for red-green colorblind players. I flagged friend-or-foe as the sharpest open risk and proposed non-color carriers: base rings, silhouettes and outline weight.</p>
+
+    <h2>Designing for the engine</h2>
+    <p>Moving to Unity's uGUI changed what was cheap and what was expensive, so the designs account for it:</p>
+    <ul>
+      <li>Live elements like the threat meter and health bars sit on their own dynamic canvas, since any change rebuilds the whole canvas mesh.</li>
+      <li>A click-through policy for the HUD, because every graphic blocks raycasts by default and the HUD floats over a clickable board.</li>
+      <li>Faction reskins through a theme asset rather than a prefab per faction, decided before component specs were drawn.</li>
+    </ul>
+
+    <h2>The command seal</h2>
+    <p>The team replaced a plain Resolve Orders button with a modular command seal stamped with the current faction's emblem. It sits translucent on hover, goes full opacity when pressed, and lights up once every unit has orders, so readiness is visible without reading a word.</p>
+
+    <h2>What I took from it</h2>
+    <p>Mapping state before drawing screens saved the team from designing controls for phases where the player cannot act. It is the same habit that keeps an operator screen honest, applied to a game.</p>
+
+    <nav class="next" aria-label="Next project">
+      <a href="../index.html#work"><span class="tag">Back</span>All work</a>
+      <a href="greywater.html"><span class="tag">Next</span>Greywater &rarr;</a>
+    </nav>
+  </div>
+</section>
+
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <span>&copy; <span id="year">2026</span> Maurice Birchard &middot; Game UI/UX</span>
+    <ul>
+      <li><a href="https://moninja.itch.io/" rel="noopener">itch.io</a></li>
+      <li><a href="https://github.com/moninja92" rel="noopener">GitHub</a></li>
+      <li><a href="[YOUR-LINKEDIN-URL]" rel="noopener">LinkedIn</a></li>
+      <li><a href="mailto:[YOUR-EMAIL]">Email</a></li>
+    </ul>
+  </div>
+</footer>
+<script src="../assets/js/main.js"></script>
+</body>
+</html>

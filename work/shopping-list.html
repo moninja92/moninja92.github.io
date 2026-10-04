@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Shopping List App Prototype | Maurice Birchard</title>
+<meta name="description" content="A five-screen mobile flow from paper prototype to clickable Figma Make prototype.">
+<meta property="og:title" content="Shopping List App Prototype | Maurice Birchard">
+<meta property="og:description" content="A five-screen mobile flow from paper prototype to clickable Figma Make prototype.">
+<link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;800;900&family=JetBrains+Mono:wght@400;600&display=swap">
+<link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="../index.html" aria-label="Maurice Birchard, home">
+      <span class="brand-mark" aria-hidden="true">MB</span>
+      <span class="brand-name">Maurice Birchard</span>
+    </a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav">Menu</button>
+    <nav id="site-nav" class="site-nav" aria-label="Main">
+      <ul>
+        <li><a href="../index.html#work" aria-current="page">Work</a></li>
+        <li><a href="../about.html">About</a></li>
+        <li><a href="../assets/Maurice-Birchard-Resume.pdf">Resume</a></li>
+        <li><a class="nav-signal" href="https://moninja.itch.io/" rel="noopener">itch.io &#8599;</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<main id="main">
+
+<section class="case-hero">
+  <div class="wrap">
+    <div class="eyebrow">Case file 05 &middot; UI exploration</div>
+    <h1>Shopping List App</h1>
+    <p class="lede">A five-screen mobile flow taken from a hand-drawn paper prototype to a working, clickable prototype in Figma Make. Every screen, and every path between them, mapped and testable.</p>
+    <div class="btn-row">
+      <a class="btn btn-signal" href="shopping-list-prototype/index.html">Open prototype full screen</a>
+    </div>
+    <dl class="meta">
+      <div><dt>Context</dt><dd>Coursework, CSU Global</dd></div>
+      <div><dt>Tools</dt><dd>Paper, Figma Make, React</dd></div>
+      <div><dt>Screens</dt><dd>Home, Add, View, Edit, Settings</dd></div>
+      <div><dt>Deliverable</dt><dd>Navigation-mapped prototype</dd></div>
+    </dl>
+  </div>
+</section>
+
+<section class="band gallery" aria-label="Paper prototype">
+  <div class="wrap gallery-2">
+    <figure class="shot">
+      <img src="../assets/img/shopping/sketch.webp" width="904" height="832" alt="Sketched paper prototype: Settings, Home, Add Item, View List and Edit Item screens joined by seven numbered arrows">
+      <figcaption>Step 1: paper prototype with seven numbered navigation paths</figcaption>
+    </figure>
+    <figure class="shot">
+      <img src="../assets/img/shopping/home-hifi.webp" width="900" height="1150" alt="Refined Home screen titled My Lists with Groceries, Hardware Store and Party Supplies cards and an Add Item button">
+      <figcaption>Refined Home screen</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap prose">
+    <h2>The brief</h2>
+    <p>Design a paper prototype for a shopping list app covering Home, Add Item, View List, Edit/Delete and Settings/About, with the navigation between them clearly shown.</p>
+
+    <h2>Navigation first</h2>
+    <p>Before styling anything I mapped every path a user can take. Seven numbered routes connect five screens, and Home is the only starting point. Numbering the arrows turned the sketch into something a reviewer could walk through step by step.</p>
+
+    <h2>From sketch to something you can click</h2>
+    <p>I rebuilt the sketch in Figma Make as a working prototype. Lists, items and settings hold real state, so checking off milk updates the "left" count on Home, and a saved item shows up in View List. Below is the full board in its starting state. Try it.</p>
+  </div>
+  <div class="wrap">
+    <div class="proto-frame" role="region" aria-label="Interactive prototype, scrolls horizontally on small screens" tabindex="0">
+      <iframe src="shopping-list-prototype/index.html" title="Shopping List interactive paper prototype" loading="lazy"></iframe>
+    </div>
+  </div>
+  <div class="wrap prose">
+    <figure>
+      <img src="../assets/img/shopping/beginning-state.webp" width="1800" height="2167" alt="Full prototype board in its beginning state: Settings, Home with Groceries selected, Add Item, View List, Edit Item and the navigation flow legend" loading="lazy">
+      <figcaption>The prototype board at its beginning state, Groceries selected</figcaption>
+    </figure>
+
+    <h2>Refining the screens</h2>
+    <p>A higher-fidelity pass added item categories under each name, a dedicated Preferences group in Settings, and a softer, rounded device frame.</p>
+    <figure>
+      <img src="../assets/img/shopping/hifi-screens.webp" width="1600" height="1930" alt="Refined View List, Edit Item, Add Item and Settings screens on a gray canvas" loading="lazy">
+      <figcaption>Refined View List, Edit Item, Add Item and Settings</figcaption>
+    </figure>
+
+    <h2>Design decisions</h2>
+    <ul>
+      <li>Checked items drop below a divider and fade, so what is left to buy is always on top.</li>
+      <li>Delete asks for confirmation inline instead of a modal, keeping the user on the same screen.</li>
+      <li>Save stays disabled until an item has a name, which prevents empty entries without an error message.</li>
+      <li>One accent color carries every primary action, so the next step is always obvious.</li>
+    </ul>
+
+    <nav class="next" aria-label="Next project">
+      <a href="dreamland.html"><span class="tag">Previous</span>&larr; Dreamland</a>
+      <a href="project-titan.html"><span class="tag">Next</span>Project Titan &rarr;</a>
+    </nav>
+  </div>
+</section>
+
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <span>&copy; <span id="year">2026</span> Maurice Birchard &middot; Game UI/UX</span>
+    <ul>
+      <li><a href="https://moninja.itch.io/" rel="noopener">itch.io</a></li>
+      <li><a href="https://github.com/moninja92" rel="noopener">GitHub</a></li>
+      <li><a href="[YOUR-LINKEDIN-URL]" rel="noopener">LinkedIn</a></li>
+      <li><a href="mailto:[YOUR-EMAIL]">Email</a></li>
+    </ul>
+  </div>
+</footer>
+<script src="../assets/js/main.js"></script>
+</body>
+</html>
