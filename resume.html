@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Resume | Maurice Birchard</title>
+<meta name="description" content="Resume of Maurice Birchard, game UI/UX designer.">
+<meta property="og:title" content="Resume | Maurice Birchard">
+<meta property="og:description" content="Resume of Maurice Birchard, game UI/UX designer.">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;800;900&family=JetBrains+Mono:wght@400;600&display=swap">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="index.html" aria-label="Maurice Birchard, home">
+      <span class="brand-mark" aria-hidden="true">MB</span>
+      <span class="brand-name">Maurice Birchard</span>
+    </a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav">Menu</button>
+    <nav id="site-nav" class="site-nav" aria-label="Main">
+      <ul>
+        <li><a href="index.html#work">Work</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="resume.html" aria-current="page">Resume</a></li>
+        <li><a class="nav-signal" href="https://moninja.itch.io/" rel="noopener">itch.io &#8599;</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<main id="main">
+
+<style>
+.resume-actions { display:flex; flex-wrap:wrap; gap:16px; }
+.resume-viewer { margin: 40px 0 96px; border: 2px solid var(--ink); background: var(--console); box-shadow: 8px 8px 0 var(--ink); }
+.resume-viewer-bar {
+  display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px;
+  padding: 12px 18px; background: var(--console); color: var(--console-muted);
+  font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase;
+}
+.resume-viewer-bar a { color: var(--signal); text-decoration: none; }
+.resume-viewer-bar a:hover { color: var(--signal-hover); }
+.resume-viewer object, .resume-viewer iframe { display:block; width:100%; height: min(1100px, 85vh); border:0; background: var(--panel); }
+.resume-fallback { padding: 48px 24px; text-align:center; background: var(--panel); color: var(--ink); }
+.resume-fallback p { margin: 0 0 20px; }
+</style>
+
+<section class="case-hero">
+  <div class="wrap">
+    <div class="eyebrow">Service record</div>
+    <h1>Resume</h1>
+    <p class="lede">Read it here, or download a copy for your files.</p>
+    <div class="resume-actions">
+      <a class="btn btn-primary" href="assets/Maurice-Birchard-Resume.pdf" download="Maurice-Birchard-Resume.pdf">Download PDF</a>
+      <a class="btn btn-outline" href="assets/Maurice-Birchard-Resume.pdf" target="_blank" rel="noopener">Open in new tab</a>
+    </div>
+  </div>
+</section>
+
+<section aria-label="Resume viewer">
+  <div class="wrap">
+    <div class="resume-viewer">
+      <div class="resume-viewer-bar">
+        <span>&#9632; Maurice-Birchard-Resume.pdf</span>
+        <a href="assets/Maurice-Birchard-Resume.pdf" download="Maurice-Birchard-Resume.pdf">Download &darr;</a>
+      </div>
+      <object data="assets/Maurice-Birchard-Resume.pdf#view=FitH&amp;toolbar=1" type="application/pdf" aria-label="Maurice Birchard resume">
+        <div class="resume-fallback">
+          <p>Your browser can't show the PDF inline.</p>
+          <a class="btn btn-primary" href="assets/Maurice-Birchard-Resume.pdf" download="Maurice-Birchard-Resume.pdf">Download PDF</a>
+        </div>
+      </object>
+    </div>
+  </div>
+</section>
+
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <span>&copy; <span id="year">2026</span> Maurice Birchard &middot; Game UI/UX</span>
+    <ul>
+      <li><a href="https://moninja.itch.io/" rel="noopener">itch.io</a></li>
+      <li><a href="https://github.com/moninja92" rel="noopener">GitHub</a></li>
+      <li><a href="https://www.linkedin.com/in/mauricebirchard/" rel="noopener">LinkedIn</a></li>
+      <li><a href="mailto:mauricebirchard@gmail.com">Email</a></li>
+    </ul>
+  </div>
+</footer>
+<script src="assets/js/main.js"></script>
+</body>
+</html>
