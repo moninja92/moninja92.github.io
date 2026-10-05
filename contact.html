@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contact | Maurice Birchard</title>
+<meta name="description" content="Get in touch with Maurice Birchard: email, LinkedIn, GitHub, itch.io and YouTube.">
+<meta property="og:title" content="Contact | Maurice Birchard">
+<meta property="og:description" content="Get in touch with Maurice Birchard: email, LinkedIn, GitHub, itch.io and YouTube.">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;800;900&family=JetBrains+Mono:wght@400;600&display=swap">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="index.html" aria-label="Maurice Birchard, home">
+      <span class="brand-mark" aria-hidden="true">MB</span>
+      <span class="brand-name">Maurice Birchard</span>
+    </a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav">Menu</button>
+    <nav id="site-nav" class="site-nav" aria-label="Main">
+      <ul>
+        <li><a href="index.html#work">Work</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="resume.html">Resume</a></li>
+        <li><a class="nav-signal" href="https://moninja.itch.io/" rel="noopener">itch.io &#8599;</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<main id="main">
+
+<style>
+.contact-grid { display:grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 1fr)); gap: 28px; margin-top: 8px; margin-bottom: 40px; }
+.contact-primary { align-self: start; background: var(--console); color: var(--console-text); border: 2px solid var(--ink); box-shadow: 8px 8px 0 var(--ink); padding: 32px; display:flex; flex-direction:column; gap: 24px; }
+.contact-primary .tag { color: var(--signal); }
+.contact-line { display:flex; flex-direction:column; gap: 6px; }
+.contact-line a { color: var(--console-text); text-decoration: none; font-size: clamp(17px, 4.4vw, 26px); font-weight: 800; overflow-wrap: anywhere; }
+@media (max-width: 480px) { .contact-primary { padding: 24px 20px; } }
+.contact-line a:hover { color: var(--signal); }
+.copy-btn {
+  align-self: flex-start; background: none; border: 1px solid var(--console-line); color: var(--console-muted);
+  font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase;
+  padding: 8px 12px; min-height: 36px; cursor: pointer;
+}
+.copy-btn:hover { color: var(--signal); border-color: var(--signal); }
+.contact-meta { font-family: var(--font-mono); font-size: 13px; color: var(--console-muted); border-top: 1px solid var(--console-line); padding-top: 18px; }
+.link-list { list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap: 14px; }
+.link-row {
+  display:flex; justify-content:space-between; align-items:center; gap: 16px; min-height: 64px;
+  background: var(--panel); border: 2px solid var(--ink); padding: 14px 20px; text-decoration:none;
+  transition: transform .15s ease, box-shadow .15s ease;
+}
+.link-row:hover { transform: translate(-3px,-3px); box-shadow: 6px 6px 0 var(--ink); color: var(--ink); }
+.link-row strong { display:block; font-weight: 900; text-transform: uppercase; font-size: 18px; }
+.link-row span { font-family: var(--font-mono); font-size: 13px; color: var(--ink-soft); overflow-wrap: anywhere; }
+.link-row .arrow { font-family: var(--font-mono); font-weight: 600; font-size: 18px; flex: none; }
+@media (prefers-reduced-motion: reduce) { .link-row { transition: none; } }
+</style>
+
+<section class="case-hero">
+  <div class="wrap">
+    <div class="eyebrow">Contact</div>
+    <h1>Get in touch</h1>
+    <p class="lede">Open to UI/UX, game design and software roles. The fastest way to reach me is email.</p>
+  </div>
+</section>
+
+<section aria-label="Contact details" style="padding-bottom:96px">
+  <div class="wrap contact-grid">
+    <div class="contact-primary">
+      <div class="contact-line">
+        <span class="tag">Email</span>
+        <a href="mailto:mauricebirchard@gmail.com">mauricebirchard@gmail.com</a>
+        <div style="display:flex;flex-wrap:wrap;gap:12px;margin-top:8px">
+          <a class="btn btn-signal" href="mailto:mauricebirchard@gmail.com" style="font-size:15px">Send an email</a>
+          <button class="copy-btn" type="button" data-copy="mauricebirchard@gmail.com" style="align-self:center">Copy email</button>
+        </div>
+      </div>
+      <div class="contact-meta">Based in Chandler, AZ &middot; Open to remote</div>
+    </div>
+
+    <ul class="link-list" aria-label="Profiles">
+      <li><a class="link-row" href="https://www.linkedin.com/in/mauricebirchard/" rel="noopener">
+        <div><strong>LinkedIn</strong><span>linkedin.com/in/mauricebirchard</span></div><span class="arrow" aria-hidden="true">&#8599;</span></a></li>
+      <li><a class="link-row" href="https://github.com/moninja92" rel="noopener">
+        <div><strong>GitHub</strong><span>github.com/moninja92</span></div><span class="arrow" aria-hidden="true">&#8599;</span></a></li>
+      <li><a class="link-row" href="https://moninja.itch.io/" rel="noopener">
+        <div><strong>itch.io</strong><span>moninja.itch.io</span></div><span class="arrow" aria-hidden="true">&#8599;</span></a></li>
+      <li><a class="link-row" href="https://www.youtube.com/@MorkusGaming" rel="noopener">
+        <div><strong>YouTube</strong><span>youtube.com/@MorkusGaming</span></div><span class="arrow" aria-hidden="true">&#8599;</span></a></li>
+      <li><a class="link-row" href="resume.html">
+        <div><strong>Resume</strong><span>View or download PDF</span></div><span class="arrow" aria-hidden="true">&rarr;</span></a></li>
+    </ul>
+  </div>
+</section>
+
+<script>
+document.querySelectorAll('.copy-btn').forEach(function (btn) {
+  btn.addEventListener('click', function () {
+    var label = btn.textContent;
+    var done = function () { btn.textContent = 'Copied'; setTimeout(function () { btn.textContent = label; }, 1500); };
+    if (navigator.clipboard) { navigator.clipboard.writeText(btn.getAttribute('data-copy')).then(done, function () {}); }
+  });
+});
+</script>
+
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <span>&copy; <span id="year">2026</span> Maurice Birchard &middot; UI/UX / Software Development</span>
+    <ul>
+      <li><a href="https://moninja.itch.io/" rel="noopener">itch.io</a></li>
+      <li><a href="https://github.com/moninja92" rel="noopener">GitHub</a></li>
+      <li><a href="https://www.linkedin.com/in/mauricebirchard/" rel="noopener">LinkedIn</a></li>
+      <li><a href="mailto:mauricebirchard@gmail.com">Email</a></li>
+    </ul>
+  </div>
+</footer>
+<script src="assets/js/main.js"></script>
+</body>
+</html>
