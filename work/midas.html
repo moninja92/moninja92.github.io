@@ -4,107 +4,110 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Midas: The Accursed King | Maurice Birchard</title>
-<meta name="description" content="A GBJAM 14 narrative RPG built in Godot under Game Boy constraints.">
+<meta name="description" content="A narrative top-down RPG built in Godot inside Game Boy constraints for GBJam 14.">
 <meta property="og:title" content="Midas: The Accursed King | Maurice Birchard">
-<meta property="og:description" content="A GBJAM 14 narrative RPG built in Godot under Game Boy constraints.">
+<meta property="og:description" content="A narrative top-down RPG built in Godot inside Game Boy constraints for GBJam 14.">
+<meta name="theme-color" content="#1450C8">
 <link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;800;900&family=JetBrains+Mono:wght@400;600&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:ital,wght@0,400;0,600;0,700;0,800;0,900;1,800;1,900&display=swap">
 <link rel="stylesheet" href="../assets/css/style.css">
 </head>
-<body>
+<body class="ch-midas">
 <a class="skip-link" href="#main">Skip to content</a>
-<header class="site-header">
+<nav class="tabs" aria-label="Chapters">
+  <ol>
+    <li class="ch-argos"><a href="../work/argos.html"><span class="num">01</span><span class="visually-hidden">Chapter 01: </span><span class="name">Argos</span></a></li>
+    <li class="ch-titan"><a href="../work/project-titan.html"><span class="num">02</span><span class="visually-hidden">Chapter 02: </span><span class="name">Titan</span></a></li>
+    <li class="ch-greywater"><a href="../work/greywater.html"><span class="num">03</span><span class="visually-hidden">Chapter 03: </span><span class="name">Greywater</span></a></li>
+    <li class="ch-midas"><a href="../work/midas.html" aria-current="page"><span class="num">04</span><span class="visually-hidden">Chapter 04: </span><span class="name">Midas</span></a></li>
+    <li class="ch-dreamland"><a href="../work/dreamland.html"><span class="num">05</span><span class="visually-hidden">Chapter 05: </span><span class="name">Dreamland</span></a></li>
+    <li class="ch-explore"><a href="../work/shopping-list.html"><span class="num">06</span><span class="visually-hidden">Chapter 06: </span><span class="name">Explorations</span></a></li>
+    <li class="ch-back"><a href="../about.html"><span class="num back-letter" aria-hidden="true">A</span><span class="name">About</span></a></li>
+    <li class="ch-back"><a href="../resume.html"><span class="num back-letter" aria-hidden="true">R</span><span class="name">Resume</span></a></li>
+    <li class="ch-back"><a href="../contact.html"><span class="num back-letter" aria-hidden="true">C</span><span class="name">Contact</span></a></li>
+  </ol>
+</nav>
+<header class="runhead">
   <div class="wrap">
-    <a class="brand" href="../index.html" aria-label="Maurice Birchard, home">
-      <span class="brand-mark" aria-hidden="true">MB</span>
-      <span class="brand-name">Maurice Birchard</span>
-    </a>
-    <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav">Menu</button>
-    <nav id="site-nav" class="site-nav" aria-label="Main">
-      <ul>
-        <li><a href="../index.html#work" aria-current="page">Work</a></li>
-        <li><a href="../about.html">About</a></li>
-        <li><a href="../resume.html">Resume</a></li>
-        <li><a class="nav-signal" href="https://moninja.itch.io/" rel="noopener">itch.io &#8599;</a></li>
-      </ul>
-    </nav>
+    <a class="wordmark" href="../index.html"><b>Maurice Birchard</b><span>Game UI / UX</span></a>
+    <span class="folio">Chapter 04 &middot; page 16</span>
   </div>
 </header>
 <main id="main">
-
-<section class="case-hero">
+<section class="opener">
   <div class="wrap">
-    <div class="eyebrow">Project 03 &middot; Game jam</div>
-    <h1>Midas: The Accursed King</h1>
-    <p class="lede">A narrative driven top down RPG made for GBJAM 14. Midas, a disgraced king, works to restore his form and memories while chasing wealth and power, with two endings to uncover.</p>
-    <div class="btn-row">
-      <a class="btn btn-signal" href="https://moninja.itch.io/midas-the-accursed-king" rel="noopener">Play in browser on itch.io</a>
+    <span class="chap" aria-hidden="true">04</span>
+    <div>
+      <h1 class="display"><span class="visually-hidden">Chapter 04: </span>Midas: The Accursed King</h1>
+      <p class="lede">A narrative-driven top-down RPG made for GBJAM 14. Midas, a disgraced king, works to restore his form and memories while chasing wealth and power, with two endings to uncover.</p>
+      <div class="btn-row"><a class="btn" href="https://moninja.itch.io/midas-the-accursed-king" rel="noopener">Play in your browser on itch.io <svg viewBox="0 0 16 16" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 11 11 5M6 5h5v5"/></svg></a></div>
     </div>
-    <dl class="meta">
-      <div><dt>My role</dt><dd>Programming and story</dd></div>
-      <div><dt>Engine</dt><dd>Godot, HTML5</dd></div>
-      <div><dt>Jam</dt><dd>GBJAM 14, Sept 2026</dd></div>
-      <div><dt>Constraints</dt><dd>160&times;144, four colors, Game Boy inputs</dd></div>
-    </dl>
   </div>
 </section>
-
-<section class="band gallery" aria-label="Midas screenshots">
-  <div class="wrap gallery-2">
-    <figure class="shot pixel">
-      <img src="../assets/img/midas/dialogue.webp" width="312" height="255" alt="Forest path with a ghost NPC and a dialogue box reading Ghosty: Oh... good morning!">
-      <figcaption>Dialogue UI built to fit a 160&times;144 screen</figcaption>
-    </figure>
-    <figure class="shot pixel">
-      <img src="../assets/img/midas/village.webp" width="312" height="264" alt="Village with houses, ghosts and a skeleton enemy in a muted four-tone palette">
-      <figcaption>Village hub in the four tone palette</figcaption>
-    </figure>
+<div class="wrap specs-wrap"><dl class="specs"><div><dt>My role</dt><dd>Programming and story</dd></div><div><dt>Engine</dt><dd>Godot, HTML5</dd></div><div><dt>Jam</dt><dd>GBJAM 14, Sept 2026</dd></div><div><dt>Constraints</dt><dd>160&times;144, four colours, Game Boy inputs</dd></div></dl></div>
+<section class="guide" aria-labelledby="guide-h">
+  <div class="wrap">
+    <div class="guide-title"><h2 id="guide-h">Screen Guide: Dialogue</h2><p>160&times;144, four colours</p></div>
+    <div class="spread">
+      <figure class="plate pixel">
+        <img src="../assets/img/midas/dialogue.webp" width="312" height="255" alt="Forest path with a ghost NPC and a dialogue box reading Ghosty: Oh... good morning!">
+      <span class="lead-line" data-n="1" style="--x:40%;--y:30%"></span><span class="pin" data-n="1" style="--x:40%;--y:30%" aria-hidden="true">1</span><span class="co" data-n="1" style="--x:40%;--y:30%" aria-hidden="true">1</span>
+      <span class="lead-line" data-n="2" style="--x:14%;--y:60%"></span><span class="pin" data-n="2" style="--x:14%;--y:60%" aria-hidden="true">2</span><span class="co" data-n="2" style="--x:14%;--y:60%" aria-hidden="true">2</span>
+      <span class="lead-line" data-n="3" style="--x:28%;--y:72%"></span><span class="pin" data-n="3" style="--x:28%;--y:72%" aria-hidden="true">3</span><span class="co" data-n="3" style="--x:28%;--y:72%" aria-hidden="true">3</span>
+      <span class="lead-line" data-n="4" style="--x:81%;--y:89%"></span><span class="pin" data-n="4" style="--x:81%;--y:89%" aria-hidden="true">4</span><span class="co" data-n="4" style="--x:81%;--y:89%" aria-hidden="true">4</span>
+      </figure>
+      <ol class="legend" aria-label="Screen elements">
+      <li data-n="1" tabindex="0"><span class="co" aria-hidden="true">1</span><div><b><span class="visually-hidden">1. </span>Scene</b><p>The play area keeps the full four-tone palette, so the box below always reads as UI.</p></div></li>
+      <li data-n="2" tabindex="0"><span class="co" aria-hidden="true">2</span><div><b><span class="visually-hidden">2. </span>Speaker</b><p>The speaker's name sits on its own line above the text.</p></div></li>
+      <li data-n="3" tabindex="0"><span class="co" aria-hidden="true">3</span><div><b><span class="visually-hidden">3. </span>Line</b><p>Short lines in capitals, sized to stay legible at 160&times;144.</p></div></li>
+      <li data-n="4" tabindex="0"><span class="co" aria-hidden="true">4</span><div><b><span class="visually-hidden">4. </span>Continue marker</b><p>A small arrow says there is more to read.</p></div></li>
+      </ol>
+    </div>
+    <p class="plate-cap">Dialogue UI built to fit the Game Boy screen. Hover or focus an entry to find it on the screen.</p>
   </div>
 </section>
-
+<section class="section" style="padding-top:0">
+  <div class="wrap">
+    <figure class="figure pixel narrow"><img src="../assets/img/midas/village.webp" width="312" height="264" alt="Village with houses, ghosts and a skeleton enemy in a muted four-tone palette" loading="lazy"><figcaption>Village hub in the four-tone palette.</figcaption></figure>
+  </div>
+</section>
 <section class="section">
   <div class="wrap prose">
     <h2>Designing inside a tiny box</h2>
-    <p>GBJam's rules are the point: a 160&times;144 screen, four colors per frame, and only the Game Boy's buttons. Every piece of UI, from dialogue boxes to menus, has to earn its pixels and stay legible with almost no color to separate information.</p>
-
+    <p>GBJam's rules are the point: a 160&times;144 screen, four colours per frame, and only the Game Boy's buttons. Every piece of UI, from dialogue boxes to menus, has to earn its pixels and stay legible with almost no colour to separate information.</p>
     <h2>Systems over content</h2>
-    <p>With a jam timeline, I leaned on systems that generate variety instead of hand authoring everything:</p>
+    <p>With a jam timeline, I leaned on systems that generate variety instead of hand-authoring everything:</p>
     <ul>
       <li><strong>Two power tracks:</strong> slaying unique enemies grows LEAD powers, while gold grows GOLD powers, so how you play shapes how Midas grows.</li>
       <li><strong>Gold as a resource:</strong> healing costs gold from the SELECT menu, which turns wealth into a running decision.</li>
       <li><strong>Branching endings:</strong> after finishing, players can continue and choose differently to see another ending.</li>
     </ul>
-
     <h2>Controls</h2>
     <p>Keyboard maps to the Game Boy layout (Z for A, X for B, arrows to move, Shift for SELECT, Enter for START), and gamepads work out of the box.</p>
-
-    <div class="callout">
-      <span class="tag">Credits</span>
-      <p>Programming and story: Maurice Birchard (Moninja). Art: Lexiianna. Music and SFX: PhantomAxis Studios and Haphaeu.</p>
-    </div>
-
+    <div class="note"><h3><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.4"><circle cx="12" cy="12" r="10"/><path d="M12 7v6M12 16.5v.5"/></svg>Credits</h3><p>Programming and story: Maurice Birchard (Moninja). Art: Lexiianna. Music and SFX: PhantomAxis Studios and Haphaeu.</p></div>
     <h2>What I took from it</h2>
-    <p>Hard constraints make UI decisions faster and sharper. With four colors, hierarchy has to come from shape, spacing and placement, which is good practice for any HUD.</p>
-
-    <nav class="next" aria-label="Next project">
-      <a href="greywater.html"><span class="tag">Previous</span>&larr; Greywater</a>
-      <a href="dreamland.html"><span class="tag">Next</span>Dreamland &rarr;</a>
-    </nav>
+    <p>Hard constraints make UI decisions faster and sharper. With four colours, hierarchy has to come from shape, spacing and placement, which is good practice for any HUD.</p>
   </div>
+  <div class="wrap"><nav class="turn" aria-label="Turn the page"><a class="prev ch-greywater" href="../work/greywater.html"><small>Previous</small><b>03 Greywater</b></a><a class="next ch-dreamland" href="../work/dreamland.html"><small>Next</small><b>05 Dreamland</b></a></nav></div>
 </section>
-
 </main>
-<footer class="site-footer">
+<footer class="backcover">
   <div class="wrap">
-    <span>&copy; <span id="year">2026</span> Maurice Birchard &middot; Game UI/UX</span>
+    <div>
+      <h2>Contact</h2>
+      <a class="mail" href="mailto:mauricebirchard@gmail.com">mauricebirchard@gmail.com</a>
+      <p>Open to game UI/UX, game design and software roles, full-time or contract. Based in Chandler, AZ, open to remote.</p>
+    </div>
     <ul>
-      <li><a href="https://moninja.itch.io/" rel="noopener">itch.io</a></li>
-      <li><a href="https://github.com/moninja92" rel="noopener">GitHub</a></li>
-      <li><a href="https://www.linkedin.com/in/mauricebirchard/" rel="noopener">LinkedIn</a></li>
-      <li><a href="mailto:mauricebirchard@gmail.com">Email</a></li>
+      <li><a href="../contact.html">All contact options <svg viewBox="0 0 16 16" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a></li>
+      <li><a href="../resume.html">Resume <svg viewBox="0 0 16 16" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a></li>
+      <li><a href="https://www.linkedin.com/in/mauricebirchard/" rel="noopener">LinkedIn <svg viewBox="0 0 16 16" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 11 11 5M6 5h5v5"/></svg></a></li>
+      <li><a href="https://github.com/moninja92" rel="noopener">GitHub <svg viewBox="0 0 16 16" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 11 11 5M6 5h5v5"/></svg></a></li>
+      <li><a href="https://moninja.itch.io/" rel="noopener">itch.io <svg viewBox="0 0 16 16" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 11 11 5M6 5h5v5"/></svg></a></li>
     </ul>
+    <div class="colophon"><span>&copy; <span id="year">2026</span> Maurice Birchard</span><span>Hand-built in HTML and CSS. Set in Schibsted Grotesk.</span></div>
   </div>
 </footer>
 <script src="../assets/js/main.js"></script>

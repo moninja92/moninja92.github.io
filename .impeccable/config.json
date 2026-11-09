@@ -1,0 +1,80 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "overused-font",
+        "value": "arial",
+        "files": [
+          ".impeccable/mocks/decision/assigned.html"
+        ],
+        "createdAt": "2026-11-09T18:39:42.106Z",
+        "reason": "Claude: throwaway decision-page skeleton sketch, not shipped; text renders as bars"
+      },
+      {
+        "rule": "overused-font",
+        "value": "arial",
+        "files": [
+          ".impeccable/mocks/decision/model-pick.html"
+        ],
+        "createdAt": "2026-11-09T18:39:42.277Z",
+        "reason": "Claude: throwaway decision-page skeleton sketch, not shipped; text renders as bars"
+      },
+      {
+        "rule": "overused-font",
+        "value": "arial",
+        "files": [
+          ".impeccable/mocks/decision/challenger-map.html"
+        ],
+        "createdAt": "2026-11-09T18:39:42.446Z",
+        "reason": "Claude: throwaway decision-page skeleton sketch, not shipped; text renders as bars"
+      },
+      {
+        "rule": "overused-font",
+        "value": "arial",
+        "files": [
+          ".impeccable/mocks/decision/canon.html"
+        ],
+        "createdAt": "2026-11-09T18:39:42.617Z",
+        "reason": "Claude: throwaway decision-page skeleton sketch, not shipped; text renders as bars"
+      },
+      {
+        "rule": "cream-palette",
+        "value": "*",
+        "files": [
+          ".impeccable/mocks/decision/challenger-map.html"
+        ],
+        "createdAt": "2026-11-09T18:39:42.789Z",
+        "reason": "Claude: sketch reproduces the catalog challenger's own cream ground (#F5F1E4); unchosen, not shipped"
+      },
+      {
+        "rule": "side-tab",
+        "value": "*",
+        "files": [
+          "assets/css/greywater-menu.css"
+        ],
+        "createdAt": "2026-11-09T18:40:15.413Z",
+        "reason": "Claude: Greywater's in-game selection bar reproduced from its Figma component; the case study documents the 3px bar + fill as its accessibility rule"
+      },
+      {
+        "rule": "design-system-color",
+        "value": "*",
+        "files": [
+          "work/greywater.html"
+        ],
+        "createdAt": "2026-11-09T19:14:02.046Z",
+        "reason": "Claude: the Greywater game's own title menu, embedded as an exhibit with its own palette and fonts (IBM Plex Mono, Newsreader); DESIGN.md documents it as an exhibit exception"
+      },
+      {
+        "rule": "design-system-font",
+        "value": "*",
+        "files": [
+          "work/greywater.html"
+        ],
+        "createdAt": "2026-11-09T19:14:02.216Z",
+        "reason": "Claude: the Greywater game's own title menu, embedded as an exhibit with its own palette and fonts (IBM Plex Mono, Newsreader); DESIGN.md documents it as an exhibit exception"
+      }
+    ]
+  }
+}

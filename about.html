@@ -4,82 +4,89 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>About | Maurice Birchard</title>
-<meta name="description" content="Game UI/UX designer with a background in industrial HMI design and military service.">
+<meta name="description" content="Game UI/UX designer with a background in industrial HMI and SCADA design and military service.">
 <meta property="og:title" content="About | Maurice Birchard">
-<meta property="og:description" content="Game UI/UX designer with a background in industrial HMI design and military service.">
+<meta property="og:description" content="Game UI/UX designer with a background in industrial HMI and SCADA design and military service.">
+<meta name="theme-color" content="#1450C8">
 <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;800;900&family=JetBrains+Mono:wght@400;600&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:ital,wght@0,400;0,600;0,700;0,800;0,900;1,800;1,900&display=swap">
 <link rel="stylesheet" href="assets/css/style.css">
 </head>
-<body>
+<body class="ch-back">
 <a class="skip-link" href="#main">Skip to content</a>
-<header class="site-header">
+<nav class="tabs" aria-label="Chapters">
+  <ol>
+    <li class="ch-argos"><a href="work/argos.html"><span class="num">01</span><span class="visually-hidden">Chapter 01: </span><span class="name">Argos</span></a></li>
+    <li class="ch-titan"><a href="work/project-titan.html"><span class="num">02</span><span class="visually-hidden">Chapter 02: </span><span class="name">Titan</span></a></li>
+    <li class="ch-greywater"><a href="work/greywater.html"><span class="num">03</span><span class="visually-hidden">Chapter 03: </span><span class="name">Greywater</span></a></li>
+    <li class="ch-midas"><a href="work/midas.html"><span class="num">04</span><span class="visually-hidden">Chapter 04: </span><span class="name">Midas</span></a></li>
+    <li class="ch-dreamland"><a href="work/dreamland.html"><span class="num">05</span><span class="visually-hidden">Chapter 05: </span><span class="name">Dreamland</span></a></li>
+    <li class="ch-explore"><a href="work/shopping-list.html"><span class="num">06</span><span class="visually-hidden">Chapter 06: </span><span class="name">Explorations</span></a></li>
+    <li class="ch-back"><a href="about.html" aria-current="page"><span class="num back-letter" aria-hidden="true">A</span><span class="name">About</span></a></li>
+    <li class="ch-back"><a href="resume.html"><span class="num back-letter" aria-hidden="true">R</span><span class="name">Resume</span></a></li>
+    <li class="ch-back"><a href="contact.html"><span class="num back-letter" aria-hidden="true">C</span><span class="name">Contact</span></a></li>
+  </ol>
+</nav>
+<header class="runhead">
   <div class="wrap">
-    <a class="brand" href="index.html" aria-label="Maurice Birchard, home">
-      <span class="brand-mark" aria-hidden="true">MB</span>
-      <span class="brand-name">Maurice Birchard</span>
-    </a>
-    <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav">Menu</button>
-    <nav id="site-nav" class="site-nav" aria-label="Main">
-      <ul>
-        <li><a href="index.html#work">Work</a></li>
-        <li><a href="about.html" aria-current="page">About</a></li>
-        <li><a href="resume.html">Resume</a></li>
-        <li><a class="nav-signal" href="https://moninja.itch.io/" rel="noopener">itch.io &#8599;</a></li>
-      </ul>
-    </nav>
+    <a class="wordmark" href="index.html"><b>Maurice Birchard</b><span>Game UI / UX</span></a>
+    <span class="folio">Back matter &middot; page 28</span>
   </div>
 </header>
 <main id="main">
-
-<section class="case-hero">
+<section class="opener">
   <div class="wrap">
-    <div class="eyebrow">About</div>
-    <h1>Control Systems, Systems Design and Game Design</h1>
-    <p class="lede">I'm Maurice Birchard, a current systems engineer moving into the UI and UX side of game design. For years I've designed the screens operators use to run solar plants and industrial systems in real time. That work taught me how to put the right information in front of someone at the exact moment they need it, and how much a cluttered screen can cost in production.</p>
+    <span></span>
+    <div>
+      <h1 class="display">About the designer</h1>
+      <p class="lede">I'm Maurice Birchard, a systems engineer moving into the UI and UX side of game design. I've spent years on the screens operators use to run solar plants and industrial systems in real time. That work taught me how to put the right information in front of someone at the exact moment they need it, and how much a cluttered screen can cost.</p>
+    </div>
   </div>
 </section>
-
-<section class="section" style="padding-top:24px">
-  <div class="wrap about-grid">
+<section class="section">
+  <div class="wrap two-col">
     <div class="prose">
-      <h2 style="margin-top:0">Skills and Capabilities</h2>
+      <h2>What I do</h2>
       <ul>
-        <li><strong>Interface design:</strong> data processing, ease of use, and functional design.</li>
+        <li><strong>Interface design:</strong> dense information made easy to read and act on.</li>
         <li><strong>Design that ships:</strong> I prototype in Figma, then build in Unity, Godot or TypeScript, so designs account for how the engine actually works.</li>
-        <li><strong>Team process:</strong> wireframes first allows the team to identify early risks and prototype quickly.</li>
+        <li><strong>Team process:</strong> wireframes first, so the team spots risks early and prototypes quickly.</li>
       </ul>
       <h2>Tools</h2>
-      <p>Figma, Unity (uGUI, TextMeshPro), Godot, TypeScript and Vite, Ignition Perspective and Vision, Wonderware System Platform, Miro/Notion.</p>
-      <div class="btn-row" style="margin-top:24px">
-        <a class="btn btn-primary" href="resume.html">View resume</a>
-        <a class="btn btn-outline" href="contact.html">Get in touch</a>
-      </div>
+      <p>Figma, Unity (uGUI, TextMeshPro), Godot, TypeScript and Vite, Ignition Perspective and Vision, Wonderware System Platform, Miro and Notion.</p>
+      <div class="btn-row" style="margin-top:28px"><a class="btn" href="resume.html">Read the resume <svg viewBox="0 0 16 16" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a><a class="btn btn-quiet" href="contact.html">Get in touch</a></div>
     </div>
     <div>
-      <h2 class="eyebrow" style="margin:0 0 20px">Professional Summary</h2>
-      <ol class="timeline">
-        <li><strong>SCADA Engineer</strong><span>Solar energy. Operator HMIs and systems in Ignition and Wonderware.</span></li>
-        <li><strong>Controls SME</strong><span>Microsoft</span></li>
-        <li><strong>Controls and HMI systems UI/UX</strong><span>Amazon</span></li>
-        <li><strong>Bachelor's Degree</strong><span>Computer Science, focus in Cybersecurity - CSU Global</span></li>
+      <h2 style="margin-bottom:16px">Service record</h2>
+      <ol class="career">
+        <li><span class="when">Apr 2026 &ndash; now</span><div><b>SCADA Engineer, QE Solar</b><span>Custom SCADA platform in Ignition, with dashboards operators can track and update.</span></div></li>
+        <li><span class="when">Jul 2025 &ndash; now</span><div><b>Control Systems SME, Microsoft</b><span>OT and ICS systems for datacenters: BMS, EPMS, SCADA and PLCs.</span></div></li>
+        <li><span class="when">Nov 2023 &ndash; Apr 2026</span><div><b>Intelligence Analyst, US Army</b><span>Turned large, messy datasets into clear briefings for leadership.</span></div></li>
+        <li><span class="when">Oct 2024 &ndash; Jul 2025</span><div><b>Control Systems Specialist, HelloFresh</b><span>PLCs for automation and robotics.</span></div></li>
+        <li><span class="when">Jun 2023 &ndash; Oct 2024</span><div><b>Controls and robotics, Amazon</b><span>Control Systems Specialist and Maintenance and Robotics Engineer II.</span></div></li>
+        <li><span class="when">Jan 2026</span><div><b>BS, Computer Science</b><span>Cybersecurity focus, Colorado State University Global. Master's in AI and Machine Learning in progress.</span></div></li>
       </ol>
     </div>
   </div>
 </section>
-
 </main>
-<footer class="site-footer">
+<footer class="backcover">
   <div class="wrap">
-    <span>&copy; <span id="year">2026</span> Maurice Birchard &middot; UI/UX / Software Development</span>
+    <div>
+      <h2>Contact</h2>
+      <a class="mail" href="mailto:mauricebirchard@gmail.com">mauricebirchard@gmail.com</a>
+      <p>Open to game UI/UX, game design and software roles, full-time or contract. Based in Chandler, AZ, open to remote.</p>
+    </div>
     <ul>
-      <li><a href="https://moninja.itch.io/" rel="noopener">itch.io</a></li>
-      <li><a href="https://github.com/moninja92" rel="noopener">GitHub</a></li>
-      <li><a href="https://www.linkedin.com/in/mauricebirchard/" rel="noopener">LinkedIn</a></li>
-      <li><a href="mailto:mauricebirchard@gmail.com">Email</a></li>
+      <li><a href="contact.html">All contact options <svg viewBox="0 0 16 16" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a></li>
+      <li><a href="resume.html">Resume <svg viewBox="0 0 16 16" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a></li>
+      <li><a href="https://www.linkedin.com/in/mauricebirchard/" rel="noopener">LinkedIn <svg viewBox="0 0 16 16" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 11 11 5M6 5h5v5"/></svg></a></li>
+      <li><a href="https://github.com/moninja92" rel="noopener">GitHub <svg viewBox="0 0 16 16" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 11 11 5M6 5h5v5"/></svg></a></li>
+      <li><a href="https://moninja.itch.io/" rel="noopener">itch.io <svg viewBox="0 0 16 16" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 11 11 5M6 5h5v5"/></svg></a></li>
     </ul>
+    <div class="colophon"><span>&copy; <span id="year">2026</span> Maurice Birchard</span><span>Hand-built in HTML and CSS. Set in Schibsted Grotesk.</span></div>
   </div>
 </footer>
 <script src="assets/js/main.js"></script>

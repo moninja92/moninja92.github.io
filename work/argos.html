@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Argos | Maurice Birchard</title>
+<meta name="description" content="Diegetic menus for a narrative Unity adventure: a river title menu with leaves as buttons, and a stopped-watch pause with a field journal.">
+<meta property="og:title" content="Argos | Maurice Birchard">
+<meta property="og:description" content="Diegetic menus for a narrative Unity adventure: a river title menu with leaves as buttons, and a stopped-watch pause with a field journal.">
+<meta name="theme-color" content="#1450C8">
+<link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:ital,wght@0,400;0,600;0,700;0,800;0,900;1,800;1,900&display=swap">
+<link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body class="ch-argos">
+<a class="skip-link" href="#main">Skip to content</a>
+<nav class="tabs" aria-label="Chapters">
+  <ol>
+    <li class="ch-argos"><a href="../work/argos.html" aria-current="page"><span class="num">01</span><span class="visually-hidden">Chapter 01: </span><span class="name">Argos</span></a></li>
+    <li class="ch-titan"><a href="../work/project-titan.html"><span class="num">02</span><span class="visually-hidden">Chapter 02: </span><span class="name">Titan</span></a></li>
+    <li class="ch-greywater"><a href="../work/greywater.html"><span class="num">03</span><span class="visually-hidden">Chapter 03: </span><span class="name">Greywater</span></a></li>
+    <li class="ch-midas"><a href="../work/midas.html"><span class="num">04</span><span class="visually-hidden">Chapter 04: </span><span class="name">Midas</span></a></li>
+    <li class="ch-dreamland"><a href="../work/dreamland.html"><span class="num">05</span><span class="visually-hidden">Chapter 05: </span><span class="name">Dreamland</span></a></li>
+    <li class="ch-explore"><a href="../work/shopping-list.html"><span class="num">06</span><span class="visually-hidden">Chapter 06: </span><span class="name">Explorations</span></a></li>
+    <li class="ch-back"><a href="../about.html"><span class="num back-letter" aria-hidden="true">A</span><span class="name">About</span></a></li>
+    <li class="ch-back"><a href="../resume.html"><span class="num back-letter" aria-hidden="true">R</span><span class="name">Resume</span></a></li>
+    <li class="ch-back"><a href="../contact.html"><span class="num back-letter" aria-hidden="true">C</span><span class="name">Contact</span></a></li>
+  </ol>
+</nav>
+<header class="runhead">
+  <div class="wrap">
+    <a class="wordmark" href="../index.html"><b>Maurice Birchard</b><span>Game UI / UX</span></a>
+    <span class="folio">Chapter 01 &middot; page 4</span>
+  </div>
+</header>
+<main id="main">
+<section class="opener">
+  <div class="wrap">
+    <span class="chap" aria-hidden="true">01</span>
+    <div>
+      <h1 class="display"><span class="visually-hidden">Chapter 01: </span>Argos</h1>
+      <p class="lede">Lead UI/UX on a contemplative 3D narrative adventure. Two diegetic menus, designed in Figma and built in Unity: a title menu that looks down into a river, with fallen leaves as buttons, and a pause that stops a pocket watch.</p>
+    </div>
+  </div>
+</section>
+<div class="wrap specs-wrap"><dl class="specs"><div><dt>Role</dt><dd>Lead UI/UX: design and Unity build</dd></div><div><dt>Engine</dt><dd>Unity 6, uGUI + TextMeshPro, FMOD</dd></div><div><dt>Input</dt><dd>Keyboard and mouse, Xbox and PlayStation controllers</dd></div><div><dt>Status</dt><dd>Vertical slice in development, 2026</dd></div></dl></div>
+<section class="section" style="padding-top:40px">
+  <div class="wrap">
+    <figure class="figure"><div class="pending" role="img" aria-label="River Menu: screenshot coming soon"><span>River Menu</span><small>Screenshot coming soon</small></div><figcaption>The River Menu, Day theme. Each leaf is a button; the stones are sliders.</figcaption></figure>
+  </div>
+  <div class="wrap prose">
+    <h2>A title menu you look down into</h2>
+    <p>The title menu is a river seen from above. Fallen autumn leaves are the buttons and toggles: they bob on the current, lift when focused, and flip when pressed. Sliders are skipping stones, and Back is a rock. It is built to the Figma prototype's spec, on the same 1920&times;1080 stage with the same formulas and tokens.</p>
+    <ul>
+      <li><strong>Three rivers, one per stage of the game.</strong> Day is an autumn river with a willow and the man reflected in it. Soul is dark water lit by the hound's collar light and fireflies. Night holds stars, a faint aurora and a fractured moon.</li>
+      <li><strong>Story in the menu.</strong> Wake and Sleep frame the start and end of the game. Wake sends three pulses out from the leaf, one for each of Cerberus's barks. After the first full loop, the hound's reflection slowly surfaces beside the man's.</li>
+      <li><strong>Every input is first class.</strong> Mouse, keyboard and controller all focus and press the same leaves, and every control except Pause can be rebound from leaves on the Controls pages.</li>
+    </ul>
+  </div>
+  <div class="wrap pair">
+    <figure class="figure"><div class="pending" role="img" aria-label="Watch Pause: screenshot coming soon"><span>Watch Pause</span><small>Screenshot coming soon</small></div><figcaption>The Watch Pause: the minute hand points at the focused option.</figcaption></figure>
+    <figure class="figure"><div class="pending" role="img" aria-label="Field Journal: screenshot coming soon"><span>Field Journal</span><small>Screenshot coming soon</small></div><figcaption>The Field Journal: entries on the left page, the one being read on the right.</figcaption></figure>
+  </div>
+  <div class="wrap prose">
+    <h2>A pause that stops time</h2>
+    <p>Esc or Start stops time, the world dims to 55%, and the protagonist's father's pocket watch slides up. The minute hand points at the focused option: Resume at 12, Journal at 3, Leave river at 6, Settings at 9. Resume plays one tick, the second hand steps six degrees, and the world moves again 240&nbsp;ms later.</p>
+    <p>Settings fades into the River Menu, so one settings system serves the title and the pause. The Field Journal is a notebook spread with Letters, Keepsakes and Photos tabs.</p>
+    <div class="note"><h3><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.4"><circle cx="12" cy="12" r="10"/><path d="M12 7v6M12 16.5v.5"/></svg>Design tone</h3><p>Minimal and diegetic, in the vein of Gris and Spiritfarer. No gradients, glows or glass, except the Soul act's collar light.</p></div>
+    <h2>From Figma to Unity, number for number</h2>
+    <ul>
+      <li>Colours, geometry, type sizes and motion timings live in one tokens file taken from the Figma source, so a change happens in one place.</li>
+      <li>Layout is written in Figma frame pixels, with the same cubic-bezier easing curves as the prototype.</li>
+      <li>Menus run on unscaled time, so the same river can sit over a paused game.</li>
+      <li>UI sounds are FMOD events shared between the River Menu and the pause, so a sound designer owns them without touching code.</li>
+    </ul>
+    <h2>Accessibility</h2>
+    <ul>
+      <li>Three motion levels: full, gentle (the default) and still.</li>
+      <li>A Text Size setting (100, 125 and 150%) for dialogue and prompt words.</li>
+      <li>Subtitles, vibration, and music and effects volume, all saved between sessions.</li>
+      <li>Full rebinding for keyboard and controller.</li>
+    </ul>
+  </div>
+  <div class="wrap"><nav class="turn" aria-label="Turn the page"><span></span><a class="next ch-titan" href="../work/project-titan.html"><small>Next</small><b>02 Project Titan</b></a></nav></div>
+</section>
+</main>
+<footer class="backcover">
+  <div class="wrap">
+    <div>
+      <h2>Contact</h2>
+      <a class="mail" href="mailto:mauricebirchard@gmail.com">mauricebirchard@gmail.com</a>
+      <p>Open to game UI/UX, game design and software roles, full-time or contract. Based in Chandler, AZ, open to remote.</p>
+    </div>
+    <ul>
+      <li><a href="../contact.html">All contact options <svg viewBox="0 0 16 16" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a></li>
+      <li><a href="../resume.html">Resume <svg viewBox="0 0 16 16" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a></li>
+      <li><a href="https://www.linkedin.com/in/mauricebirchard/" rel="noopener">LinkedIn <svg viewBox="0 0 16 16" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 11 11 5M6 5h5v5"/></svg></a></li>
+      <li><a href="https://github.com/moninja92" rel="noopener">GitHub <svg viewBox="0 0 16 16" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 11 11 5M6 5h5v5"/></svg></a></li>
+      <li><a href="https://moninja.itch.io/" rel="noopener">itch.io <svg viewBox="0 0 16 16" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 11 11 5M6 5h5v5"/></svg></a></li>
+    </ul>
+    <div class="colophon"><span>&copy; <span id="year">2026</span> Maurice Birchard</span><span>Hand-built in HTML and CSS. Set in Schibsted Grotesk.</span></div>
+  </div>
+</footer>
+<script src="../assets/js/main.js"></script>
+</body>
+</html>

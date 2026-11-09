@@ -3,121 +3,125 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Shopping List App Prototype | Maurice Birchard</title>
-<meta name="description" content="A five-screen mobile flow from paper prototype to clickable Figma Make prototype.">
-<meta property="og:title" content="Shopping List App Prototype | Maurice Birchard">
-<meta property="og:description" content="A five-screen mobile flow from paper prototype to clickable Figma Make prototype.">
+<title>UI Explorations | Maurice Birchard</title>
+<meta name="description" content="A five-screen mobile app taken from paper sketch to a clickable Figma prototype.">
+<meta property="og:title" content="UI Explorations | Maurice Birchard">
+<meta property="og:description" content="A five-screen mobile app taken from paper sketch to a clickable Figma prototype.">
+<meta name="theme-color" content="#1450C8">
 <link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;800;900&family=JetBrains+Mono:wght@400;600&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:ital,wght@0,400;0,600;0,700;0,800;0,900;1,800;1,900&display=swap">
 <link rel="stylesheet" href="../assets/css/style.css">
 </head>
-<body>
+<body class="ch-explore">
 <a class="skip-link" href="#main">Skip to content</a>
-<header class="site-header">
+<nav class="tabs" aria-label="Chapters">
+  <ol>
+    <li class="ch-argos"><a href="../work/argos.html"><span class="num">01</span><span class="visually-hidden">Chapter 01: </span><span class="name">Argos</span></a></li>
+    <li class="ch-titan"><a href="../work/project-titan.html"><span class="num">02</span><span class="visually-hidden">Chapter 02: </span><span class="name">Titan</span></a></li>
+    <li class="ch-greywater"><a href="../work/greywater.html"><span class="num">03</span><span class="visually-hidden">Chapter 03: </span><span class="name">Greywater</span></a></li>
+    <li class="ch-midas"><a href="../work/midas.html"><span class="num">04</span><span class="visually-hidden">Chapter 04: </span><span class="name">Midas</span></a></li>
+    <li class="ch-dreamland"><a href="../work/dreamland.html"><span class="num">05</span><span class="visually-hidden">Chapter 05: </span><span class="name">Dreamland</span></a></li>
+    <li class="ch-explore"><a href="../work/shopping-list.html" aria-current="page"><span class="num">06</span><span class="visually-hidden">Chapter 06: </span><span class="name">Explorations</span></a></li>
+    <li class="ch-back"><a href="../about.html"><span class="num back-letter" aria-hidden="true">A</span><span class="name">About</span></a></li>
+    <li class="ch-back"><a href="../resume.html"><span class="num back-letter" aria-hidden="true">R</span><span class="name">Resume</span></a></li>
+    <li class="ch-back"><a href="../contact.html"><span class="num back-letter" aria-hidden="true">C</span><span class="name">Contact</span></a></li>
+  </ol>
+</nav>
+<header class="runhead">
   <div class="wrap">
-    <a class="brand" href="../index.html" aria-label="Maurice Birchard, home">
-      <span class="brand-mark" aria-hidden="true">MB</span>
-      <span class="brand-name">Maurice Birchard</span>
-    </a>
-    <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav">Menu</button>
-    <nav id="site-nav" class="site-nav" aria-label="Main">
-      <ul>
-        <li><a href="../index.html#work" aria-current="page">Work</a></li>
-        <li><a href="../about.html">About</a></li>
-        <li><a href="../resume.html">Resume</a></li>
-        <li><a class="nav-signal" href="https://moninja.itch.io/" rel="noopener">itch.io &#8599;</a></li>
-      </ul>
-    </nav>
+    <a class="wordmark" href="../index.html"><b>Maurice Birchard</b><span>Game UI / UX</span></a>
+    <span class="folio">Chapter 06 &middot; page 24</span>
   </div>
 </header>
 <main id="main">
-
-<section class="case-hero">
+<section class="opener">
   <div class="wrap">
-    <div class="eyebrow">Project 05 &middot; UI exploration</div>
-    <h1>Shopping List App</h1>
-    <p class="lede">A five screen mobile flow taken from a "hand drawn" (using Figma) paper prototype to a working, clickable prototype in Figma. Every screen, and every path between them, mapped and testable.</p>
-    <div class="btn-row">
-      <a class="btn btn-signal" href="shopping-list-prototype/index.html">Open prototype full screen</a>
+    <span class="chap" aria-hidden="true">06</span>
+    <div>
+      <h1 class="display"><span class="visually-hidden">Chapter 06: </span>UI Explorations: Shopping List</h1>
+      <p class="lede">A five-screen mobile flow taken from a paper-style prototype, drawn in Figma, to a working, clickable prototype. Every screen, and every path between them, mapped and testable.</p>
+      <div class="btn-row"><a class="btn" href="shopping-list-prototype/index.html">Open the prototype full screen <svg viewBox="0 0 16 16" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a></div>
     </div>
-    <dl class="meta">
-      <div><dt>Context</dt><dd>Coursework, CSU Global</dd></div>
-      <div><dt>Tools</dt><dd>Figma, React</dd></div>
-      <div><dt>Screens</dt><dd>Home, Add, View, Edit, Settings</dd></div>
-      <div><dt>Deliverable</dt><dd>Navigation mapped prototype</dd></div>
-    </dl>
   </div>
 </section>
-
-<section class="band gallery" aria-label="Paper prototype">
-  <div class="wrap gallery-2">
-    <figure class="shot">
-      <img src="../assets/img/shopping/sketch.webp" width="904" height="832" alt="Sketched paper prototype: Settings, Home, Add Item, View List and Edit Item screens joined by seven numbered arrows">
-      <figcaption>Step 1: paper prototype with seven numbered navigation paths</figcaption>
-    </figure>
-    <figure class="shot">
-      <img src="../assets/img/shopping/home-hifi.webp" width="900" height="1150" alt="Refined Home screen titled My Lists with Groceries, Hardware Store and Party Supplies cards and an Add Item button">
-      <figcaption>Refined Home screen</figcaption>
-    </figure>
+<div class="wrap specs-wrap"><dl class="specs"><div><dt>Context</dt><dd>Coursework, CSU Global</dd></div><div><dt>Tools</dt><dd>Figma, React</dd></div><div><dt>Screens</dt><dd>Home, Add, View, Edit, Settings</dd></div><div><dt>Deliverable</dt><dd>Navigation-mapped prototype</dd></div></dl></div>
+<section class="guide" aria-labelledby="guide-h">
+  <div class="wrap">
+    <div class="guide-title"><h2 id="guide-h">Screen Guide: Paper prototype</h2><p>Five screens, seven routes</p></div>
+    <div class="spread">
+      <figure class="plate">
+        <img src="../assets/img/shopping/sketch.webp" width="904" height="832" alt="Sketched paper prototype: Settings, Home, Add Item, View List and Edit Item screens joined by seven numbered arrows">
+      <span class="lead-line" data-n="1" style="--x:45%;--y:16%"></span><span class="pin" data-n="1" style="--x:45%;--y:16%" aria-hidden="true">1</span><span class="co" data-n="1" style="--x:45%;--y:16%" aria-hidden="true">1</span>
+      <span class="lead-line" data-n="2" style="--x:61%;--y:30%"></span><span class="pin" data-n="2" style="--x:61%;--y:30%" aria-hidden="true">2</span><span class="co" data-n="2" style="--x:61%;--y:30%" aria-hidden="true">2</span>
+      <span class="lead-line" data-n="3" style="--x:12%;--y:62%"></span><span class="pin" data-n="3" style="--x:12%;--y:62%" aria-hidden="true">3</span><span class="co" data-n="3" style="--x:12%;--y:62%" aria-hidden="true">3</span>
+      <span class="lead-line" data-n="4" style="--x:40%;--y:83%"></span><span class="pin" data-n="4" style="--x:40%;--y:83%" aria-hidden="true">4</span><span class="co" data-n="4" style="--x:40%;--y:83%" aria-hidden="true">4</span>
+      </figure>
+      <ol class="legend" aria-label="Screen elements">
+      <li data-n="1" tabindex="0"><span class="co" aria-hidden="true">1</span><div><b><span class="visually-hidden">1. </span>Home</b><p>The only starting point.</p></div></li>
+      <li data-n="2" tabindex="0"><span class="co" aria-hidden="true">2</span><div><b><span class="visually-hidden">2. </span>Numbered routes</b><p>Seven numbered arrows connect five screens, so a reviewer can walk them step by step.</p></div></li>
+      <li data-n="3" tabindex="0"><span class="co" aria-hidden="true">3</span><div><b><span class="visually-hidden">3. </span>Navigation flow</b><p>A legend listing every route.</p></div></li>
+      <li data-n="4" tabindex="0"><span class="co" aria-hidden="true">4</span><div><b><span class="visually-hidden">4. </span>Checked items</b><p>Ticked items sink to the bottom of the list.</p></div></li>
+      </ol>
+    </div>
+    <p class="plate-cap">Step 1: the paper prototype. Hover or focus an entry to find it on the screen.</p>
   </div>
 </section>
-
+<section class="section" style="padding-top:0">
+  <div class="wrap">
+    <figure class="figure narrow" style="max-width:420px"><img src="../assets/img/shopping/home-hifi.webp" width="900" height="1150" alt="Refined Home screen titled My Lists with Groceries, Hardware Store and Party Supplies cards and an Add Item button" loading="lazy"><figcaption>Refined Home screen.</figcaption></figure>
+  </div>
+</section>
 <section class="section">
   <div class="wrap prose">
     <h2>The brief</h2>
     <p>Design a paper prototype for a shopping list app covering Home, Add Item, View List, Edit/Delete and Settings/About, with the navigation between them clearly shown.</p>
-
     <h2>Navigation first</h2>
     <p>Before styling anything I mapped every path a user can take. Seven numbered routes connect five screens, and Home is the only starting point. Numbering the arrows turned the sketch into something a reviewer could walk through step by step.</p>
-
     <h2>From sketch to something you can click</h2>
     <p>I rebuilt the sketch in Figma as a working prototype. Lists, items and settings hold real state, so checking off milk updates the "left" count on Home, and a saved item shows up in View List. Below is the full board in its starting state.</p>
   </div>
   <div class="wrap">
-    <div class="proto-frame" role="region" aria-label="Interactive prototype, scrolls horizontally on small screens" tabindex="0">
+    <div class="proto-frame" role="region" aria-label="Interactive prototype, scrolls sideways on small screens" tabindex="0">
       <iframe src="shopping-list-prototype/index.html" title="Shopping List interactive paper prototype" loading="lazy"></iframe>
     </div>
+    <figure class="figure"><img src="../assets/img/shopping/beginning-state.webp" width="1800" height="2167" alt="Full prototype board in its beginning state: Settings, Home with Groceries selected, Add Item, View List, Edit Item and the navigation flow legend" loading="lazy"><figcaption>The prototype board at its beginning state, Groceries selected.</figcaption></figure>
   </div>
   <div class="wrap prose">
-    <figure>
-      <img src="../assets/img/shopping/beginning-state.webp" width="1800" height="2167" alt="Full prototype board in its beginning state: Settings, Home with Groceries selected, Add Item, View List, Edit Item and the navigation flow legend" loading="lazy">
-      <figcaption>The prototype board at its beginning state, Groceries selected</figcaption>
-    </figure>
-
     <h2>Refining the screens</h2>
-    <p>A higher fidelity pass added item categories under each name, a dedicated Preferences group in Settings, and a softer, rounded device frame.</p>
-    <figure>
-      <img src="../assets/img/shopping/hifi-screens.webp" width="1600" height="1930" alt="Refined View List, Edit Item, Add Item and Settings screens on a gray canvas" loading="lazy">
-      <figcaption>Refined View List, Edit Item, Add Item and Settings</figcaption>
-    </figure>
-
+    <p>A higher-fidelity pass added item categories under each name, a dedicated Preferences group in Settings, and a softer, rounded device frame.</p>
+  </div>
+  <div class="wrap">
+    <figure class="figure narrow"><img src="../assets/img/shopping/hifi-screens.webp" width="1600" height="1930" alt="Refined View List, Edit Item, Add Item and Settings screens on a gray canvas" loading="lazy"><figcaption>Refined View List, Edit Item, Add Item and Settings.</figcaption></figure>
+  </div>
+  <div class="wrap prose">
     <h2>Design decisions</h2>
     <ul>
       <li>Checked items drop below a divider and fade, so what is left to buy is always on top.</li>
       <li>Delete asks for confirmation inline instead of a modal, keeping the user on the same screen.</li>
       <li>Save stays disabled until an item has a name, which prevents empty entries without an error message.</li>
-      <li>One accent color carries every primary action, so the next step is always obvious.</li>
+      <li>One accent colour carries every primary action, so the next step is always obvious.</li>
     </ul>
-
-    <nav class="next" aria-label="Next project">
-      <a href="dreamland.html"><span class="tag">Previous</span>&larr; Dreamland</a>
-      <a href="project-titan.html"><span class="tag">Next</span>Project Titan &rarr;</a>
-    </nav>
   </div>
+  <div class="wrap"><nav class="turn" aria-label="Turn the page"><a class="prev ch-dreamland" href="../work/dreamland.html"><small>Previous</small><b>05 Dreamland</b></a><a class="next ch-back" href="../about.html"><small>Next</small><b>About the designer</b></a></nav></div>
 </section>
-
 </main>
-<footer class="site-footer">
+<footer class="backcover">
   <div class="wrap">
-    <span>&copy; <span id="year">2026</span> Maurice Birchard &middot; Game UI/UX</span>
+    <div>
+      <h2>Contact</h2>
+      <a class="mail" href="mailto:mauricebirchard@gmail.com">mauricebirchard@gmail.com</a>
+      <p>Open to game UI/UX, game design and software roles, full-time or contract. Based in Chandler, AZ, open to remote.</p>
+    </div>
     <ul>
-      <li><a href="https://moninja.itch.io/" rel="noopener">itch.io</a></li>
-      <li><a href="https://github.com/moninja92" rel="noopener">GitHub</a></li>
-      <li><a href="https://www.linkedin.com/in/mauricebirchard/" rel="noopener">LinkedIn</a></li>
-      <li><a href="mailto:mauricebirchard@gmail.com">Email</a></li>
+      <li><a href="../contact.html">All contact options <svg viewBox="0 0 16 16" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a></li>
+      <li><a href="../resume.html">Resume <svg viewBox="0 0 16 16" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a></li>
+      <li><a href="https://www.linkedin.com/in/mauricebirchard/" rel="noopener">LinkedIn <svg viewBox="0 0 16 16" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 11 11 5M6 5h5v5"/></svg></a></li>
+      <li><a href="https://github.com/moninja92" rel="noopener">GitHub <svg viewBox="0 0 16 16" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 11 11 5M6 5h5v5"/></svg></a></li>
+      <li><a href="https://moninja.itch.io/" rel="noopener">itch.io <svg viewBox="0 0 16 16" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 11 11 5M6 5h5v5"/></svg></a></li>
     </ul>
+    <div class="colophon"><span>&copy; <span id="year">2026</span> Maurice Birchard</span><span>Hand-built in HTML and CSS. Set in Schibsted Grotesk.</span></div>
   </div>
 </footer>
 <script src="../assets/js/main.js"></script>

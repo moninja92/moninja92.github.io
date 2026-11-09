@@ -1,0 +1,502 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-09T19:13:07+00:00",
+  "title": "Design System: Maurice Birchard, Instruction Booklet",
+  "extensions": {
+    "colorMeta": {
+      "stock": {
+        "role": "neutral",
+        "displayName": "Coated Stock",
+        "canonical": "#EEF1F4",
+        "tonalRamp": [
+          "#090B0D",
+          "#242729",
+          "#434548",
+          "#646669",
+          "#87898C",
+          "#ABAEB1",
+          "#CED1D4",
+          "#ECEFF2"
+        ]
+      },
+      "stock-shade": {
+        "role": "neutral",
+        "displayName": "Stock Shade",
+        "canonical": "#E0E5EA",
+        "tonalRamp": [
+          "#080C0F",
+          "#23272B",
+          "#41454A",
+          "#62676B",
+          "#858A8E",
+          "#AAAEB3",
+          "#CDD2D6",
+          "#EAEFF4"
+        ]
+      },
+      "rule": {
+        "role": "neutral",
+        "displayName": "Hairline Grey",
+        "canonical": "#C4CBD3",
+        "tonalRamp": [
+          "#070C11",
+          "#22272D",
+          "#40464C",
+          "#61676E",
+          "#838A91",
+          "#A8AFB6",
+          "#CBD2DA",
+          "#E8EFF8"
+        ]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Booklet Ink",
+        "canonical": "#121316",
+        "tonalRamp": [
+          "#0A0B0E",
+          "#25262A",
+          "#444548",
+          "#65666A",
+          "#88898D",
+          "#ACAEB2",
+          "#CFD1D5",
+          "#EDEEF3"
+        ]
+      },
+      "ink-soft": {
+        "role": "neutral",
+        "displayName": "Soft Ink",
+        "canonical": "#44474E",
+        "tonalRamp": [
+          "#090B11",
+          "#24262D",
+          "#42454C",
+          "#63666D",
+          "#868991",
+          "#AAAEB6",
+          "#CDD1D9",
+          "#EBEEF7"
+        ]
+      },
+      "paper-white": {
+        "role": "neutral",
+        "displayName": "Paper White",
+        "canonical": "#FFFFFF",
+        "tonalRamp": [
+          "#0B0B0B",
+          "#262626",
+          "#454545",
+          "#666666",
+          "#898989",
+          "#AEAEAE",
+          "#D1D1D1",
+          "#EEEEEE"
+        ]
+      },
+      "cover-blue": {
+        "role": "primary",
+        "displayName": "Process Cover Blue",
+        "canonical": "#1450C8",
+        "tonalRamp": [
+          "#00003C",
+          "#00186D",
+          "#0438A1",
+          "#235CCF",
+          "#5285E9",
+          "#80ADFF",
+          "#ABD1FF",
+          "#D0EFFF"
+        ]
+      },
+      "cover-blue-deep": {
+        "role": "primary",
+        "displayName": "Deep Cover Blue",
+        "canonical": "#0E3C9C",
+        "tonalRamp": [
+          "#00003B",
+          "#001A69",
+          "#0D3B9A",
+          "#3862B6",
+          "#6288D0",
+          "#8EAEEA",
+          "#B8D2FF",
+          "#DBEFFF"
+        ]
+      },
+      "on-cover-soft": {
+        "role": "primary",
+        "displayName": "Cover Mist",
+        "canonical": "#D3DEF8",
+        "tonalRamp": [
+          "#0A0B0E",
+          "#24262B",
+          "#41454D",
+          "#616672",
+          "#828999",
+          "#A5AEC2",
+          "#C7D1E9",
+          "#E4EEFF"
+        ]
+      },
+      "chapter-argos-green": {
+        "role": "secondary",
+        "displayName": "Argos Green",
+        "canonical": "#0E7A45",
+        "tonalRamp": [
+          "#001200",
+          "#003211",
+          "#00552A",
+          "#0E7A45",
+          "#509C6C",
+          "#81BF95",
+          "#ADDFBC",
+          "#D1FBDD"
+        ]
+      },
+      "chapter-titan-red": {
+        "role": "secondary",
+        "displayName": "Titan Red",
+        "canonical": "#C22B22",
+        "tonalRamp": [
+          "#290000",
+          "#550000",
+          "#850505",
+          "#B8261E",
+          "#DC594B",
+          "#FA897A",
+          "#FFB4A6",
+          "#FFD7CB"
+        ]
+      },
+      "chapter-greywater-magenta": {
+        "role": "secondary",
+        "displayName": "Greywater Magenta",
+        "canonical": "#A61F60",
+        "tonalRamp": [
+          "#27000B",
+          "#510027",
+          "#7F0446",
+          "#AC2C67",
+          "#CC5F8A",
+          "#EB8DAE",
+          "#FFB6D1",
+          "#FFD9EF"
+        ]
+      },
+      "chapter-midas-yellow": {
+        "role": "secondary",
+        "displayName": "Midas Yellow",
+        "canonical": "#F2B705",
+        "tonalRamp": [
+          "#120A00",
+          "#332400",
+          "#594100",
+          "#826000",
+          "#AD8100",
+          "#DAA502",
+          "#FFC842",
+          "#FFE77A"
+        ]
+      },
+      "chapter-dreamland-blue": {
+        "role": "secondary",
+        "displayName": "Dreamland Blue",
+        "canonical": "#006AA3",
+        "tonalRamp": [
+          "#000B25",
+          "#00294D",
+          "#004978",
+          "#086CA5",
+          "#4C90C2",
+          "#7DB5E0",
+          "#AAD7FB",
+          "#CFF4FF"
+        ]
+      },
+      "chapter-explore-orange": {
+        "role": "secondary",
+        "displayName": "Explorations Orange",
+        "canonical": "#B04A0E",
+        "tonalRamp": [
+          "#230000",
+          "#4B0D00",
+          "#772800",
+          "#A64407",
+          "#C96C41",
+          "#E89773",
+          "#FFBFA0",
+          "#FFE0C6"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "Opener titles and the cover headline; 900 italic, uppercase."
+      },
+      "chapter-numeral": {
+        "displayName": "Chapter Numeral",
+        "purpose": "Giant tabular chapter number in the opener."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Section h2s, 800 italic; guide titles, section heads and back cover step to 900."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "h3s and legend item names, 800."
+      },
+      "lede": {
+        "displayName": "Lede",
+        "purpose": "One paragraph under each display title, max 60ch."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Running text, 68ch prose measure."
+      },
+      "caption": {
+        "displayName": "Caption",
+        "purpose": "Plate and figure captions in soft ink."
+      },
+      "label": {
+        "displayName": "Spec Label",
+        "purpose": "Uppercase spec-strip terms only (Role, Engine, Team, Status)."
+      }
+    },
+    "shadows": [
+      {
+        "name": "cover-print-drop",
+        "value": "0 24px 50px -12px rgba(0, 0, 0, 0.5)",
+        "purpose": "Cover-art screens only; the single ambient shadow on the site."
+      },
+      {
+        "name": "current-tab-ring",
+        "value": "inset 0 0 0 3px var(--stock), inset 0 0 0 5px var(--chapter)",
+        "purpose": "aria-current thumb tab."
+      },
+      {
+        "name": "pin-outline",
+        "value": "0 0 0 1px var(--ink)",
+        "purpose": "Screen Guide pins."
+      },
+      {
+        "name": "leader-halo",
+        "value": "0 0 0 1px rgba(255,255,255,0.75)",
+        "purpose": "Keeps leader lines legible over dark screens."
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease",
+        "value": "cubic-bezier(0.16, 1, 0.3, 1)",
+        "purpose": "The only easing; used by every transition."
+      },
+      {
+        "name": "leader-draw",
+        "value": "transform 0.9s var(--ease): scaleX(0) to scaleX(1), once at 35% visibility",
+        "purpose": "Leader lines draw in once when a Screen Guide enters view; static under reduced motion or without JS."
+      },
+      {
+        "name": "callout-link",
+        "value": "transform 0.25s var(--ease): disc scale(1.22), pin scale(1.3)",
+        "purpose": "Linked legend/pin/disc highlight on hover or focus."
+      },
+      {
+        "name": "tab-slide",
+        "value": "transform 0.25s var(--ease): translateX(6px) to 0",
+        "purpose": "Desktop rail tabs slide in on hover, focus and current."
+      },
+      {
+        "name": "thumb-zoom",
+        "value": "transform 0.5s var(--ease): scale(1.04)",
+        "purpose": "Chapters index thumbnail hover."
+      },
+      {
+        "name": "cover-print-lift",
+        "value": "transform 0.4s var(--ease): rotate(0) translateY(-6px)",
+        "purpose": "Cover-art print straightens and lifts on hover."
+      },
+      {
+        "name": "reduced-motion",
+        "value": "transition-duration: 0.01ms; scroll-behavior: auto",
+        "purpose": "prefers-reduced-motion: transitions collapse and leader lines are drawn static."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "rail",
+        "value": "min-width: 1000px"
+      },
+      {
+        "name": "rail-short",
+        "value": "min-width: 1000px and max-height: 960px"
+      },
+      {
+        "name": "guide-stack",
+        "value": "max-width: 860px"
+      },
+      {
+        "name": "index-stack",
+        "value": "max-width: 760px"
+      },
+      {
+        "name": "opener-stack",
+        "value": "max-width: 640px"
+      },
+      {
+        "name": "narrow",
+        "value": "max-width: 560px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Square ink button; hover takes the page's chapter colour (Titan red shown).",
+      "html": "<a class=\"ds-btn\" href=\"#\">Read the resume <svg viewBox=\"0 0 16 16\" width=\"16\" height=\"16\" aria-hidden=\"true\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><path d=\"M3 8h10M9 4l4 4-4 4\"/></svg></a>",
+      "css": ".ds-btn { font-family: 'Schibsted Grotesk', 'Helvetica Neue', Arial, sans-serif; display: inline-flex; align-items: center; gap: 10px; min-height: 48px; padding: 12px 22px; font-size: 1rem; font-weight: 800; text-decoration: none; border: 2px solid #121316; background: #121316; color: #fff; transition: background .2s cubic-bezier(0.16,1,0.3,1), color .2s cubic-bezier(0.16,1,0.3,1); } .ds-btn:hover { background: #C22B22; border-color: #C22B22; color: #fff; } .ds-btn:focus-visible { outline: 3px solid #1450C8; outline-offset: 3px; }"
+    },
+    {
+      "name": "Quiet Button",
+      "kind": "button",
+      "refersTo": "button-quiet",
+      "description": "Outlined ink button; hover inverts to ink.",
+      "html": "<button class=\"ds-btn-quiet\" type=\"button\">Copy address</button>",
+      "css": ".ds-btn-quiet { font-family: 'Schibsted Grotesk', 'Helvetica Neue', Arial, sans-serif; display: inline-flex; align-items: center; min-height: 48px; padding: 12px 22px; font-size: 1rem; font-weight: 800; border: 2px solid #121316; background: transparent; color: #121316; cursor: pointer; transition: background .2s cubic-bezier(0.16,1,0.3,1), color .2s cubic-bezier(0.16,1,0.3,1); } .ds-btn-quiet:hover { background: #121316; color: #fff; } .ds-btn-quiet:focus-visible { outline: 3px solid #1450C8; outline-offset: 3px; }"
+    },
+    {
+      "name": "Cover Button",
+      "kind": "button",
+      "refersTo": "button-on-cover",
+      "description": "White button on the process-blue cover; hover turns Midas yellow.",
+      "html": "<div class=\"ds-cover-field\"><a class=\"ds-btn-cover\" href=\"#\">Open the Screen Guide</a></div>",
+      "css": ".ds-cover-field { background: #1450C8; padding: 24px; } .ds-btn-cover { font-family: 'Schibsted Grotesk', 'Helvetica Neue', Arial, sans-serif; display: inline-flex; align-items: center; min-height: 48px; padding: 12px 22px; font-size: 1rem; font-weight: 800; text-decoration: none; border: 2px solid #fff; background: #fff; color: #0E3C9C; transition: background .2s cubic-bezier(0.16,1,0.3,1), color .2s cubic-bezier(0.16,1,0.3,1); } .ds-btn-cover:hover { background: #F2B705; border-color: #F2B705; color: #121316; } .ds-btn-cover:focus-visible { outline: 3px solid #fff; outline-offset: 3px; }"
+    },
+    {
+      "name": "Thumb Tabs",
+      "kind": "nav",
+      "refersTo": "thumb-tab-mobile",
+      "description": "Chapter thumb tabs, the site navigation (mobile bar form shown; the desktop rail is the same blocks set vertically on the right edge).",
+      "html": "<nav class=\"ds-tabs\"><a style=\"--c:#0E7A45;--o:#fff\" href=\"#\"><b>01</b>Argos</a><a style=\"--c:#C22B22;--o:#fff\" href=\"#\" aria-current=\"page\"><b>02</b>Titan</a><a style=\"--c:#A61F60;--o:#fff\" href=\"#\"><b>03</b>Greywater</a><a style=\"--c:#F2B705;--o:#121316\" href=\"#\"><b>04</b>Midas</a><a style=\"--c:#006AA3;--o:#fff\" href=\"#\"><b>05</b>Dreamland</a><a style=\"--c:#B04A0E;--o:#fff\" href=\"#\"><b>06</b>Explorations</a><a style=\"--c:#121316;--o:#fff\" href=\"#\"><b>C</b>Contact</a></nav>",
+      "css": ".ds-tabs { font-family: 'Schibsted Grotesk', 'Helvetica Neue', Arial, sans-serif; display: flex; gap: 2px; background: #E0E5EA; border-top: 2px solid #121316; overflow-x: auto; } .ds-tabs a { display: flex; flex-direction: column; justify-content: center; height: 62px; min-width: 62px; padding: 8px 12px; background: var(--c); color: var(--o); text-decoration: none; font-weight: 800; font-size: 0.78rem; line-height: 1.15; white-space: nowrap; } .ds-tabs b { font-weight: 900; font-style: italic; font-size: 0.95rem; font-variant-numeric: tabular-nums; } .ds-tabs a:hover { filter: brightness(1.08); } .ds-tabs a[aria-current=page] { box-shadow: inset 0 0 0 3px #EEF1F4, inset 0 0 0 5px var(--c); } .ds-tabs a:focus-visible { outline: 3px solid #1450C8; outline-offset: 3px; }"
+    },
+    {
+      "name": "Contents",
+      "kind": "custom",
+      "refersTo": "button-on-cover",
+      "description": "Booklet contents on the process-blue cover: number, name, dotted leader, page number.",
+      "html": "<nav class=\"ds-contents\"><h2>Contents</h2><a href=\"#\"><i>01</i><span><b>Argos</b><em></em></span><small>4</small></a><a href=\"#\"><i>02</i><span><b>Titan</b><em></em></span><small>8</small></a></nav>",
+      "css": ".ds-contents { font-family: 'Schibsted Grotesk', 'Helvetica Neue', Arial, sans-serif; background: #1450C8; color: #fff; padding: 16px 24px 24px; font-variant-numeric: tabular-nums; } .ds-contents h2 { margin: 0 0 6px; padding-top: 12px; border-top: 2px solid #fff; font-size: 1.35rem; font-style: italic; font-weight: 900; } .ds-contents a { display: grid; grid-template-columns: 2.2em 1fr auto; gap: 6px; align-items: baseline; padding: 7px 0; color: #fff; text-decoration: none; border-bottom: 1px solid rgba(255,255,255,0.22); } .ds-contents i { font-weight: 900; } .ds-contents span { display: flex; gap: 8px; min-width: 0; } .ds-contents b { font-weight: 800; } .ds-contents em { flex: 1; overflow: hidden; white-space: nowrap; color: #D3DEF8; opacity: .7; } .ds-contents em::after { content: ' . . . . . . . . . . . . . . . . . . . . . . . .'; } .ds-contents small { font-size: 1em; font-weight: 600; color: #D3DEF8; } .ds-contents a:hover b { text-decoration: underline; text-decoration-color: #F2B705; } .ds-contents a:hover small { color: #fff; } .ds-contents a:focus-visible { outline: 3px solid #fff; outline-offset: 3px; }"
+    },
+    {
+      "name": "Screen Guide",
+      "kind": "custom",
+      "refersTo": "callout-disc",
+      "description": "Signature spread: screen on an ink mat with pin, hairline leader and numbered gutter disc linked to a legend row.",
+      "html": "<div class=\"ds-guide\"><figure class=\"ds-plate\"><div class=\"ds-screen\"></div><span class=\"ds-line\"></span><span class=\"ds-pin\"></span><span class=\"ds-co\">1</span></figure><ol class=\"ds-legend\"><li tabindex=\"0\"><span class=\"ds-co ds-static\">1</span><div><b>Kaiju threat meter</b><p>Every kill feeds this shared meter.</p></div></li></ol></div>",
+      "css": ".ds-guide { font-family: 'Schibsted Grotesk', 'Helvetica Neue', Arial, sans-serif; display: grid; grid-template-columns: 7fr 5fr; color: #121316; } .ds-plate { position: relative; margin: 0; background: #121316; padding: 8px; } .ds-screen { aspect-ratio: 16/10; background: #2A3F66; } .ds-pin { position: absolute; left: 40%; top: 30%; width: 12px; height: 12px; margin: -6px 0 0 -6px; border-radius: 50%; background: #C22B22; border: 2px solid #fff; box-shadow: 0 0 0 1px #121316; z-index: 3; transition: transform .25s cubic-bezier(0.16,1,0.3,1); } .ds-line { position: absolute; left: 40%; top: 30%; right: -15px; height: 1.5px; margin-top: -0.75px; background: #121316; box-shadow: 0 0 0 1px rgba(255,255,255,0.75); z-index: 2; transition: background .2s; } .ds-co { position: absolute; left: calc(100% + 30px); top: 30%; width: 30px; height: 30px; margin: -15px 0 0 -15px; border-radius: 50%; display: grid; place-items: center; border: 2px solid #121316; background: #C22B22; color: #fff; font: 900 italic 0.9rem/1 'Schibsted Grotesk', sans-serif; z-index: 3; transition: transform .25s cubic-bezier(0.16,1,0.3,1); } .ds-legend { list-style: none; margin: 0; padding: 0 0 0 72px; } .ds-legend li { display: grid; grid-template-columns: 30px 1fr; gap: 14px; padding: 0 0 12px; border-bottom: 1px solid #C4CBD3; } .ds-static { position: static; margin: 0; border-color: #C22B22; } .ds-legend b { font-weight: 800; font-size: 1.05rem; } .ds-legend p { margin: 2px 0 0; color: #44474E; font-size: 0.97rem; } .ds-guide:has(li:hover, li:focus-visible) .ds-line { background: #C22B22; height: 3px; margin-top: -1.5px; } .ds-guide:has(li:hover, li:focus-visible) .ds-co { transform: scale(1.22); } .ds-guide:has(li:hover, li:focus-visible) .ds-pin { transform: scale(1.3); } .ds-legend li:hover b, .ds-legend li:focus-visible b { text-decoration: underline; text-decoration-color: #C22B22; text-decoration-thickness: 3px; } .ds-legend li:focus-visible { outline: 3px solid #1450C8; outline-offset: 3px; }"
+    },
+    {
+      "name": "Chapter Opener",
+      "kind": "custom",
+      "refersTo": "plate",
+      "description": "Full-bleed chapter-colour band with the giant numeral and display title.",
+      "html": "<section class=\"ds-opener\"><span>02</span><div><h1>Project Titan</h1><p>Lead designer for the UI and HUD of a tactical skirmish auto battler.</p></div></section>",
+      "css": ".ds-opener { font-family: 'Schibsted Grotesk', 'Helvetica Neue', Arial, sans-serif; display: grid; grid-template-columns: auto 1fr; gap: 0 32px; padding: 48px 32px; background: #C22B22; color: #fff; } .ds-opener span { font-weight: 900; font-style: italic; font-size: 7rem; line-height: 0.8; letter-spacing: -0.04em; font-variant-numeric: tabular-nums; } .ds-opener h1 { margin: 0; font-weight: 900; font-style: italic; text-transform: uppercase; font-size: 3.5rem; line-height: 0.92; letter-spacing: -0.02em; } .ds-opener p { margin: 18px 0 0; font-size: 1.2rem; line-height: 1.5; max-width: 60ch; }"
+    },
+    {
+      "name": "Page Turn",
+      "kind": "nav",
+      "refersTo": "button-primary",
+      "description": "Previous/next chapter blocks, each in the destination chapter's colour.",
+      "html": "<nav class=\"ds-turn\"><a href=\"#\" style=\"--c:#0E7A45\"><small>Previous</small><b>01 Argos</b></a><a href=\"#\" class=\"ds-next\" style=\"--c:#A61F60\"><small>Next</small><b>03 Greywater</b></a></nav>",
+      "css": ".ds-turn { font-family: 'Schibsted Grotesk', 'Helvetica Neue', Arial, sans-serif; display: grid; grid-template-columns: 1fr 1fr; gap: 2px; } .ds-turn a { display: flex; flex-direction: column; gap: 4px; padding: 20px 22px; min-height: 96px; background: var(--c); color: #fff; text-decoration: none; transition: filter .2s cubic-bezier(0.16,1,0.3,1); } .ds-turn a:hover { filter: brightness(1.08); } .ds-turn a:focus-visible { outline: 3px solid #1450C8; outline-offset: 3px; } .ds-turn .ds-next { text-align: right; align-items: flex-end; } .ds-turn small { font-size: 0.85rem; font-weight: 600; } .ds-turn b { font-size: 1.5rem; font-weight: 900; font-style: italic; text-transform: uppercase; line-height: 1.1; }"
+    },
+    {
+      "name": "Note",
+      "kind": "card",
+      "refersTo": "note",
+      "description": "White boxed aside with an inline SVG icon in the chapter colour; holds terms of art.",
+      "html": "<div class=\"ds-note\"><h3><svg viewBox=\"0 0 24 24\" width=\"22\" height=\"22\" aria-hidden=\"true\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.4\"><circle cx=\"12\" cy=\"12\" r=\"10\"/><path d=\"M12 7v6M12 16.5v.5\"/></svg>Design vocabulary</h3><p><span class=\"ds-term\">FOCUS</span> is where the hands go. <span class=\"ds-term\">BEAT</span> is where the eyes go.</p></div>",
+      "css": ".ds-note { font-family: 'Schibsted Grotesk', 'Helvetica Neue', Arial, sans-serif; padding: 18px 22px; background: #fff; border: 2px solid #121316; color: #121316; line-height: 1.6; } .ds-note h3 { display: flex; align-items: center; gap: 10px; margin: 0 0 6px; font-size: 1.1rem; font-style: italic; font-weight: 900; } .ds-note svg { color: #C22B22; flex: none; } .ds-note p { margin: 0; } .ds-term { font-weight: 900; font-style: italic; background: #E0E5EA; padding: 0 6px; }"
+    },
+    {
+      "name": "Pending Plate",
+      "kind": "card",
+      "refersTo": "plate",
+      "description": "Honest slot for a screen not yet captured; never a stand-in image.",
+      "html": "<div class=\"ds-pending\" role=\"img\" aria-label=\"River Menu: screenshot coming soon\"><span>River Menu</span><small>Screenshot coming soon</small></div>",
+      "css": ".ds-pending { font-family: 'Schibsted Grotesk', 'Helvetica Neue', Arial, sans-serif; aspect-ratio: 16/9; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px; padding: 12px; background: #1B1D22; color: #fff; text-align: center; border: 2px solid #121316; outline: 2px dashed #5A5E66; outline-offset: -10px; } .ds-pending span { font-weight: 900; font-style: italic; text-transform: uppercase; font-size: 1.3rem; } .ds-pending small { font-size: 0.85rem; font-weight: 600; color: #C7C9CF; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Instruction Booklet",
+    "overview": "The site is printed matter from a 1990s game box: a coated, cool-white booklet in black ink, with a process-blue cover, numbered chapters and coloured thumb tabs cut into the right edge. Every project is a chapter. Each chapter opens on a full-bleed band in its own process colour, then a spec strip, then a Screen Guide: the real UI shown large on a black mat, every element pinned, numbered and explained in a legend beside it. The page carries running heads and folios (\"Chapter 02 · page 8\") the way a manual does.\n\nDensity is manual-like, not gallery-like: text sits in tight, ruled lists separated by 2px ink rules and 1px hairlines, and size carries volume instead of extra families or decoration. One family, Schibsted Grotesk, does everything. Black Italic uppercase is the booklet's shout, used for covers, chapter titles and a few labels. Running text stays regular and sentence case.\n\nColour is flat, opaque process ink. There are no gradients, glass or glow on site surfaces. Depth is printed, made from ink mats, rules and one soft drop shadow under the cover art. The world explicitly refuses the dark thumbnail grid and the cream editorial portfolio.",
+    "keyCharacteristics": [
+      "Cool coated stock (#EEF1F4 family), never cream; black ink type and rules.",
+      "One process colour per chapter, carried by the `--chapter` / `--on-chapter` pair through tabs, openers, discs, list markers, underlines and page-turn links.",
+      "Schibsted Grotesk only; Black Italic for volume, regular for reading.",
+      "Screen Guide spreads: real screens on an ink mat with pins, hairline leader lines and numbered gutter discs linked to a legend.",
+      "Square corners everywhere; the only round shapes are callout discs and pins.",
+      "One motion moment: leader lines draw in once when a Screen Guide enters view."
+    ],
+    "rules": [
+      {
+        "name": "The One Chapter Ink Rule",
+        "body": "A page wears exactly one chapter colour, set once on `body` (or a wrapper) through `--chapter` / `--on-chapter`. Components never hard-code a chapter hex; they read the variable. Tabs and page-turn links set their own chapter class because they point to other chapters.",
+        "section": "colors"
+      },
+      {
+        "name": "The Cover Owns The Blue Rule",
+        "body": "Process blue is the cover. It is never a chapter colour and never a section background inside a chapter.",
+        "section": "colors"
+      },
+      {
+        "name": "The Midas Takes Ink Rule",
+        "body": "Yellow is the only chapter fill with dark text. Any new chapter colour must hold at least 4.5:1 against its on-colour.",
+        "section": "colors"
+      },
+      {
+        "name": "The Size Carries Volume Rule",
+        "body": "Hierarchy comes from size and the 400 to 900 weight jump within one family. Never add a second family to the site.",
+        "section": "typography"
+      },
+      {
+        "name": "The Black Italic Shout Rule",
+        "body": "Uppercase is allowed only for: display titles, the wordmark name, home Chapters entry titles, page-turn chapter names, pending-plate titles, and spec-strip terms. Everything else, including h2, h3, body, buttons and captions, stays sentence case.",
+        "section": "typography"
+      },
+      {
+        "name": "The Tabular Folio Rule",
+        "body": "Every number that behaves like a page or chapter number (tabs, Contents, chapter numerals, callout discs, dates) uses tabular figures.",
+        "section": "typography"
+      },
+      {
+        "name": "The Printed Depth Rule",
+        "body": "Nothing lifts off the page except the cover prints. Never use hard offset shadows (solid, unblurred, x/y offset); they belong to a different world. Separate with rules, mats and colour fields.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "**Do** set one chapter class per page and let every accent read `--chapter` / `--on-chapter`.",
+      "**Do** show real screens on ink mats, and annotate signature screens as a Screen Guide with pins, leader lines, gutter discs and a linked legend.",
+      "**Do** use a pending plate (\"Screenshot coming soon\") when a real capture is missing.",
+      "**Do** keep running heads and folios consistent with the Contents page numbers.",
+      "**Do** separate content with 2px ink rules and 1px hairlines instead of cards and shadows.",
+      "**Do** keep the leader-line draw-in as the only entrance animation, and keep it static under `prefers-reduced-motion`.",
+      "**Do** keep claims truthful: roles, engines and status stated exactly. No invented metrics, logos or testimonials."
+    ],
+    "donts": [
+      "**Don't** use hard offset shadows or black drop boxes.",
+      "**Don't** add eyebrow or kicker labels above headings. The only small uppercase label is the spec-strip term.",
+      "**Don't** introduce a second typeface on site surfaces, or uppercase body, h2/h3 or button text.",
+      "**Don't** use cream or warm paper as a site background, or a dark thumbnail-grid layout.",
+      "**Don't** round corners on anything but discs and pins.",
+      "**Don't** use process blue as a chapter colour or a background inside chapters.",
+      "**Don't** borrow the Greywater exhibit's fonts, glow or selection bar for the site."
+    ]
+  }
+}
