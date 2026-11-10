@@ -22,7 +22,7 @@
     <li class="ch-greywater"><a href="../work/greywater.html"><span class="num">03</span><span class="visually-hidden">Chapter 03: </span><span class="name">Greywater</span></a></li>
     <li class="ch-midas"><a href="../work/midas.html"><span class="num">04</span><span class="visually-hidden">Chapter 04: </span><span class="name">Midas</span></a></li>
     <li class="ch-dreamland"><a href="../work/dreamland.html"><span class="num">05</span><span class="visually-hidden">Chapter 05: </span><span class="name">Dreamland</span></a></li>
-    <li class="ch-explore"><a href="../work/shopping-list.html"><span class="num">06</span><span class="visually-hidden">Chapter 06: </span><span class="name">Explore</span></a></li>
+    <li class="ch-explore"><a href="../work/shopping-list.html"><span class="num">06</span><span class="visually-hidden">Chapter 06: </span><span class="name">Explorations</span></a></li>
     <li class="ch-concept"><a href="../work/dreamland-concept.html"><span class="num">07</span><span class="visually-hidden">Chapter 07: </span><span class="name">Concept</span></a></li>
     <li class="ch-back tab-contact"><a href="../contact.html"><span class="num icon"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.4"><rect x="3" y="5" width="18" height="14"/><path d="m3 6 9 7 9-7"/></svg></span><span class="name">Contact</span></a></li>
   </ol>
@@ -30,7 +30,7 @@
 <header class="runhead">
   <div class="wrap">
     <a class="wordmark" href="../index.html"><b>Maurice Birchard</b><span>Game UI / UX</span></a>
-    <div class="runhead-end"><nav class="backlinks" aria-label="Back matter"><a href="../about.html">About</a><a href="../resume.html">Resume</a></nav><span class="folio">Chapter 02 &middot; page 8</span></div>
+    <div class="runhead-end"><nav class="backlinks" aria-label="Back matter"><a href="../about.html">About</a><a href="../resume.html">Resume</a><a class="ext" href="https://moninja.itch.io/" rel="noopener">itch.io<svg viewBox="0 0 16 16" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 11 11 5M6 5h5v5"/></svg></a></nav><span class="folio">Chapter 02 &middot; page 8</span></div>
   </div>
 </header>
 <main id="main">
@@ -64,7 +64,7 @@
       <li data-n="5"><span class="co" aria-hidden="true">5</span><div><b><span class="visually-hidden">5. </span>Command seal</b><p>Stamped with the faction's emblem. Translucent on hover, full opacity when pressed, lit once every unit has orders.</p></div></li>
       </ol>
     </div>
-    <p class="plate-cap">The Skirmish HUD in engine. Hover an entry to find it on the screen.</p>
+    <p class="plate-cap">The Skirmish HUD in engine. <span class="how">Select an entry to find it on the screen.</span></p>
   </div>
 </section>
 <section class="section">
@@ -72,7 +72,7 @@
     <h2>A HUD that narrates</h2>
     <p>Titan's hook is risk: every kill feeds a shared meter that can summon a Kaiju neither player fully controls. The HUD has to make that tension readable at a glance, keep the board clear, and reskin cleanly for three factions.</p>
     <p>Visual direction landed on cream panels with heavy dark outlines and riveted metal borders, so it is cartoony, easy to read and easy to swap.</p>
-    <figure class="figure"><img src="../assets/img/titan/meter-detail.webp" width="494" height="128" alt="Detail of the Kaiju threat meter: IN 2 TURNS on the left, KAIJU THREAT on the right, an empty meter bar, and the commander portrait" loading="lazy"><figcaption>Detail, in engine: the threat meter and its countdown, with the commander portrait.</figcaption></figure>
+    <figure class="figure w-494"><img src="../assets/img/titan/meter-detail.webp" width="494" height="128" alt="Detail of the Kaiju threat meter: IN 2 TURNS on the left, KAIJU THREAT on the right, an empty meter bar, and the commander portrait" loading="lazy"><figcaption>Detail, in engine: the threat meter and its countdown, with the commander portrait.</figcaption></figure>
 
     <h2>Scope first</h2>
     <p>The first pass covered the Skirmish HUD only. The War Room and formation builder are later passes. Keeping scope tight meant the team could react to something concrete instead of a sprawling system.</p>
@@ -87,9 +87,9 @@
     <p>Each board shows the same moment, the Deploy phase of round 7, with numbered notes on what every element does and what it costs.</p>
   </div>
   <div class="wrap">
-    <figure class="figure"><img src="../assets/img/titan/direction-a-command-table.webp" width="1922" height="1425" alt="Direction A, Command Table: a grayscale isometric board inside a dark frame, with an arched mechanical phase dial at the top, strife columns on the right, a fanned hand of cards along the bottom and seven numbered notes below" loading="lazy"><figcaption>Direction A, Command Table: built for immersion, at the cost of scan speed, tile visibility at the edges and room for localization.</figcaption></figure>
-    <figure class="figure"><img src="../assets/img/titan/direction-b-clean-tactical.webp" width="1922" height="1389" alt="Direction B, Clean Tactical: a two-lane phase rail across the top, a roster on the left, tile and objective panels on the right, a flat row of cards along the bottom and seven numbered notes below" loading="lazy"><figcaption>Direction B, Clean Tactical: built for glance speed, controller parity and localization, at the cost of atmosphere.</figcaption></figure>
-    <figure class="figure"><img src="../assets/img/titan/direction-c-card-forward.webp" width="1922" height="1389" alt="Direction C, Card-Forward: a thin phase strip, a smaller board in the upper half, and large inspect-size cards with full rules text across the lower half, with seven numbered notes below" loading="lazy"><figcaption>Direction C, Card-Forward: built for card legibility and the deck as the thing to master, at the cost of board area.</figcaption></figure>
+    <figure class="figure"><img src="../assets/img/titan/direction-a-command-table.webp" width="1922" height="1425" alt="Direction A, Command Table: a grayscale isometric board inside a dark frame, with an arched mechanical phase dial at the top, strife columns on the right, a fanned hand of cards along the bottom and seven numbered notes below" loading="lazy"><figcaption>Direction A, Command Table: built for immersion, at the cost of scan speed, tile visibility at the edges and room for localization. <a class="full" href="../assets/img/titan/direction-a-command-table.webp">Open full size<svg viewBox="0 0 16 16" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 11 11 5M6 5h5v5"/></svg></a></figcaption></figure>
+    <figure class="figure"><img src="../assets/img/titan/direction-b-clean-tactical.webp" width="1922" height="1389" alt="Direction B, Clean Tactical: a two-lane phase rail across the top, a roster on the left, tile and objective panels on the right, a flat row of cards along the bottom and seven numbered notes below" loading="lazy"><figcaption>Direction B, Clean Tactical: built for glance speed, controller parity and localization, at the cost of atmosphere. <a class="full" href="../assets/img/titan/direction-b-clean-tactical.webp">Open full size<svg viewBox="0 0 16 16" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 11 11 5M6 5h5v5"/></svg></a></figcaption></figure>
+    <figure class="figure"><img src="../assets/img/titan/direction-c-card-forward.webp" width="1922" height="1389" alt="Direction C, Card-Forward: a thin phase strip, a smaller board in the upper half, and large inspect-size cards with full rules text across the lower half, with seven numbered notes below" loading="lazy"><figcaption>Direction C, Card-Forward: built for card legibility and the deck as the thing to master, at the cost of board area. <a class="full" href="../assets/img/titan/direction-c-card-forward.webp">Open full size<svg viewBox="0 0 16 16" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 11 11 5M6 5h5v5"/></svg></a></figcaption></figure>
   </div>
   <div class="wrap prose">
     <p>Grayscale kept the conversation on hierarchy and layout. Colour came later, built on a neutral dead-world base with faction colours layered on top.</p>
@@ -145,7 +145,7 @@
     <p>Its interaction states were wireframed in grayscale too: assess, formation selected, card inspection and combat resolution, with numbered callouts and a "Decisions to confirm" list for stakeholders.</p>
   </div>
   <div class="wrap">
-    <figure class="figure"><img src="../assets/img/titan/wireframes-interaction-states.webp" width="1940" height="1080" alt="Grayscale wireframes of the battle HUD in four interaction states (assess, formation selected, card inspection, combat resolution) with thirteen numbered callouts and a list of five decisions to confirm" loading="lazy"><figcaption>Battle HUD wireframes: four interaction states, thirteen numbered callouts and five open decisions.</figcaption></figure>
+    <figure class="figure"><img src="../assets/img/titan/wireframes-interaction-states.webp" width="1940" height="1080" alt="Grayscale wireframes of the battle HUD in four interaction states (assess, formation selected, card inspection, combat resolution) with thirteen numbered callouts and a list of five decisions to confirm" loading="lazy"><figcaption>Battle HUD wireframes: four interaction states, thirteen numbered callouts and five open decisions. <a class="full" href="../assets/img/titan/wireframes-interaction-states.webp">Open full size<svg viewBox="0 0 16 16" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 11 11 5M6 5h5v5"/></svg></a></figcaption></figure>
   </div>
   <div class="wrap prose">
     <h2>What I took from it</h2>

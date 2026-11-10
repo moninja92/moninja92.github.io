@@ -94,3 +94,6 @@
   .gw-meta { display: none; }
 }
 
+
+/* Touch screens: the keyboard legend means nothing without keys */
+@media (hover: none) { .gw-hints { display: none; } }

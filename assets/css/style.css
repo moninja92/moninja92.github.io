@@ -157,9 +157,9 @@ p { margin: 0 0 1em; }
 @media (min-width: 1000px) {
   .tabs { position: fixed; top: 0; right: 0; bottom: 0; width: var(--rail); z-index: 40; background: var(--stock-2); }
   .tabs ol { display: flex; flex-direction: column; height: 100%; gap: 2px; }
-  .tabs li { flex: 1; min-height: 0; }
+  .tabs li { flex: 1 1 auto; min-height: 0; display: flex; } /* longer names get taller tabs */
   .tabs a {
-    height: 100%; width: 100%; writing-mode: vertical-rl; align-items: center; justify-content: flex-start;
+    flex: 1; width: 100%; writing-mode: vertical-rl; align-items: center; justify-content: flex-start;
     padding: 12px 0; gap: 7px; overflow: hidden; font-size: 0.78rem; white-space: nowrap;
     transform: translateX(6px);
   }
@@ -169,7 +169,7 @@ p { margin: 0 0 1em; }
 .tabs .icon { display: inline-flex; }
 .tabs .icon svg { width: 18px; height: 18px; }
 /* Very short screens: tabs keep their number only, the name moves to a flyout label */
-@media (min-width: 1000px) and (max-height: 700px) {
+@media (min-width: 1000px) and (max-height: 760px) {
   .tabs a { position: relative; overflow: visible; justify-content: center; padding: 0; }
   .tabs .name {
     position: absolute; right: calc(100% + 6px); top: 50%; translate: 0 -50%; writing-mode: horizontal-tb;
@@ -178,16 +178,16 @@ p { margin: 0 0 1em; }
   }
   .tabs a:hover .name, .tabs a:focus-visible .name { opacity: 1; }
 }
-/* Phones: one row that always fits: six numbered chapters and Contact */
+/* Phones and tablets: a strip of named tabs that scrolls sideways; Contact stays pinned at the end */
 @media (max-width: 999px) {
   .tabs { position: fixed; left: 0; right: 0; bottom: 0; z-index: 40; background: var(--stock-2); border-top: 2px solid var(--ink); }
-  .tabs ol { display: flex; gap: 2px; }
-  .tabs li { flex: 1 1 0; min-width: 0; }
-  .tabs li.tab-contact { flex: 1.9 1 0; }
-  .tabs a { height: 60px; padding: 6px 2px; flex-direction: column; justify-content: center; align-items: center; gap: 2px; line-height: 1.1; }
+  .tabs ol { display: flex; gap: 2px; overflow-x: auto; scrollbar-width: none; overscroll-behavior-x: contain; }
+  .tabs ol::-webkit-scrollbar { display: none; }
+  .tabs li { flex: 1 0 auto; }
+  .tabs li.tab-contact { position: sticky; right: 0; border-left: 2px solid var(--stock-2); }
+  .tabs a { height: 60px; padding: 6px 12px; flex-direction: column; justify-content: center; align-items: center; gap: 1px; line-height: 1.1; white-space: nowrap; }
   .tabs .num { font-size: 1.05rem; }
-  .tabs li:not(.tab-contact) .name { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
-  .tabs .tab-contact .name { font-size: 0.8rem; }
+  .tabs .name { font-size: 0.74rem; }
 }
 
 /* ---------- Buttons ---------- */
@@ -259,9 +259,12 @@ p { margin: 0 0 1em; }
 
 @media (max-width: 860px) {
   .cover-grid { grid-template-columns: 1fr; min-height: 0; align-items: start; padding-top: 18px; }
-  .cover-art { aspect-ratio: 2000 / 953; margin: 6px 0 40px; }
-  .art-a { inset: 0; width: 100%; height: 100%; aspect-ratio: auto; transform: none; }
-  .art-b, .art-c { display: none; }
+  /* Phones keep all three prints: Argos across the top, Titan and Greywater cropped side by side */
+  .cover-art { aspect-ratio: auto; display: grid; grid-template-columns: 1fr 1fr; gap: 40px 14px; margin: 6px 0 40px; }
+  .cover-art figure { position: relative; inset: auto; width: auto; transform: none; }
+  .art-a { grid-column: 1 / -1; aspect-ratio: 2000 / 953; }
+  .art-b, .art-c { aspect-ratio: 4 / 3; }
+  .art-c img { object-position: center 30%; }
   .cover-art .pending small { display: none; }
   .cover-art .pending span { font-size: 0.8rem; }
 }
@@ -332,12 +335,26 @@ p { margin: 0 0 1em; }
 .plate .is-hot.co { box-shadow: 0 0 0 3px var(--stock), 0 0 0 5px var(--chapter); }
 .legend li.is-hot b { text-decoration: underline; text-decoration-color: var(--chapter-line); text-decoration-thickness: 3px; text-underline-offset: 0.2em; }
 .js .guide:not(.seen) .lead-line { transform: scaleX(0); }
+/* Legend names are buttons (added by main.js): keyboard and touch can select a number */
+.legend-pick {
+  font: inherit; color: inherit; text-align: left; background: none; border: 0; padding: 0; margin: 0;
+  cursor: pointer; text-decoration: inherit; -webkit-tap-highlight-color: transparent;
+}
+.legend-pick:focus-visible { outline-offset: 4px; }
+.js .legend li, .js .plate .pin, .js .plate .co { cursor: pointer; }
+/* The plate holds its place while a long legend scrolls past it */
+@media (min-width: 861px) {
+  .spread:not(.portrait) .plate { position: sticky; top: 24px; }
+}
 @media (max-width: 860px) {
   .spread, .spread.portrait { grid-template-columns: 1fr; }
   .portrait .plate { justify-self: center; max-width: 280px; }
   .plate .co, .lead-line { display: none; }
   .plate .pin { width: 22px; height: 22px; margin: -11px 0 0 -11px; display: grid; place-items: center; font: 900 italic 0.72rem/1 var(--font); }
-  .legend { padding: 24px 0 0; }
+  /* Landscape plates stay pinned above the legend, so a tapped row and its pin share the screen */
+  .spread:not(.portrait) .plate { position: sticky; top: 0; z-index: 6; }
+  .legend { padding: 20px 0 0; }
+  .legend li { padding: 14px 0; min-height: 48px; }
 }
 
 /* ---------- Manual text ---------- */
@@ -493,7 +510,7 @@ p, li, dd, figcaption { text-wrap: pretty; }
 .skills li { border: 2px solid var(--ink); padding: 4px 10px; font-weight: 700; font-size: 0.92rem; }
 
 /* ---------- Contact ---------- */
-.contact-card { background: var(--white); border: 2px dashed var(--ink); padding: clamp(22px, 4vw, 36px); }
+.contact-card { background: var(--white); border: 2px solid var(--ink); padding: clamp(22px, 4vw, 36px); }
 .contact-card .mail { display: block; font-size: clamp(1.05rem, 2.1vw, 1.55rem); font-weight: 900; font-style: italic; overflow-wrap: anywhere; text-decoration: none; margin: 6px 0 18px; }
 .contact-card .mail:hover { text-decoration: underline; text-decoration-color: var(--c-back); }
 .contact-card .where { margin: 18px 0 0; padding-top: 14px; border-top: 1px solid var(--rule); color: var(--ink-2); }
@@ -515,3 +532,13 @@ p, li, dd, figcaption { text-wrap: pretty; }
   .js .guide:not(.seen) .lead-line { transform: none; opacity: 0; }
   .lead-line { transform: none; transition: opacity .3s linear, background .2s linear; }
 }
+
+/* Input-aware hints: name the input the visitor actually has */
+.for-touch { display: none; }
+@media (hover: none) { .for-fine { display: none; } .for-touch { display: inline; } }
+
+/* External link in the running head, and "open full size" on dense boards */
+.backlinks .ext, .figure .full { display: inline-flex; align-items: center; gap: 4px; }
+.backlinks .ext svg, .figure .full svg { width: 12px; height: 12px; flex: none; }
+.figure .full { font-weight: 700; color: var(--ink); white-space: nowrap; }
+.figure.w-494 { max-width: 498px; }
