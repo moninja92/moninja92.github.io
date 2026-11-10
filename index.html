@@ -4,127 +4,129 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Maurice Birchard | Game UI/UX Designer</title>
-<meta name="description" content="Game UI/UX designer building HUDs, menus and game systems that read at a glance.">
+<meta name="description" content="Game UI/UX designer who designs menus and HUDs in Figma and ships them in Unity, Godot and TypeScript.">
 <meta property="og:title" content="Maurice Birchard | Game UI/UX Designer">
-<meta property="og:description" content="Game UI/UX designer building HUDs, menus and game systems that read at a glance.">
+<meta property="og:description" content="Game UI/UX designer who designs menus and HUDs in Figma and ships them in Unity, Godot and TypeScript.">
+<meta name="theme-color" content="#1450C8">
 <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;800;900&family=JetBrains+Mono:wght@400;600&display=swap">
+<link rel="preload" href="assets/fonts/schibsted-grotesk-normal-400-900-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/schibsted-grotesk-italic-800-900-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="assets/css/style.css">
 </head>
-<body>
+<body class="ch-back">
 <a class="skip-link" href="#main">Skip to content</a>
-<header class="site-header">
-  <div class="wrap">
-    <a class="brand" href="index.html" aria-label="Maurice Birchard, home">
-      <span class="brand-mark" aria-hidden="true">MB</span>
-      <span class="brand-name">Maurice Birchard</span>
-    </a>
-    <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav">Menu</button>
-    <nav id="site-nav" class="site-nav" aria-label="Main">
-      <ul>
-        <li><a href="index.html#work" aria-current="page">Work</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="resume.html">Resume</a></li>
-        <li><a class="nav-signal" href="https://moninja.itch.io/" rel="noopener">itch.io &#8599;</a></li>
-      </ul>
-    </nav>
-  </div>
-</header>
+<nav class="tabs" aria-label="Chapters">
+  <ol>
+    <li class="ch-argos"><a href="work/argos.html"><span class="num">01</span><span class="visually-hidden">Chapter 01: </span><span class="name">Argos</span></a></li>
+    <li class="ch-titan"><a href="work/project-titan.html"><span class="num">02</span><span class="visually-hidden">Chapter 02: </span><span class="name">Titan</span></a></li>
+    <li class="ch-greywater"><a href="work/greywater.html"><span class="num">03</span><span class="visually-hidden">Chapter 03: </span><span class="name">Greywater</span></a></li>
+    <li class="ch-midas"><a href="work/midas.html"><span class="num">04</span><span class="visually-hidden">Chapter 04: </span><span class="name">Midas</span></a></li>
+    <li class="ch-dreamland"><a href="work/dreamland.html"><span class="num">05</span><span class="visually-hidden">Chapter 05: </span><span class="name">Dreamland</span></a></li>
+    <li class="ch-explore"><a href="work/shopping-list.html"><span class="num">06</span><span class="visually-hidden">Chapter 06: </span><span class="name">Explorations</span></a></li>
+    <li class="ch-concept"><a href="work/dreamland-concept.html"><span class="num">07</span><span class="visually-hidden">Chapter 07: </span><span class="name">Concept</span></a></li>
+    <li class="ch-back tab-contact"><a href="contact.html"><span class="num icon"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.4"><rect x="3" y="5" width="18" height="14"/><path d="m3 6 9 7 9-7"/></svg></span><span class="name">Contact</span></a></li>
+  </ol>
+</nav>
+
 <main id="main">
-
-<section class="hero">
-  <div class="wrap">
-    <div class="eyebrow"> UI/UX Designer, Software Developer</div>
-    <h1>Clear and professional results for chaotic games.</h1>
-    <p class="lede">I design games, HUDs, menus and systems to work together and present players with holistic experiences.</p>
-    <div class="btn-row">
-      <a class="btn btn-primary" href="#work">View work</a>
-      <a class="btn btn-outline" href="https://moninja.itch.io/" rel="noopener">Play on itch.io</a>
+<section class="cover" aria-labelledby="cover-h">
+  <header class="wrap cover-top">
+    <a class="wordmark" href="index.html" aria-label="Maurice Birchard, home"><b>Maurice Birchard</b><span>Game UI / UX</span></a>
+    <div class="runhead-end"><nav class="backlinks" aria-label="Back matter"><a href="about.html">About</a><a href="resume.html">Resume</a><a class="ext" href="https://moninja.itch.io/" rel="noopener">itch.io<svg viewBox="0 0 16 16" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 11 11 5M6 5h5v5"/></svg></a></nav><span class="folio">Instruction booklet, 2026</span></div>
+  </header>
+  <div class="wrap cover-grid">
+    <div>
+      <h1 id="cover-h" class="display">Game UI, designed in Figma, shipped in engine.</h1>
+      <p class="lede">I design and build menus, HUDs and game systems in Unity, Godot and TypeScript. By day I build the screens operators use to run solar plants and industrial systems.</p>
+      <div class="btn-row"><a class="btn" href="work/argos.html">Start with chapter 01 <svg viewBox="0 0 16 16" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a></div>
     </div>
+    <div>
+    <div class="cover-art">
+      <figure class="art-a"><img src="assets/img/argos/river-menu.webp" width="2000" height="953" alt="Argos River Menu: a river seen from above, with leaves floating on it as the menu buttons"><figcaption><b>01 Argos</b>, River Menu</figcaption><a href="work/argos.html" aria-label="Chapter 01, Argos"></a></figure>
+      <figure class="art-b"><img src="assets/img/titan/hud-panel.webp" width="528" height="1248" alt="Project Titan Skirmish HUD: Kaiju threat meter, Unit Inspector and orders"><figcaption><b>02 Titan</b>, Skirmish HUD</figcaption><a href="work/project-titan.html" aria-label="Chapter 02, Project Titan"></a></figure>
+      <figure class="art-c"><img src="assets/img/greywater/menu-panel.webp" width="520" height="721" alt="Greywater title menu: a paper panel with Continue selected"><figcaption><b>03 Greywater</b>, title menu</figcaption><a href="work/greywater.html" aria-label="Chapter 03, Greywater"></a></figure>
+    </div>
+    </div>
+  </div>
+  <div class="wrap">
+      <nav class="contents" aria-labelledby="contents-h">
+        <h2 id="contents-h">Contents</h2>
+        <ol>
+        <li><a href="work/argos.html"><span class="n">01</span><span><b>Argos</b> <span class="lead" aria-hidden="true"></span></span><span class="pg"><span class="visually-hidden">page </span>4</span></a></li>
+        <li><a href="work/project-titan.html"><span class="n">02</span><span><b>Titan</b> <span class="lead" aria-hidden="true"></span></span><span class="pg"><span class="visually-hidden">page </span>8</span></a></li>
+        <li><a href="work/greywater.html"><span class="n">03</span><span><b>Greywater</b> <span class="lead" aria-hidden="true"></span></span><span class="pg"><span class="visually-hidden">page </span>12</span></a></li>
+        <li><a href="work/midas.html"><span class="n">04</span><span><b>Midas</b> <span class="lead" aria-hidden="true"></span></span><span class="pg"><span class="visually-hidden">page </span>16</span></a></li>
+        <li><a href="work/dreamland.html"><span class="n">05</span><span><b>Dreamland</b> <span class="lead" aria-hidden="true"></span></span><span class="pg"><span class="visually-hidden">page </span>20</span></a></li>
+        <li><a href="work/shopping-list.html"><span class="n">06</span><span><b>Explorations</b> <span class="lead" aria-hidden="true"></span></span><span class="pg"><span class="visually-hidden">page </span>24</span></a></li>
+        <li><a href="work/dreamland-concept.html"><span class="n">07</span><span><b>Concept Pass</b> <span class="lead" aria-hidden="true"></span></span><span class="pg"><span class="visually-hidden">page </span>28</span></a></li>
+        </ol>
+      </nav>
   </div>
 </section>
 
-<section class="section" id="work" aria-labelledby="featured-heading">
+<div class="ch-argos">
+<section class="guide" aria-labelledby="guide-h">
   <div class="wrap">
-    <div class="section-head"><div class="eyebrow">Featured</div></div>
-  </div>
-  <div class="wrap">
-    <div class="band feature">
-      <div class="feature-media">
-        <img src="assets/img/titan/hud-panel.webp" width="528" height="1248" alt="Project Titan Skirmish HUD: Kaiju threat meter, Unit Inspector panel with Attack, Hold, Defend and Retreat orders, and the command seal button" loading="eager">
-      </div>
-      <div class="feature-body">
-        <div class="tag">UI/UX Lead &middot; Unity uGUI &middot; Team project</div>
-        <h2 id="featured-heading">Project Titan</h2>
-        <p>Skirmish HUD for an isometric tactical auto battler. Began with wireframes and developed the HUD in Unity.</p>
-        <a class="cta" href="work/project-titan.html">Open project &rarr;</a>
-      </div>
+    <div class="guide-title"><h2 id="guide-h">Screen Guide: Argos River Menu</h2><p>Chapter 01, built in Unity uGUI</p></div>
+    <div class="spread">
+      <figure class="plate">
+        <img src="assets/img/argos/river-menu.webp" width="2000" height="953" alt="Argos River Menu: fallen autumn leaves floating on a blue-grey river as the buttons Wake, Settings, Controls, Credits and Sleep, with a man reflected in the water">
+      <span class="lead-line" data-n="1" style="--x:25.8%;--y:24%"></span><span class="pin" data-n="1" style="--x:25.8%;--y:24%" aria-hidden="true">1</span><span class="co" data-n="1" style="--x:25.8%;--y:24%" aria-hidden="true">1</span>
+      <span class="lead-line" data-n="2" style="--x:42.2%;--y:42%"></span><span class="pin" data-n="2" style="--x:42.2%;--y:42%" aria-hidden="true">2</span><span class="co" data-n="2" style="--x:42.2%;--y:42%" aria-hidden="true">2</span>
+      <span class="lead-line" data-n="3" style="--x:58.3%;--y:57%"></span><span class="pin" data-n="3" style="--x:58.3%;--y:57%" aria-hidden="true">3</span><span class="co" data-n="3" style="--x:58.3%;--y:57%" aria-hidden="true">3</span>
+      <span class="lead-line" data-n="4" style="--x:74.2%;--y:70.5%"></span><span class="pin" data-n="4" style="--x:74.2%;--y:70.5%" aria-hidden="true">4</span><span class="co" data-n="4" style="--x:74.2%;--y:70.5%" aria-hidden="true">4</span>
+      <span class="lead-line" data-n="5" style="--x:90%;--y:83.5%"></span><span class="pin" data-n="5" style="--x:90%;--y:83.5%" aria-hidden="true">5</span><span class="co" data-n="5" style="--x:90%;--y:83.5%" aria-hidden="true">5</span>
+      </figure>
+      <ol class="legend" aria-label="Screen elements">
+      <li data-n="1"><span class="co" aria-hidden="true">1</span><div><b><span class="visually-hidden">1. </span>Wake</b><p>Begins the game. It sends three pulses out from the leaf, one for each of Cerberus's barks.</p></div></li>
+      <li data-n="2"><span class="co" aria-hidden="true">2</span><div><b><span class="visually-hidden">2. </span>Settings</b><p>Subtitles, vibration, motion level, music and effects. The same pages open from the pause.</p></div></li>
+      <li data-n="3"><span class="co" aria-hidden="true">3</span><div><b><span class="visually-hidden">3. </span>Controls</b><p>Rebinding leaves for keyboard and controller; each leaf's small word is the current key.</p></div></li>
+      <li data-n="4"><span class="co" aria-hidden="true">4</span><div><b><span class="visually-hidden">4. </span>Credits</b><p>Every leaf is a button: it bobs on the current, lifts when focused and flips when pressed.</p></div></li>
+      <li data-n="5"><span class="co" aria-hidden="true">5</span><div><b><span class="visually-hidden">5. </span>Sleep</b><p>Quits. Wake and Sleep frame the start and end of the game.</p></div></li>
+      </ol>
     </div>
+    <p class="plate-cap">Every chapter opens on a guide like this one. <span class="how">Select an entry to find it on the screen.</span></p>
+  </div>
+</section>
+</div>
+
+<section class="section" id="chapters" aria-labelledby="chapters-h">
+  <div class="wrap">
+    <div class="section-head"><h2 id="chapters-h">Chapters</h2><p>Seven projects, from first sketch to working build.</p></div>
+    <ol class="index-list">
+      <li class="ch-argos"><a class="entry" href="work/argos.html"><span class="tab" aria-hidden="true">01</span><div><h3>Argos</h3><p>A river seen from above as the title menu, and a stopped pocket watch with a field journal as the pause, for a story-led Unity adventure.</p><span class="meta">Menus and pause &middot; Unity uGUI &middot; design and build</span></div><span class="thumb"><img src="assets/img/argos/river-menu.webp" width="2000" height="953" alt="" loading="lazy"></span></a></li>
+      <li class="ch-titan"><a class="entry" href="work/project-titan.html"><span class="tab" aria-hidden="true">02</span><div><h3>Project Titan</h3><p>Skirmish HUD for an isometric tactical auto battler, from grayscale wireframes to Unity.</p><span class="meta">UI/UX lead &middot; Unity uGUI &middot; team project</span></div><span class="thumb"><img src="assets/img/titan/hud-panel.webp" width="528" height="1248" alt="" loading="lazy"></span></a></li>
+      <li class="ch-greywater"><a class="entry" href="work/greywater.html"><span class="tab" aria-hidden="true">03</span><div><h3>Greywater</h3><p>Menus, HUD and dialogue for a first-person narrative game, with a live title menu you can try.</p><span class="meta">UI system &middot; Figma, rebuilt in HTML</span></div><span class="thumb"><img src="assets/img/greywater/title-menu.webp" width="1282" height="726" alt="" loading="lazy"></span></a></li>
+      <li class="ch-midas"><a class="entry" href="work/midas.html"><span class="tab" aria-hidden="true">04</span><div><h3>Midas: The Accursed King</h3><p>A narrative top-down RPG built inside Game Boy constraints for GBJam 14.</p><span class="meta">Programming and story &middot; Godot &middot; game jam</span></div><span class="thumb pixel"><img src="assets/img/midas/village.webp" width="312" height="264" alt="" loading="lazy"></span></a></li>
+      <li class="ch-dreamland"><a class="entry" href="work/dreamland.html"><span class="tab" aria-hidden="true">05</span><div><h3>Dreamland Timeline</h3><p>A searchable, declassified-archive timeline for a fictional world, fed live from a spreadsheet.</p><span class="meta">Design and development &middot; TypeScript</span></div><span class="thumb"><img src="assets/img/dreamland/archive.webp" width="1600" height="876" alt="" loading="lazy"></span></a></li>
+      <li class="ch-explore"><a class="entry" href="work/shopping-list.html"><span class="tab" aria-hidden="true">06</span><div><h3>UI Explorations</h3><p>A five-screen mobile app taken from paper sketch to clickable prototype.</p><span class="meta">Prototyping &middot; Figma</span></div><span class="thumb"><img src="assets/img/shopping/sketch.webp" width="904" height="832" alt="" loading="lazy"></span></a></li>
+      <li class="ch-concept"><a class="entry" href="work/dreamland-concept.html"><span class="tab" aria-hidden="true">07</span><div><h3>Dreamland: Concept Pass</h3><p>Game UI for the Dreamland world: three palettes, a type spec, tactical combat, a bestiary entry and exploration HUDs.</p><span class="meta">UI/UX concept &middot; Figma</span></div><span class="thumb"><img src="assets/img/dreamland-game/combat-turn-order.webp" width="1920" height="1080" alt="" loading="lazy"></span></a></li>
+    </ol>
   </div>
 </section>
 
-<section class="section" aria-label="More projects">
+<section class="section flush-top">
   <div class="wrap">
-    <div class="grid">
-      <a class="card" href="work/greywater.html">
-        <div class="card-media"><img src="assets/img/greywater/title-menu.webp" width="1282" height="726" alt="Greywater title menu: a paper panel with Continue selected over a dark, dimmed scene" loading="lazy"></div>
-        <div class="card-body">
-          <div class="tag">02 &middot; Figma &middot; UI system</div>
-          <h3>Greywater</h3>
-          <p>Menus, HUD and dialogue for a first-person narrative game.</p>
-        </div>
-      </a>
-      <a class="card" href="work/midas.html">
-        <div class="card-media pixel"><img src="assets/img/midas/village.webp" width="312" height="264" alt="Midas village scene in a four-tone Game Boy palette" loading="lazy"></div>
-        <div class="card-body">
-          <div class="tag">03 &middot; Godot &middot; GBJam 14</div>
-          <h3>Midas: The Accursed King</h3>
-          <p>A narrative top down RPG built inside Game Boy constraints. Developed all of the programming and story.</p>
-        </div>
-      </a>
-      <a class="card" href="work/dreamland.html">
-        <div class="card-media"><img src="assets/img/dreamland/archive.webp" width="1600" height="876" alt="Dreamland timeline archive with category filters and a decade histogram" loading="lazy"></div>
-        <div class="card-body">
-          <div class="tag">04 &middot; TypeScript &middot; Data UI</div>
-          <h3>Dreamland Timeline</h3>
-          <p>A searchable, declassified-archive style timeline for a fictional world, fed live from a spreadsheet.</p>
-        </div>
-      </a>
-      <a class="card" href="work/shopping-list.html">
-        <div class="card-media"><img src="assets/img/shopping/sketch.webp" width="904" height="832" alt="Hand-drawn paper prototype of a five-screen shopping list app with numbered navigation arrows" loading="lazy"></div>
-        <div class="card-body">
-          <div class="tag">05 &middot; Figma &middot; Prototyping</div>
-          <h3>UI Explorations</h3>
-          <p>From paper sketch to clickable prototype: a five-screen mobile app mapped end to end.</p>
-        </div>
-      </a>
-    </div>
+    <p class="aside-line">The habits come from operator screens: SCADA and HMI work for solar sites, and controls roles at Microsoft and Amazon, where a cluttered screen costs something. <a href="about.html">More about me</a></p>
   </div>
 </section>
-
-<section class="section" aria-labelledby="bg-heading">
-  <div class="wrap">
-    <div class="section-head"><h2 id="bg-heading" class="eyebrow" style="margin:0">Some of my Background</h2></div>
-    <div class="strip">
-      <div><strong>Systems Engineering</strong><span>Years designing SCADA and Software with a focus on ease of use for non technical users.</span></div>
-      <div><strong>Systems thinking</strong><span>Comfortable working from the wireframe through to the final product.</span></div>
-      <div><strong>Efficient and Disciplined</strong><span>Leveraging experience to work relentlessly and design with effectiveness in mind.</span></div>
-    </div>
-  </div>
-</section>
-
 </main>
-<footer class="site-footer">
+<footer class="backcover">
   <div class="wrap">
-    <span>&copy; <span id="year">2026</span> Maurice Birchard &middot; Game UI/UX</span>
+    <div>
+      <h2>Contact</h2>
+      <a class="mail" href="mailto:mauricebirchard@gmail.com">mauricebirchard@gmail.com</a>
+      <p>Open to game UI/UX, game design and software roles, full-time or contract. Based in Chandler, AZ, open to remote.</p>
+    </div>
     <ul>
-      <li><a href="https://moninja.itch.io/" rel="noopener">itch.io</a></li>
-      <li><a href="https://github.com/moninja92" rel="noopener">GitHub</a></li>
-      <li><a href="https://www.linkedin.com/in/mauricebirchard/" rel="noopener">LinkedIn</a></li>
-      <li><a href="mailto:mauricebirchard@gmail.com">Email</a></li>
+      <li><a href="contact.html">All contact options <svg viewBox="0 0 16 16" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a></li>
+      <li><a href="about.html">About <svg viewBox="0 0 16 16" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a></li>
+      <li><a href="resume.html">Resume <svg viewBox="0 0 16 16" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a></li>
+      <li><a href="https://www.linkedin.com/in/mauricebirchard/" rel="noopener">LinkedIn <svg viewBox="0 0 16 16" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 11 11 5M6 5h5v5"/></svg></a></li>
+      <li><a href="https://github.com/moninja92" rel="noopener">GitHub <svg viewBox="0 0 16 16" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 11 11 5M6 5h5v5"/></svg></a></li>
+      <li><a href="https://moninja.itch.io/" rel="noopener">itch.io <svg viewBox="0 0 16 16" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 11 11 5M6 5h5v5"/></svg></a></li>
     </ul>
+    <div class="colophon"><span>&copy; <span id="year">2026</span> Maurice Birchard</span><span>Hand-built in HTML and CSS. Set in Schibsted Grotesk.</span></div>
   </div>
 </footer>
 <script src="assets/js/main.js"></script>

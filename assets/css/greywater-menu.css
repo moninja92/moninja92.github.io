@@ -1,0 +1,99 @@
+/* Greywater live title menu, rebuilt from the Figma component. Loaded only on work/greywater.html. */
+/* Self-hosted IBM Plex Mono and Newsreader (SIL OFL 1.1, see assets/fonts/) */
+/* IBM Plex Mono normal 400, latin-ext */
+@font-face {
+  font-family: 'IBM Plex Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(../fonts/ibm-plex-mono-normal-400-latin-ext.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* IBM Plex Mono normal 400, latin */
+@font-face {
+  font-family: 'IBM Plex Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(../fonts/ibm-plex-mono-normal-400-latin.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* IBM Plex Mono normal 500, latin-ext */
+@font-face {
+  font-family: 'IBM Plex Mono';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(../fonts/ibm-plex-mono-normal-500-latin-ext.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* IBM Plex Mono normal 500, latin */
+@font-face {
+  font-family: 'IBM Plex Mono';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(../fonts/ibm-plex-mono-normal-500-latin.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* Newsreader normal 300, latin-ext */
+@font-face {
+  font-family: 'Newsreader';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url(../fonts/newsreader-normal-300-latin-ext.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* Newsreader normal 300, latin */
+@font-face {
+  font-family: 'Newsreader';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url(../fonts/newsreader-normal-300-latin.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+.gw-scene {
+  position: relative; border: 2px solid var(--ink); min-height: 560px;
+  background: radial-gradient(ellipse 60% 45% at 46% 30%, #3A352C 0%, #2B2821 27%, #1C1A16 55%, #0D0C0A 100%);
+  display: flex; overflow: hidden;
+}
+.gw-scene::after { content: ""; position: absolute; inset: 0; background: rgba(9, 8, 7, 0.72); z-index: 0; }
+.gw-panel {
+  position: relative; z-index: 1; background: #EDE8DE; color: #23211D;
+  width: min(520px, 100%); margin-left: clamp(0px, 7.5%, 96px);
+  padding: 72px 44px 44px; box-shadow: 0 0 40px rgba(0, 0, 0, 0.55);
+  display: flex; flex-direction: column;
+}
+.gw-chapter, .gw-hints, .gw-meta, .gw-status { font-family: 'IBM Plex Mono', ui-monospace, monospace; text-transform: uppercase; }
+.gw-chapter { font-size: 11px; letter-spacing: 0.26em; color: #57524A; }
+.gw-title { font-family: 'IBM Plex Mono', ui-monospace, monospace; font-weight: 500; font-size: clamp(36px, 6vw, 48px); line-height: 1; letter-spacing: 0.06em; text-transform: uppercase; margin-top: 14px; }
+.gw-sub { font-family: 'Newsreader', Georgia, serif; font-weight: 300; font-size: 17px; color: #57524A; margin-top: 12px; }
+.gw-rule { height: 1px; background: #CFC7B9; margin: 32px 0 22px; }
+.gw-menu { list-style: none; margin: 0; padding: 0; }
+.gw-row {
+  position: relative; width: 100%; min-height: 48px; padding: 14px 18px; text-align: left;
+  background: transparent; border: 0; cursor: pointer; color: #23211D;
+  font-family: 'IBM Plex Mono', ui-monospace, monospace; font-weight: 500; font-size: 20px; letter-spacing: 0.03em;
+  display: flex; justify-content: space-between; align-items: baseline; gap: 12px;
+}
+.gw-row.gw-quiet { color: #57524A; }
+.gw-row.is-selected { background: rgba(125, 143, 166, 0.16); }
+.gw-row.is-selected::before { content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: 3px; background: #7D8FA6; }
+.gw-row:focus-visible { outline: 2px solid #3A4B5E; outline-offset: -2px; }
+.gw-meta { font-size: 11px; letter-spacing: 0.1em; color: #57524A; font-weight: 400; }
+.gw-hints { display: flex; flex-wrap: wrap; gap: 22px; padding-left: 18px; margin-top: 30px; font-size: 11px; letter-spacing: 0.14em; color: #57524A; }
+.gw-status { min-height: 16px; margin: 16px 0 0 18px; font-size: 11px; letter-spacing: 0.12em; color: #3A4B5E; }
+.gw-try { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; margin: 0 0 12px; font-weight: 700; }
+.gw-try span { color: var(--ink-2); font-weight: 600; }
+@media (max-width: 560px) {
+  .gw-panel { padding: 40px 20px 28px; }
+  .gw-row { font-size: 18px; padding: 14px 14px; }
+  .gw-meta { display: none; }
+}
+
+
+/* Touch screens: the keyboard legend means nothing without keys */
+@media (hover: none) { .gw-hints { display: none; } }
