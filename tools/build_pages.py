@@ -271,7 +271,7 @@ ARGOS_POINTS = [
 ar = opener("01", "Argos", "Lead UI/UX on a contemplative 3D narrative adventure. Two diegetic menus, designed in Figma and built in Unity: a title menu that looks down into a river, with fallen leaves as buttons, and a pause that stops a pocket watch.") + '\n' + specs([
     ("Role", "Lead UI/UX: design and Unity build"), ("Engine", "Unity 6, uGUI + TextMeshPro, FMOD"), ("Input", "Keyboard and mouse, Xbox and PlayStation controllers"), ("Status", "Vertical slice in development, 2026")]) + '\n' + guide("Screen Guide: River Menu", "Day theme, built in Unity uGUI", "{P}assets/img/argos/river-menu.webp", 2000, 953,
     "Argos River Menu: fallen autumn leaves floating on a blue-grey river as the buttons Wake, Settings, Controls, Credits and Sleep, with a man reflected in the water", "The River Menu, Day theme. Hover or focus an entry to find it on the screen.", ARGOS_POINTS) + f'''
-<section class="section" style="padding-top:0">
+<section class="section flush-top">
   <div class="wrap prose">
     <h2>A title menu you look down into</h2>
     <p>The title menu is a river seen from above. Fallen autumn leaves are the buttons and toggles: they bob on the current, lift when focused, and flip when pressed. Sliders are skipping stones, and Back is a rock. It is built to the Figma prototype's spec, on the same 1920&times;1080 stage with the same formulas and tokens.</p>
@@ -282,8 +282,8 @@ ar = opener("01", "Argos", "Lead UI/UX on a contemplative 3D narrative adventure
     </ul>
   </div>
   <div class="wrap pair">
-    <figure class="figure">{argos("watch-pause", 1109, 704, "Argos Watch Pause: a gold pocket watch over the dimmed village, its minute hand pointing at Resume, with Journal at 3, Leave river at 6 and Settings at 9", "Watch Pause", p="{P}")}<figcaption>The Watch Pause: the minute hand points at the focused option.</figcaption></figure>
-    <figure class="figure">{argos("journal", 1235, 869, "Argos Field Journal, Letters page: entries grouped by act on the left page, the letter being read on the right, with three empty photograph fragment slots", "Field Journal", p="{P}")}<figcaption>The Field Journal, Letters: entries on the left page, the one being read on the right.</figcaption></figure>
+    <figure class="figure">{argos("watch-pause", 1109, 704, "Argos Watch Pause: a gold pocket watch over the dimmed village, its minute hand pointing at Resume, with Journal at 3, Leave river at 6 and Settings at 9", "Watch Pause", p="{P}", extra=' loading="lazy"')}<figcaption>The Watch Pause: the minute hand points at the focused option.</figcaption></figure>
+    <figure class="figure">{argos("journal", 1235, 869, "Argos Field Journal, Letters page: entries grouped by act on the left page, the letter being read on the right, with three empty photograph fragment slots", "Field Journal", p="{P}", extra=' loading="lazy"')}<figcaption>The Field Journal, Letters: entries on the left page, the one being read on the right.</figcaption></figure>
   </div>
   <div class="wrap prose">
     <h2>A pause that stops time</h2>
@@ -355,7 +355,7 @@ titan = opener("02", "Project Titan", "Lead designer for the UI and HUD of a tac
 
     <h2>The command seal</h2>
     <p>The team replaced a plain Resolve Orders button with a modular command seal stamped with the current faction's emblem. It sits translucent on hover, goes full opacity when pressed, and lights up once every unit has orders, so readiness is visible without reading a word.</p>
-    <figure class="figure" style="max-width:300px"><img src="{P}assets/img/titan/seal-detail.webp" width="268" height="323" alt="Detail of the command seal: a riveted round button above the Resolve Orders label" loading="lazy"><figcaption>Detail, in engine: the command seal above its Resolve Orders label.</figcaption></figure>
+    <figure class="figure w-sm"><img src="{P}assets/img/titan/seal-detail.webp" width="268" height="323" alt="Detail of the command seal: a riveted round button above the Resolve Orders label" loading="lazy"><figcaption>Detail, in engine: the command seal above its Resolve Orders label.</figcaption></figure>
 
     <h2>What I took from it</h2>
     <p>Mapping state before drawing screens saved the team from designing controls for phases where the player cannot act. It is the same habit that keeps an operator screen honest, applied to a game.</p>
@@ -451,7 +451,7 @@ midas = opener("04", "Midas: The Accursed King", "A narrative-driven top-down RP
     ("My role", "Programming and story"), ("Engine", "Godot, HTML5"), ("Jam", "GBJAM 14, Sept 2026"), ("Constraints", "160&times;144, four colours, Game Boy inputs")]) + '''
 ''' + guide("Screen Guide: Dialogue", "160&times;144, four colours", "{P}assets/img/midas/dialogue.webp", 312, 255,
     "Forest path with a ghost NPC and a dialogue box reading Ghosty: Oh... good morning!", "Dialogue UI built to fit the Game Boy screen. Hover or focus an entry to find it on the screen.", MIDAS_POINTS, pixel=True) + '''
-<section class="section" style="padding-top:0">
+<section class="section flush-top">
   <div class="wrap">
     <figure class="figure pixel narrow"><img src="{P}assets/img/midas/village.webp" width="312" height="264" alt="Village with houses, ghosts and a skeleton enemy in a muted four-tone palette" loading="lazy"><figcaption>Village hub in the four-tone palette.</figcaption></figure>
   </div>
@@ -484,9 +484,9 @@ dl = opener("05", "Dreamland Timeline", "An interactive archive covering 160 yea
     f'\n      <div class="btn-row"><a class="btn" href="https://moninja92.github.io/dreamland-timeline/" rel="noopener">Open the live site {EXT}</a><a class="btn btn-quiet" href="https://github.com/moninja92/dreamland-timeline" rel="noopener">View source {EXT}</a></div>') + '\n' + specs([
     ("Role", "Design and development"), ("Stack", "TypeScript, Vite"), ("Data", "Google Sheet via CSV, local fallback"), ("Deploy", "GitHub Actions to Pages")]) + '\n' + guide("Screen Guide: The archive", "Live site, TypeScript and Vite", "{P}assets/img/dreamland/archive.webp", 1600, 876,
     "Dreamland archive overview with records search, category filters and decade histogram", "The archive overview. Hover or focus an entry to find it on the screen.", DL_POINTS) + '''
-<section class="section" style="padding-top:40px">
+<section class="section tight-top">
   <div class="wrap">
-    <figure class="figure"><img src="{P}assets/img/dreamland/file-panel.webp" width="1600" height="997" alt="Dreamland archive with an entry selected, showing a File No. 001 detail panel with start and end dates, length and concurrent events"><figcaption>Selecting an entry opens its case file: dates, duration, who was alive, what overlapped.</figcaption></figure>
+    <figure class="figure"><img src="{P}assets/img/dreamland/file-panel.webp" width="1600" height="997" alt="Dreamland archive with an entry selected, showing a File No. 001 detail panel with start and end dates, length and concurrent events" loading="lazy"><figcaption>Selecting an entry opens its case file: dates, duration, who was alive, what overlapped.</figcaption></figure>
   </div>
   <div class="wrap prose">
     <h2>The problem</h2>
@@ -520,9 +520,9 @@ sl = opener("06", "UI Explorations: Shopping List", "A five-screen mobile flow t
     ("Context", "Coursework, CSU Global"), ("Tools", "Figma, React"), ("Screens", "Home, Add, View, Edit, Settings"), ("Deliverable", "Navigation-mapped prototype")]) + '''
 ''' + guide("Screen Guide: Paper prototype", "Five screens, seven routes", "{P}assets/img/shopping/sketch.webp", 904, 832,
     "Sketched paper prototype: Settings, Home, Add Item, View List and Edit Item screens joined by seven numbered arrows", "Step 1: the paper prototype. Hover or focus an entry to find it on the screen.", SL_POINTS) + '''
-<section class="section" style="padding-top:0">
+<section class="section flush-top">
   <div class="wrap">
-    <figure class="figure narrow" style="max-width:420px"><img src="{P}assets/img/shopping/home-hifi.webp" width="900" height="1150" alt="Refined Home screen titled My Lists with Groceries, Hardware Store and Party Supplies cards and an Add Item button" loading="lazy"><figcaption>Refined Home screen.</figcaption></figure>
+    <figure class="figure w-md"><img src="{P}assets/img/shopping/home-hifi.webp" width="900" height="1150" alt="Refined Home screen titled My Lists with Groceries, Hardware Store and Party Supplies cards and an Add Item button" loading="lazy"><figcaption>Refined Home screen.</figcaption></figure>
   </div>
 </section>
 <section class="section">
@@ -575,10 +575,10 @@ about = opener("", "About the designer", "I'm Maurice Birchard, a systems engine
       </ul>
       <h2>Tools</h2>
       <p>Figma, Unity (uGUI, TextMeshPro), Godot, TypeScript and Vite, Ignition Perspective and Vision, Wonderware System Platform, Miro and Notion.</p>
-      <div class="btn-row" style="margin-top:28px"><a class="btn" href="resume.html">Read the resume ''' + ARR + '''</a><a class="btn btn-quiet" href="contact.html">Get in touch</a></div>
+      <div class="btn-row after-prose"><a class="btn" href="resume.html">Read the resume ''' + ARR + '''</a><a class="btn btn-quiet" href="contact.html">Get in touch</a></div>
     </div>
     <div>
-      <h2 style="margin-bottom:16px">Service record</h2>
+      <h2 class="col-head">Service record</h2>
       <ol class="career">
         <li><span class="when">Apr 2026 &ndash; now</span><div><b>SCADA Engineer, QE Solar</b><span>Custom SCADA platform in Ignition, with dashboards operators can track and update.</span></div></li>
         <li><span class="when">Jul 2025 &ndash; now</span><div><b>Control Systems SME, Microsoft</b><span>OT and ICS systems for datacenters: BMS, EPMS, SCADA and PLCs.</span></div></li>
@@ -659,7 +659,7 @@ contact = opener("", "Contact", "Open to game UI/UX, game design and software ro
       <p class="where">Based in Chandler, AZ. Open to remote.</p>
     </div>
     <div>
-      <h2 style="margin-bottom:16px">Elsewhere</h2>
+      <h2 class="col-head">Elsewhere</h2>
       <ul class="links">
         <li><a href="https://www.linkedin.com/in/mauricebirchard/" rel="noopener"><div><b>LinkedIn</b><span>linkedin.com/in/mauricebirchard</span></div>{EXT}</a></li>
         <li><a href="https://github.com/moninja92" rel="noopener"><div><b>GitHub</b><span>github.com/moninja92</span></div>{EXT}</a></li>
