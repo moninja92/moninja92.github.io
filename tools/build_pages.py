@@ -29,9 +29,10 @@ TABS = [
     ("midas", "04", "Midas", "work/midas.html", "16"),
     ("dreamland", "05", "Dreamland", "work/dreamland.html", "20"),
     ("explore", "06", "Explorations", "work/shopping-list.html", "24"),
-    ("back", "", "About", "about.html", "28"),
-    ("back", "", "Resume", "resume.html", "30"),
-    ("back", "", "Contact", "contact.html", "32"),
+    ("concept", "07", "Concept Pass", "work/dreamland-concept.html", "28"),
+    ("back", "", "About", "about.html", "32"),
+    ("back", "", "Resume", "resume.html", "34"),
+    ("back", "", "Contact", "contact.html", "36"),
 ]
 
 def pending(label, note='Screenshot coming soon'):
@@ -44,7 +45,7 @@ def argos(name, w, h, alt, label, p='', extra=''):
         return f'<img src="{p}assets/img/argos/{name}.webp" width="{w}" height="{h}" alt="{alt}"{extra}>'
     return f'<div class="pending" role="img" aria-label="{label}: screenshot coming soon"><span>{label}</span><small>Screenshot coming soon</small></div>'
 
-RAIL = TABS[:6] + [("back", "", "Contact", "contact.html", "32")]
+RAIL = TABS[:7] + [("back", "", "Contact", "contact.html", "36")]
 
 def tabs(p, current):
     items = []
@@ -53,7 +54,8 @@ def tabs(p, current):
         n = f'<span class="num">{num}</span>' if num else f'<span class="num icon">{MAIL}</span>'
         label = f'<span class="visually-hidden">Chapter {num}: </span>' if num else ''
         cls = f'ch-{ch}' + ('' if num else ' tab-contact')
-        items.append(f'    <li class="{cls}"><a href="{p}{href}"{cur}>{n}{label}<span class="name">{name}</span></a></li>')
+        short = {'Explorations': 'Explore', 'Concept Pass': 'Concept'}.get(name, name)
+        items.append(f'    <li class="{cls}"><a href="{p}{href}"{cur}>{n}{label}<span class="name">{short}</span></a></li>')
     return '<nav class="tabs" aria-label="Chapters">\n  <ol>\n' + '\n'.join(items) + '\n  </ol>\n</nav>'
 
 def backcover(p, minimal=False):
@@ -200,7 +202,7 @@ SL_POINTS = [
 # ---------------- Home ----------------
 CONTENTS = '\n'.join(
     f'        <li><a href="{href}"><span class="n">{num}</span><span><b>{name}</b> <span class="lead" aria-hidden="true"></span></span><span class="pg"><span class="visually-hidden">page </span>{pg}</span></a></li>'
-    for ch, num, name, href, pg in TABS[:6])
+    for ch, num, name, href, pg in TABS[:7])
 
 home = f'''<section class="cover" aria-labelledby="cover-h">
   <header class="wrap cover-top">
@@ -237,7 +239,7 @@ home = f'''<section class="cover" aria-labelledby="cover-h">
 
 <section class="section" id="chapters" aria-labelledby="chapters-h">
   <div class="wrap">
-    <div class="section-head"><h2 id="chapters-h">Chapters</h2><p>Six projects, each from first sketch to working build.</p></div>
+    <div class="section-head"><h2 id="chapters-h">Chapters</h2><p>Seven projects, from first sketch to working build.</p></div>
     <ol class="index-list">
       <li class="ch-argos"><a class="entry" href="work/argos.html"><span class="tab" aria-hidden="true">01</span><div><h3>Argos</h3><p>A river seen from above as the title menu, and a stopped pocket watch with a field journal as the pause, for a story-led Unity adventure.</p><span class="meta">Menus and pause &middot; Unity uGUI &middot; design and build</span></div><span class="thumb">{argos("river-menu", 2000, 953, "", "Argos River Menu", extra=' loading="lazy"')}</span></a></li>
       <li class="ch-titan"><a class="entry" href="work/project-titan.html"><span class="tab" aria-hidden="true">02</span><div><h3>Project Titan</h3><p>Skirmish HUD for an isometric tactical auto battler, from grayscale wireframes to Unity.</p><span class="meta">UI/UX lead &middot; Unity uGUI &middot; team project</span></div><span class="thumb"><img src="assets/img/titan/hud-panel.webp" width="528" height="1248" alt="" loading="lazy"></span></a></li>
@@ -245,6 +247,7 @@ home = f'''<section class="cover" aria-labelledby="cover-h">
       <li class="ch-midas"><a class="entry" href="work/midas.html"><span class="tab" aria-hidden="true">04</span><div><h3>Midas: The Accursed King</h3><p>A narrative top-down RPG built inside Game Boy constraints for GBJam 14.</p><span class="meta">Programming and story &middot; Godot &middot; game jam</span></div><span class="thumb pixel"><img src="assets/img/midas/village.webp" width="312" height="264" alt="" loading="lazy"></span></a></li>
       <li class="ch-dreamland"><a class="entry" href="work/dreamland.html"><span class="tab" aria-hidden="true">05</span><div><h3>Dreamland Timeline</h3><p>A searchable, declassified-archive timeline for a fictional world, fed live from a spreadsheet.</p><span class="meta">Design and development &middot; TypeScript</span></div><span class="thumb"><img src="assets/img/dreamland/archive.webp" width="1600" height="876" alt="" loading="lazy"></span></a></li>
       <li class="ch-explore"><a class="entry" href="work/shopping-list.html"><span class="tab" aria-hidden="true">06</span><div><h3>UI Explorations</h3><p>A five-screen mobile app taken from paper sketch to clickable prototype.</p><span class="meta">Prototyping &middot; Figma</span></div><span class="thumb"><img src="assets/img/shopping/sketch.webp" width="904" height="832" alt="" loading="lazy"></span></a></li>
+      <li class="ch-concept"><a class="entry" href="work/dreamland-concept.html"><span class="tab" aria-hidden="true">07</span><div><h3>Dreamland: Concept Pass</h3><p>Game UI for the Dreamland world: three palettes, a type spec, tactical combat, a bestiary entry and exploration HUDs.</p><span class="meta">UI/UX concept &middot; Figma</span></div><span class="thumb"><img src="assets/img/dreamland-game/combat-turn-order.webp" width="1920" height="1080" alt="" loading="lazy"></span></a></li>
     </ol>
   </div>
 </section>
@@ -326,31 +329,22 @@ titan = opener("02", "Project Titan", "Lead designer for the UI and HUD of a tac
     <h2>Scope first</h2>
     <p>The first pass covered the Skirmish HUD only. The War Room and formation builder are later passes. Keeping scope tight meant the team could react to something concrete instead of a sprawling system.</p>
 
-    <h2>Four directions</h2>
-    <p>Under the working title Kaiju Cold War, I mocked up four structurally different layouts of the same moment: turn 4, Alpha Company selected, its legal moves highlighted.</p>
+    <h2>Three distinct directions</h2>
+    <p>I wireframed three structurally different layouts in grayscale before any colour decisions:</p>
     <ul>
-      <li><strong>Clean Tactical:</strong> a readability-first baseline, with the inspector on the right and the hand along the bottom.</li>
-      <li><strong>Field Command:</strong> the same layout as a dark command console, with orders in a grid of large buttons.</li>
-      <li><strong>Minimal Contextual:</strong> no side panel; orders open in a menu beside the selected unit.</li>
-      <li><strong>Pure Battlefield:</strong> the map fills the screen, and only the contextual menu remains.</li>
+      <li><strong>Command Table:</strong> a diegetic, holographic table the player leans over.</li>
+      <li><strong>Clean Tactical:</strong> a readability-first baseline.</li>
+      <li><strong>Card-Forward:</strong> the hand dominates the screen.</li>
     </ul>
+    <p>Each board shows the same moment, the Deploy phase of round 7, with numbered notes on what every element does and what it costs.</p>
   </div>
   <div class="wrap">
-    <div class="quad">
-      <figure class="figure"><img src="{P}assets/img/titan/mockup-a-clean-tactical.webp" width="1600" height="891" alt="Mockup A, Clean Tactical: a light battlefield grid with Alpha Company selected, its legal moves outlined, an inspector panel with stats and five commands on the right, and a hand of unit cards along the bottom" loading="lazy"><figcaption>A &middot; Clean Tactical</figcaption></figure>
-      <figure class="figure"><img src="{P}assets/img/titan/mockup-b-field-command.webp" width="1600" height="891" alt="Mockup B, Field Command: the same battlefield as a dark console, with the inspector showing integrity, formation stats and a grid of Move, Attack, Hold and Fortify buttons" loading="lazy"><figcaption>B &middot; Field Command</figcaption></figure>
-      <figure class="figure"><img src="{P}assets/img/titan/mockup-c-minimal-contextual.webp" width="1600" height="891" alt="Mockup C, Minimal Contextual: a green grid map with no side panel; a small card above Alpha Company shows its stats and a menu beside it lists Move, Attack, Hold, Fortify and Retreat" loading="lazy"><figcaption>C &middot; Minimal Contextual</figcaption></figure>
-      <figure class="figure"><img src="{P}assets/img/titan/mockup-d-pure-battlefield.webp" width="1600" height="891" alt="Mockup D, Pure Battlefield: the green map fills the screen and the same contextual menu opens beside Alpha Company, with no hand or inspector" loading="lazy"><figcaption>D &middot; Pure Battlefield</figcaption></figure>
-    </div>
+    <figure class="figure"><img src="{P}assets/img/titan/direction-a-command-table.webp" width="1922" height="1425" alt="Direction A, Command Table: a grayscale isometric board inside a dark frame, with an arched mechanical phase dial at the top, strife columns on the right, a fanned hand of cards along the bottom and seven numbered notes below" loading="lazy"><figcaption>Direction A, Command Table: built for immersion, at the cost of scan speed, tile visibility at the edges and room for localization.</figcaption></figure>
+    <figure class="figure"><img src="{P}assets/img/titan/direction-b-clean-tactical.webp" width="1922" height="1389" alt="Direction B, Clean Tactical: a two-lane phase rail across the top, a roster on the left, tile and objective panels on the right, a flat row of cards along the bottom and seven numbered notes below" loading="lazy"><figcaption>Direction B, Clean Tactical: built for glance speed, controller parity and localization, at the cost of atmosphere.</figcaption></figure>
+    <figure class="figure"><img src="{P}assets/img/titan/direction-c-card-forward.webp" width="1922" height="1389" alt="Direction C, Card-Forward: a thin phase strip, a smaller board in the upper half, and large inspect-size cards with full rules text across the lower half, with seven numbered notes below" loading="lazy"><figcaption>Direction C, Card-Forward: built for card legibility and the deck as the thing to master, at the cost of board area.</figcaption></figure>
   </div>
   <div class="wrap prose">
-    <p>Then I wireframed the interaction states in grayscale: assess, formation selected, card inspection and combat resolution. Numbered callouts explain each decision, and a "Decisions to confirm" list put the open questions to stakeholders before the final build.</p>
-  </div>
-  <div class="wrap">
-    <figure class="figure"><img src="{P}assets/img/titan/wireframes-interaction-states.webp" width="1940" height="1080" alt="Grayscale wireframes of the battle HUD in four interaction states (assess, formation selected, card inspection, combat resolution) with thirteen numbered callouts and a list of five decisions to confirm" loading="lazy"><figcaption>Battle HUD wireframes: four interaction states, thirteen numbered callouts and five open decisions.</figcaption></figure>
-  </div>
-  <div class="wrap prose">
-    <p>Colour came later, built on a neutral dead-world base with faction colours layered on top.</p>
+    <p>Grayscale kept the conversation on hierarchy and layout. Colour came later, built on a neutral dead-world base with faction colours layered on top.</p>
 
     <h2>The finding that shaped everything</h2>
     <p>I mapped every HUD element against every phase of a round in a phase-state matrix. Four of the seven phases have no player input at all. That led to two terms the team now uses:</p>
@@ -370,10 +364,42 @@ titan = opener("02", "Project Titan", "Lead designer for the UI and HUD of a tac
       <li>Faction reskins through a theme asset rather than a prefab per faction, decided before component specs were drawn.</li>
     </ul>
 
+    <h2>Every state, drawn</h2>
+    <p>Before handoff I drew the states each component can be in: a card's eight states in hand, the order chip and tile tooltip, the meter states that carry the game's tension, and edge cases such as a hand that overflows at round end or a unit that dies while its inspector is open.</p>
+  </div>
+  <div class="wrap">
+    <figure class="figure"><img src="{P}assets/img/titan/state-matrix.webp" width="1922" height="1803" alt="State matrix and edge cases board: a card shown in eight hand states, order chip and tile tooltip states, five written hand-overflow and edge cases, and six Kaiju meter states" loading="lazy"><figcaption>State matrix and edge cases: what every component looks like in every state, written down before anything was built.</figcaption></figure>
+  </div>
+  <div class="wrap prose">
+
     <h2>The command seal</h2>
     <p>The team replaced a plain Resolve Orders button with a modular command seal stamped with the current faction's emblem. It sits translucent on hover, goes full opacity when pressed, and lights up once every unit has orders, so readiness is visible without reading a word.</p>
     <figure class="figure w-sm"><img src="{P}assets/img/titan/seal-detail.webp" width="268" height="323" alt="Detail of the command seal: a riveted round button above the Resolve Orders label" loading="lazy"><figcaption>Detail, in engine: the command seal above its Resolve Orders label.</figcaption></figure>
 
+    <h2>An earlier pitch: Kaiju Cold War</h2>
+    <p>Under the working title Kaiju Cold War, I mocked up four layouts of one moment: turn 4, Alpha Company selected, its legal moves highlighted.</p>
+    <ul>
+      <li><strong>Clean Tactical:</strong> the inspector on the right and the hand along the bottom.</li>
+      <li><strong>Field Command:</strong> the same layout as a dark command console, with orders in a grid of large buttons.</li>
+      <li><strong>Minimal Contextual:</strong> no side panel; orders open in a menu beside the selected unit.</li>
+      <li><strong>Pure Battlefield:</strong> the map fills the screen, and only the contextual menu remains.</li>
+    </ul>
+  </div>
+  <div class="wrap">
+    <div class="quad">
+      <figure class="figure"><img src="{P}assets/img/titan/mockup-a-clean-tactical.webp" width="1600" height="891" alt="Mockup A, Clean Tactical: a light battlefield grid with Alpha Company selected, its legal moves outlined, an inspector panel with stats and five commands on the right, and a hand of unit cards along the bottom" loading="lazy"><figcaption>A &middot; Clean Tactical</figcaption></figure>
+      <figure class="figure"><img src="{P}assets/img/titan/mockup-b-field-command.webp" width="1600" height="891" alt="Mockup B, Field Command: the same battlefield as a dark console, with the inspector showing integrity, formation stats and a grid of Move, Attack, Hold and Fortify buttons" loading="lazy"><figcaption>B &middot; Field Command</figcaption></figure>
+      <figure class="figure"><img src="{P}assets/img/titan/mockup-c-minimal-contextual.webp" width="1600" height="891" alt="Mockup C, Minimal Contextual: a green grid map with no side panel; a small card above Alpha Company shows its stats and a menu beside it lists Move, Attack, Hold, Fortify and Retreat" loading="lazy"><figcaption>C &middot; Minimal Contextual</figcaption></figure>
+      <figure class="figure"><img src="{P}assets/img/titan/mockup-d-pure-battlefield.webp" width="1600" height="891" alt="Mockup D, Pure Battlefield: the green map fills the screen and the same contextual menu opens beside Alpha Company, with no hand or inspector" loading="lazy"><figcaption>D &middot; Pure Battlefield</figcaption></figure>
+    </div>
+  </div>
+  <div class="wrap prose">
+    <p>Its interaction states were wireframed in grayscale too: assess, formation selected, card inspection and combat resolution, with numbered callouts and a "Decisions to confirm" list for stakeholders.</p>
+  </div>
+  <div class="wrap">
+    <figure class="figure"><img src="{P}assets/img/titan/wireframes-interaction-states.webp" width="1940" height="1080" alt="Grayscale wireframes of the battle HUD in four interaction states (assess, formation selected, card inspection, combat resolution) with thirteen numbered callouts and a list of five decisions to confirm" loading="lazy"><figcaption>Battle HUD wireframes: four interaction states, thirteen numbered callouts and five open decisions.</figcaption></figure>
+  </div>
+  <div class="wrap prose">
     <h2>What I took from it</h2>
     <p>Mapping state before drawing screens saved the team from designing controls for phases where the player cannot act. It is the same habit that keeps an operator screen honest, applied to a game.</p>
   </div>
@@ -573,11 +599,59 @@ sl = opener("06", "UI Explorations: Shopping List", "A five-screen mobile flow t
       <li>One accent colour carries every primary action, so the next step is always obvious.</li>
     </ul>
   </div>
-  <div class="wrap">''' + turn(("dreamland", "05", "Dreamland", "work/dreamland.html"), ("back", "", "About the designer", "about.html")) + '''</div>
+  <div class="wrap">''' + turn(("dreamland", "05", "Dreamland", "work/dreamland.html"), ("concept", "07", "Dreamland: Concept Pass", "work/dreamland-concept.html")) + '''</div>
 </section>'''
 page('work/shopping-list.html', 'UI Explorations | Maurice Birchard',
      'A five-screen mobile app taken from paper sketch to a clickable Figma prototype.',
      sl, 'work/shopping-list.html', 'ch-explore', folio='Chapter 06 &middot; page 24')
+
+# ---------------- Dreamland concept pass ----------------
+CONCEPT_POINTS = [
+    (12, 11.4, "Turn order", "Allies, hostiles and neutrals in initiative order; the active unit is marked NOW."),
+    (11, 34.5, "Selected unit", "Hit points, action points, status effects and the equipped weapon."),
+    (98.2, 45, "Target", "The hostile's armour and hit points, with a resistance profile across six damage families."),
+    (66.5, 82, "Abilities", "Every slot shows its action-point cost and its state: ready, selected, on cooldown or unavailable."),
+    (40, 93.6, "Hit summary", "Hit chance, cover, expected damage and critical chance for the selected ability."),
+]
+dc = opener("07", "Dreamland: Concept Pass", "A UI/UX concept pass for a game set in the Dreamland world: three palettes, a build spec for the Figma rebuild, and four screens covering tactical combat, a bestiary entry and exploration in first and third person.") + '\n' + specs([
+    ("Role", "UI/UX concept design"), ("Tools", "Figma"), ("Scope", "Palettes, type spec, four screens"), ("Status", "Concept")]) + '\n' + guide("Screen Guide: Tactical combat", "1920 &times; 1080, palette A", "{P}assets/img/dreamland-game/combat-turn-order.webp", 1920, 1080,
+    "Dreamland tactical combat screen: a turn order strip across the top, the selected unit's panel on the left, an isometric battlefield placeholder in the centre, the target's resistance profile on the right, and a row of abilities above a hit summary bar", "Round 4 of a fight, with placeholder names. Hover an entry to find it on the screen.", CONCEPT_POINTS) + f'''
+<section class="section">
+  <div class="wrap prose">
+    <h2>Three palettes, one chosen</h2>
+    <p>Each palette defines the same roles: ground, surfaces, borders, text and accent, plus semantic colours and six damage families with their own codes. Dossier is cold and corporate, Vestige is organic rot, and Signal is a cyberpunk tactics HUD. Dossier was chosen for the mockups.</p>
+  </div>
+  <div class="wrap">
+    <div class="trio-figs">
+      <figure class="figure"><img src="{{P}}assets/img/dreamland-game/palette-dossier.webp" width="800" height="1000" alt="Palette A, Dossier: slate and filing-grey surfaces, bone-white text, a clearance-blue accent and redaction tan, with semantic and damage-family swatches and a sample stat panel" loading="lazy"><figcaption>A &middot; Dossier, cold corporate (chosen)</figcaption></figure>
+      <figure class="figure"><img src="{{P}}assets/img/dreamland-game/palette-vestige.webp" width="800" height="1000" alt="Palette B, Vestige: warm near-black and bruise-purple surfaces with waxlight text and green and violet accents, with semantic and damage-family swatches and a sample stat panel" loading="lazy"><figcaption>B &middot; Vestige, organic rot</figcaption></figure>
+      <figure class="figure"><img src="{{P}}assets/img/dreamland-game/palette-signal.webp" width="800" height="1000" alt="Palette C, Signal: deep ink surfaces with off-white text and amber and hot-pink accents, with semantic and damage-family swatches and a sample stat panel" loading="lazy"><figcaption>C &middot; Signal, cyberpunk tactics</figcaption></figure>
+    </div>
+  </div>
+  <div class="wrap prose">
+    <h2>A build spec for the rebuild</h2>
+    <p>A one-page sheet fixes the type before anyone rebuilds the screens: Barlow Condensed for display and panel titles, IBM Plex Sans for all UI and body text, and IBM Plex Mono for numbers, labels and codes, with a full size scale and the component names the build uses.</p>
+
+    <h2>A bestiary entry</h2>
+    <p>Entry 047 reads like a restricted file. A damage response matrix covers 18 damage types in six families, where negative values mark vulnerabilities, beside a core stat block, behaviour by moon and weather, a transcribed field report and an encounter log.</p>
+  </div>
+  <div class="wrap">
+    <figure class="figure"><img src="{{P}}assets/img/dreamland-game/bestiary-entry.webp" width="1920" height="1080" alt="Bestiary entry 047, Lorem Marrow-Kin: a creature illustration placeholder and core stat block on the left, an 18-cell damage response matrix in the centre, and behaviour, field report and encounter log panels on the right" loading="lazy"><figcaption>Bestiary entry 047, with placeholder names and illustration.</figcaption></figure>
+  </div>
+  <div class="wrap prose">
+    <h2>Exploration, first and third person</h2>
+    <p>The exploration HUD keeps the world clear: a compass strip with points of interest and distances, a panel for date, weather and moon phase, reputation with each faction in the territory, health, stamina and lucidity, quick slots, and a locked interaction prompt that states what it needs. The third-person version uses two panels and drops the compass; direction reads off the proximity list instead.</p>
+  </div>
+  <div class="wrap pair">
+    <figure class="figure"><img src="{{P}}assets/img/dreamland-game/exploration-hud.webp" width="1920" height="1080" alt="Exploration HUD: a compass strip along the top, date, weather and moon panel and territory reputation list on the right, health, stamina and lucidity bars bottom left, quick slots bottom centre, and a locked prompt to search a maintenance locker" loading="lazy"><figcaption>Exploration HUD, states shown statically.</figcaption></figure>
+    <figure class="figure"><img src="{{P}}assets/img/dreamland-game/third-person-hud.webp" width="1555" height="978" alt="Third-person HUD in palette B: a body state panel bottom left with health, stamina, lucidity and conditions, and a proximity panel top right listing contacts with distance and awareness" loading="lazy"><figcaption>Third person, two-panel HUD in palette B, Vestige.</figcaption></figure>
+  </div>
+  <div class="wrap">''' + turn(("explore", "06", "UI Explorations", "work/shopping-list.html"), ("back", "", "About the designer", "about.html")) + '''</div>
+</section>'''
+page('work/dreamland-concept.html', 'Dreamland: Concept Pass | Maurice Birchard',
+     'A game UI concept pass for the Dreamland world: palettes, a type spec, tactical combat, a bestiary entry and exploration HUDs.',
+     dc, 'work/dreamland-concept.html', 'ch-concept', folio='Chapter 07 &middot; page 28')
+
 
 # ---------------- About ----------------
 about = opener("", "About the designer", "I'm Maurice Birchard, a systems engineer moving into the UI and UX side of game design. I've spent years on the screens operators use to run solar plants and industrial systems in real time. That work taught me how to put the right information in front of someone at the exact moment they need it, and how much a cluttered screen can cost.") + '''
@@ -609,7 +683,7 @@ about = opener("", "About the designer", "I'm Maurice Birchard, a systems engine
 </section>'''
 page('about.html', 'About | Maurice Birchard',
      'Game UI/UX designer with a background in industrial HMI and SCADA design and military service.',
-     about, 'about.html', 'ch-back', folio='Back matter &middot; page 28')
+     about, 'about.html', 'ch-back', folio='Back matter &middot; page 32')
 
 # ---------------- Resume ----------------
 resume = opener("", "Resume", "The full resume, readable here. Download the PDF for your files.",
@@ -659,7 +733,7 @@ resume = opener("", "Resume", "The full resume, readable here. Download the PDF 
 </section>'''
 page('resume.html', 'Resume | Maurice Birchard',
      'Resume of Maurice Birchard: SCADA, controls and HMI engineering, intelligence analysis, and game UI/UX.',
-     resume, 'resume.html', 'ch-back', folio='Back matter &middot; page 30')
+     resume, 'resume.html', 'ch-back', folio='Back matter &middot; page 34')
 
 # ---------------- Contact ----------------
 contact = opener("", "Contact", "Open to game UI/UX, game design and software roles, full-time or contract. Email is the fastest way to reach me.") + f'''
@@ -689,7 +763,7 @@ contact = opener("", "Contact", "Open to game UI/UX, game design and software ro
 </section>'''
 page('contact.html', 'Contact | Maurice Birchard',
      'Contact Maurice Birchard about game UI/UX, game design and software roles.',
-     contact, 'contact.html', 'ch-back', folio='Back page &middot; page 32')
+     contact, 'contact.html', 'ch-back', folio='Back page &middot; page 36')
 
 # ---------------- 404 ----------------
 nf = opener("", "Page not found", "That page isn't in this booklet. It may have moved, or the link has a typo.",

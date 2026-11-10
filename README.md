@@ -15,6 +15,7 @@ work/greywater.html        Chapter 03 (includes a live title menu)
 work/midas.html            Chapter 04
 work/dreamland.html        Chapter 05
 work/shopping-list.html    Chapter 06 (embeds the prototype below)
+work/dreamland-concept.html Chapter 07 (Dreamland game UI concept pass)
 work/shopping-list-prototype/   Built Figma Make prototype (React, prebuilt)
 assets/css/style.css       Theme ("Instruction Booklet"; see DESIGN.md)
 assets/css/greywater-menu.css   The Greywater game's own menu styles, used only on its page

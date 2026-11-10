@@ -17,6 +17,7 @@ colors:
   chapter-midas-yellow: "#F2B705"
   chapter-dreamland-blue: "#006AA3"
   chapter-explore-orange: "#B04A0E"
+  chapter-concept-violet: "#5B3FA8"
 typography:
   display:
     fontFamily: "Schibsted Grotesk, Helvetica Neue, Arial, sans-serif"
@@ -157,6 +158,7 @@ Each chapter owns one process colour, applied by a chapter class that sets `--ch
 - **Midas Yellow** (`chapter-midas-yellow`), on **ink**. Chapter 04, and the only chapter colour that takes dark text. It is also the cover's hover accent (cover button hover, Contents underline, back-cover email underline and link hover).
 - **Dreamland Blue** (`chapter-dreamland-blue`), on white. Chapter 05.
 - **Explorations Orange** (`chapter-explore-orange`), on white. Chapter 06.
+- **Concept Violet** (`chapter-concept-violet`), on white. Chapter 07, the Dreamland game UI concept pass.
 - **Back matter** uses `ink` as its chapter colour, on white: About, Resume, Contact, the home body and the 404.
 
 ### Neutral
@@ -210,7 +212,7 @@ Vertical rhythm is the `section` padding at top and bottom; consecutive sections
 
 Responsive rules:
 - **1000px and wider:** vertical thumb-tab rail of seven tabs, each showing its number and name. Only on screens 700px tall or shorter do tabs drop to the number (or the mail icon) with the name as a flyout label on hover and focus.
-- **Below 1000px:** a fixed 60px bottom bar that always fits: the six chapter numbers (names kept for screen readers) and a wider Contact tab with its mail icon and label.
+- **Below 1000px:** a fixed 60px bottom bar that always fits: the seven chapter numbers (names kept for screen readers) and a wider Contact tab with its mail icon and label.
 - **860px and below:** the cover stacks with the art first (square collage); Screen Guide spreads stack; gutter discs and leader lines are hidden and the pins grow to 22px numbered discs, so the plate and the legend still match by number.
 - **760px and below:** Chapters entries collapse to tab plus text, with the thumbnail full width below; the back cover stacks.
 - **640px and below:** the opener numeral sits above the title.
@@ -245,7 +247,7 @@ Blunt, inked and square.
 - **Focus:** 3px ink outline, 3px offset (global). It turns white on the blue front and back covers, takes the on-chapter colour on chapter openers, and sits 7px inside each thumb tab in the tab's own text colour.
 
 ### Navigation: thumb tabs
-The site navigation is the booklet's thumb-cut edge. There are seven tabs: chapters 01 to 06, then Contact in ink with a mail icon. About and Resume are back matter: they sit as plain links in the running head and on the back cover, not on the thumb edge. Each tab is a solid block of its chapter colour, 800 weight, with a 900 italic number. On the desktop rail, tabs are vertical text, fill equal heights with 2px gaps, sit 6px off the edge and slide in on hover, focus or current. The current tab also gets the inset double ring. On mobile the tabs form a 62px horizontal bar with a 2px ink top rule, number over name, scrolling sideways.
+The site navigation is the booklet's thumb-cut edge. There are eight tabs: chapters 01 to 07, then Contact in ink with a mail icon. About and Resume are back matter: they sit as plain links in the running head and on the back cover, not on the thumb edge. Each tab is a solid block of its chapter colour, 800 weight, with a 900 italic number. On the desktop rail, tabs are vertical text, fill equal heights with 2px gaps, sit 6px off the edge and slide in on hover, focus or current. The current tab also gets the inset double ring. On mobile the tabs form a 62px horizontal bar with a 2px ink top rule, number over name, scrolling sideways.
 
 ### Cover
 A process-blue field with the registration rule. The top row holds the wordmark (900 italic uppercase name plus "Game UI / UX") and a folio. Below are the Display headline, the lede, one white button, and the cover art: three real screens on ink mats, tilted, captioned "NN Chapter, screen" and linked to their chapters.
