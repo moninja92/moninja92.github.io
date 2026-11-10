@@ -74,6 +74,33 @@
         ],
         "createdAt": "2026-11-09T19:14:02.216Z",
         "reason": "Claude: the Greywater game's own title menu, embedded as an exhibit with its own palette and fonts (IBM Plex Mono, Newsreader); DESIGN.md documents it as an exhibit exception"
+      },
+      {
+        "rule": "design-system-font",
+        "value": "arial black",
+        "files": [
+          ".impeccable/mocks/decision/assigned.html"
+        ],
+        "createdAt": "2026-11-09T19:14:35.721Z",
+        "reason": "Claude: throwaway decision-page skeleton sketch, gitignored and not shipped"
+      },
+      {
+        "rule": "design-system-font",
+        "value": "arial black",
+        "files": [
+          ".impeccable/mocks/decision/model-pick.html"
+        ],
+        "createdAt": "2026-11-09T19:14:35.893Z",
+        "reason": "Claude: throwaway decision-page skeleton sketch, gitignored and not shipped"
+      },
+      {
+        "rule": "design-system-font",
+        "value": "arial black",
+        "files": [
+          ".impeccable/mocks/decision/challenger-map.html"
+        ],
+        "createdAt": "2026-11-09T19:14:36.049Z",
+        "reason": "Claude: throwaway decision-page skeleton sketch, gitignored and not shipped"
       }
     ]
   }
