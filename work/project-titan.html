@@ -76,14 +76,31 @@
     <h2>Scope first</h2>
     <p>The first pass covered the Skirmish HUD only. The War Room and formation builder are later passes. Keeping scope tight meant the team could react to something concrete instead of a sprawling system.</p>
 
-    <h2>Three distinct directions</h2>
-    <p>I wireframed three structurally different layouts in grayscale before any colour decisions:</p>
+    <h2>Four directions</h2>
+    <p>Under the working title Kaiju Cold War, I mocked up four structurally different layouts of the same moment: turn 4, Alpha Company selected, its legal moves highlighted.</p>
     <ul>
-      <li><strong>Command Table:</strong> a diegetic, holographic table the player leans over.</li>
-      <li><strong>Clean Tactical:</strong> a readability-first baseline.</li>
-      <li><strong>Card-Forward:</strong> the hand dominates the screen.</li>
+      <li><strong>Clean Tactical:</strong> a readability-first baseline, with the inspector on the right and the hand along the bottom.</li>
+      <li><strong>Field Command:</strong> the same layout as a dark command console, with orders in a grid of large buttons.</li>
+      <li><strong>Minimal Contextual:</strong> no side panel; orders open in a menu beside the selected unit.</li>
+      <li><strong>Pure Battlefield:</strong> the map fills the screen, and only the contextual menu remains.</li>
     </ul>
-    <p>Grayscale kept the conversation on hierarchy and layout. Colour came later, built on a neutral dead-world base with faction colours layered on top.</p>
+  </div>
+  <div class="wrap">
+    <div class="quad">
+      <figure class="figure"><img src="../assets/img/titan/mockup-a-clean-tactical.webp" width="1600" height="891" alt="Mockup A, Clean Tactical: a light battlefield grid with Alpha Company selected, its legal moves outlined, an inspector panel with stats and five commands on the right, and a hand of unit cards along the bottom" loading="lazy"><figcaption>A &middot; Clean Tactical</figcaption></figure>
+      <figure class="figure"><img src="../assets/img/titan/mockup-b-field-command.webp" width="1600" height="891" alt="Mockup B, Field Command: the same battlefield as a dark console, with the inspector showing integrity, formation stats and a grid of Move, Attack, Hold and Fortify buttons" loading="lazy"><figcaption>B &middot; Field Command</figcaption></figure>
+      <figure class="figure"><img src="../assets/img/titan/mockup-c-minimal-contextual.webp" width="1600" height="891" alt="Mockup C, Minimal Contextual: a green grid map with no side panel; a small card above Alpha Company shows its stats and a menu beside it lists Move, Attack, Hold, Fortify and Retreat" loading="lazy"><figcaption>C &middot; Minimal Contextual</figcaption></figure>
+      <figure class="figure"><img src="../assets/img/titan/mockup-d-pure-battlefield.webp" width="1600" height="891" alt="Mockup D, Pure Battlefield: the green map fills the screen and the same contextual menu opens beside Alpha Company, with no hand or inspector" loading="lazy"><figcaption>D &middot; Pure Battlefield</figcaption></figure>
+    </div>
+  </div>
+  <div class="wrap prose">
+    <p>Then I wireframed the interaction states in grayscale: assess, formation selected, card inspection and combat resolution. Numbered callouts explain each decision, and a "Decisions to confirm" list put the open questions to stakeholders before the final build.</p>
+  </div>
+  <div class="wrap">
+    <figure class="figure"><img src="../assets/img/titan/wireframes-interaction-states.webp" width="1940" height="1080" alt="Grayscale wireframes of the battle HUD in four interaction states (assess, formation selected, card inspection, combat resolution) with thirteen numbered callouts and a list of five decisions to confirm" loading="lazy"><figcaption>Battle HUD wireframes: four interaction states, thirteen numbered callouts and five open decisions.</figcaption></figure>
+  </div>
+  <div class="wrap prose">
+    <p>Colour came later, built on a neutral dead-world base with faction colours layered on top.</p>
 
     <h2>The finding that shaped everything</h2>
     <p>I mapped every HUD element against every phase of a round in a phase-state matrix. Four of the seven phases have no player input at all. That led to two terms the team now uses:</p>
