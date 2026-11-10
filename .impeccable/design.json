@@ -486,7 +486,7 @@
       "**Do** use a pending plate (\"Screenshot coming soon\") when a real capture is missing.",
       "**Do** keep running heads and folios consistent with the Contents page numbers.",
       "**Do** separate content with 2px ink rules and 1px hairlines instead of cards and shadows.",
-      "**Do** keep the leader-line draw-in as the only entrance animation, and keep it static under `prefers-reduced-motion`.",
+      "**Do** keep the leader-line draw-in as the only entrance animation, and swap it for a fade under `prefers-reduced-motion`.",
       "**Do** keep claims truthful: roles, engines and status stated exactly. No invented metrics, logos or testimonials."
     ],
     "donts": [

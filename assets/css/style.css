@@ -2,6 +2,44 @@
    A 1990s game manual: coated stock, black ink, process-colour chapter tabs,
    Screen Guide spreads with numbered callouts. */
 
+/* Self-hosted Schibsted Grotesk (SIL OFL 1.1, see assets/fonts/) */
+/* Schibsted Grotesk italic 800-900, latin-ext */
+@font-face {
+  font-family: 'Schibsted Grotesk';
+  font-style: italic;
+  font-weight: 800 900;
+  font-display: swap;
+  src: url(../fonts/schibsted-grotesk-italic-800-900-latin-ext.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* Schibsted Grotesk italic 800-900, latin */
+@font-face {
+  font-family: 'Schibsted Grotesk';
+  font-style: italic;
+  font-weight: 800 900;
+  font-display: swap;
+  src: url(../fonts/schibsted-grotesk-italic-800-900-latin.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* Schibsted Grotesk normal 400-900, latin-ext */
+@font-face {
+  font-family: 'Schibsted Grotesk';
+  font-style: normal;
+  font-weight: 400 900;
+  font-display: swap;
+  src: url(../fonts/schibsted-grotesk-normal-400-900-latin-ext.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* Schibsted Grotesk normal 400-900, latin */
+@font-face {
+  font-family: 'Schibsted Grotesk';
+  font-style: normal;
+  font-weight: 400 900;
+  font-display: swap;
+  src: url(../fonts/schibsted-grotesk-normal-400-900-latin.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
 :root {
   --chapter-line: var(--chapter);
   --stock: #EEF1F4;
@@ -49,7 +87,7 @@ body {
   background: var(--stock);
   color: var(--ink);
   font-family: var(--font);
-  font-size: 17px;
+  font-size: 1.0625rem;
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
 }
@@ -103,6 +141,7 @@ p { margin: 0 0 1em; }
   font-weight: 800; transition: transform .25s var(--ease), filter .25s var(--ease);
 }
 .tabs .num { font-weight: 900; font-style: italic; }
+.tabs a:focus-visible { outline: 3px solid var(--on-chapter); outline-offset: -7px; }
 .tabs a[aria-current="page"] { box-shadow: inset 0 0 0 3px var(--stock), inset 0 0 0 5px var(--chapter); }
 .tabs a:hover { filter: brightness(1.08); }
 
@@ -134,6 +173,8 @@ p { margin: 0 0 1em; }
   .tabs { position: fixed; left: 0; right: 0; bottom: 0; z-index: 40; background: var(--stock-2); border-top: 2px solid var(--ink); }
   .tabs ol { display: flex; overflow-x: auto; scrollbar-width: none; gap: 2px; }
   .tabs ol::-webkit-scrollbar { display: none; }
+  .tabs ol { -webkit-mask-image: linear-gradient(to right, #000 82%, transparent); mask-image: linear-gradient(to right, #000 82%, transparent); }
+  .tabs ol.at-end { -webkit-mask-image: none; mask-image: none; }
   .tabs li { flex: 0 0 auto; }
   .tabs a { height: 62px; min-width: 62px; padding: 8px 12px; flex-direction: column; justify-content: center; align-items: flex-start; line-height: 1.15; }
   .tabs .num { font-size: 0.95rem; }
@@ -281,7 +322,6 @@ p { margin: 0 0 1em; }
 .is-hot.pin { transform: scale(1.3); }
 .legend li.is-hot b { text-decoration: underline; text-decoration-color: var(--chapter-line); text-decoration-thickness: 3px; text-underline-offset: 0.2em; }
 .js .guide:not(.seen) .lead-line { transform: scaleX(0); }
-@media (prefers-reduced-motion: reduce) { .js .guide:not(.seen) .lead-line { transform: none; } .lead-line, .co { transition: none; } }
 @media (max-width: 860px) {
   .spread, .spread.portrait { grid-template-columns: 1fr; }
   .portrait .plate { justify-self: center; max-width: 280px; }
@@ -430,6 +470,12 @@ p { margin: 0 0 1em; }
 .links a:hover svg { transform: translate(3px, -3px); }
 
 @media (prefers-reduced-motion: reduce) {
+  /* Keep the feedback (colour, opacity, the highlighted pin), drop the movement. */
   html { scroll-behavior: auto; }
-  *, *::before, *::after { transition-duration: 0.01ms !important; }
+  .tabs a, .tabs a:hover, .tabs a:focus-visible, .tabs a[aria-current="page"] { transform: none; }
+  .cover-art figure:hover { transform: none; }
+  .entry:hover .thumb img, .links a:hover svg { transform: none; }
+  .is-hot.co, .is-hot.pin { transform: none; }
+  .js .guide:not(.seen) .lead-line { transform: none; opacity: 0; }
+  .lead-line { transform: none; transition: opacity .3s linear, background .2s linear; }
 }

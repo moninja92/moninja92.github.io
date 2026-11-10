@@ -145,7 +145,7 @@ Colour is flat, opaque process ink. There are no gradients, glass or glow on sit
 Flat process inks on cool coated stock: one drenched cover blue, six chapter colours, and black.
 
 ### Primary
-- **Process Cover Blue** (`cover-blue`): drenches the home cover, is the brand `theme-color`, the text selection colour and the global focus outline. It belongs to the cover; inside chapters it appears only as focus and selection.
+- **Process Cover Blue** (`cover-blue`): drenches the home cover, is the brand `theme-color`, and the text selection colour. It belongs to the cover; inside chapters it appears only as selection.
 - **Deep Cover Blue** (`cover-blue-deep`): text colour of the white button on the cover.
 - **Cover Mist** (`on-cover-soft`): secondary text on the cover (lede, wordmark subtitle, folio, Contents leaders and page numbers, cover-art captions).
 
@@ -198,6 +198,8 @@ Each chapter owns one process colour, applied by a chapter class that sets `--ch
 
 **The Tabular Folio Rule.** Every number that behaves like a page or chapter number (tabs, Contents, chapter numerals, callout discs, dates) uses tabular figures.
 
+Fonts are self-hosted from `assets/fonts/` (woff2, latin and latin-ext subsets, SIL OFL 1.1 with licences alongside), with the upright and italic latin files preloaded. Body text is set in rem so it follows the reader's default font size.
+
 ## Layout
 
 A centred column (`max` 1180px) with a fluid `gutter` on each side. On desktop (1000px and wider) the body reserves a 60px right margin for the fixed thumb-tab rail. Below 1000px the rail becomes a fixed bottom bar and the body reserves 64px at the bottom.
@@ -208,6 +210,7 @@ Vertical rhythm is the `section` padding at top and bottom; consecutive sections
 
 Responsive rules:
 - **1000px and wider:** vertical thumb-tab rail. When the viewport is also 960px tall or shorter, tabs show only their number or back-matter letter, and the name appears as a flyout label on hover and focus.
+- **Below 1000px:** the tabs become a scrollable bottom bar. It opens scrolled to the current chapter, and its right edge fades out until the strip is scrolled to the end.
 - **Below 1000px:** horizontal, scrollable bottom tab bar (62px tall) with number over name.
 - **860px and below:** the cover stacks with the art first (square collage); Screen Guide spreads stack; gutter discs and leader lines are hidden and the pins grow to 22px numbered discs, so the plate and the legend still match by number.
 - **760px and below:** Chapters entries collapse to tab plus text, with the thumbnail full width below; the back cover stacks.
@@ -240,7 +243,7 @@ Blunt, inked and square.
 - **Quiet:** transparent with ink text and border. Hover inverts to ink.
 - **On cover:** white fill, deep cover blue text. Hover turns Midas yellow with ink text.
 - **In openers:** on-chapter fill with chapter-colour text. Hover goes transparent; the quiet variant inverts.
-- **Focus:** 3px process-blue outline, 3px offset (global).
+- **Focus:** 3px ink outline, 3px offset (global). It turns white on the blue cover and ink back cover, takes the on-chapter colour on chapter openers, and sits 7px inside each thumb tab in the tab's own text colour.
 
 ### Navigation: thumb tabs
 The site navigation is the booklet's thumb-cut edge. There are nine tabs: chapters 01 to 06, then About (A), Resume (R) and Contact (C) in ink. Each tab is a solid block of its chapter colour, 800 weight, with a 900 italic number. On the desktop rail, tabs are vertical text, fill equal heights with 2px gaps, sit 6px off the edge and slide in on hover, focus or current. The current tab also gets the inset double ring. On mobile the tabs form a 62px horizontal bar with a 2px ink top rule, number over name, scrolling sideways.
@@ -260,9 +263,9 @@ A full-width band in the chapter colour. It holds the giant chapter numeral, the
 - **Pin:** a 12px chapter-colour dot with a 2px white border and ink ring, placed with `--x` and `--y` percentages.
 - **Leader line:** a 1.5px ink hairline from the pin to the gutter, with a white halo.
 - **Gutter disc:** a 30px numbered chapter-colour disc with a 2px ink border, 30px into the gutter, 900 italic tabular number.
-- **Legend:** an ordered list of disc, bold name and soft-ink description, separated by hairlines. Each row is focusable.
-- **Linking:** hovering or focusing a legend row, pin or disc lights every part with the same number. The disc and pin scale up, the leader line thickens to 3px in the chapter colour, and the legend name gets a 3px chapter-colour underline.
-- **Motion:** leader lines start at `scaleX(0)` and draw in once (0.9s, expo-out) when 35% of the guide is visible. With reduced motion or no JS they are drawn from the start.
+- **Legend:** an ordered list of disc, bold name and soft-ink description, separated by hairlines. Rows are plain list items, not tab stops; the text already names each element.
+- **Linking:** hovering a legend row, pin or disc lights every part with the same number. The disc and pin scale up, the leader line thickens to 3px in the chapter colour, and the legend name gets a 3px chapter-colour underline.
+- **Motion:** leader lines start at `scaleX(0)` and draw in once (0.9s, expo-out) when 35% of the guide is visible. With no JS they are drawn from the start. With reduced motion they fade in instead of drawing, and hover movement (tab slide, plate lift, thumbnail zoom, disc scale) is dropped while colour feedback stays.
 
 ### Page-turn links
 Two blocks with a 2px gap at the end of each chapter. Each is in the colour of the chapter it leads to, with a small "Previous" or "Next" and a 900 italic uppercase "NN Name". Next aligns right. They stack below 560px.
@@ -293,7 +296,7 @@ When a screen has not been captured, its slot is a dark slate panel (#1B1D22) wi
 - **Do** use a pending plate ("Screenshot coming soon") when a real capture is missing.
 - **Do** keep running heads and folios consistent with the Contents page numbers.
 - **Do** separate content with 2px ink rules and 1px hairlines instead of cards and shadows.
-- **Do** keep the leader-line draw-in as the only entrance animation, and keep it static under `prefers-reduced-motion`.
+- **Do** keep the leader-line draw-in as the only entrance animation, and swap it for a fade under `prefers-reduced-motion`.
 - **Do** keep claims truthful: roles, engines and status stated exactly. No invented metrics, logos or testimonials.
 
 ### Don't:

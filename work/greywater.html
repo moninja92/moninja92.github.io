@@ -9,10 +9,8 @@
 <meta property="og:description" content="Menus, HUD and dialogue for a first-person narrative game, with a live title menu rebuilt from Figma.">
 <meta name="theme-color" content="#1450C8">
 <link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:ital,wght@0,400;0,600;0,700;0,800;0,900;1,800;1,900&display=swap">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Newsreader:opsz,wght@6..72,300&display=swap">
+<link rel="preload" href="../assets/fonts/schibsted-grotesk-normal-400-900-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../assets/fonts/schibsted-grotesk-italic-800-900-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="../assets/css/style.css">
 <link rel="stylesheet" href="../assets/css/greywater-menu.css">
 </head>
@@ -83,10 +81,10 @@
       <span class="lead-line" data-n="4" style="--x:4.6%;--y:93%"></span><span class="pin" data-n="4" style="--x:4.6%;--y:93%" aria-hidden="true">4</span><span class="co" data-n="4" style="--x:4.6%;--y:93%" aria-hidden="true">4</span>
       </figure>
       <ol class="legend" aria-label="Screen elements">
-      <li data-n="1" tabindex="0"><span class="co" aria-hidden="true">1</span><div><b><span class="visually-hidden">1. </span>Objective</b><p>Top left, then fades to 40% after eight seconds. It returns when the objective changes or the player taps Q.</p></div></li>
-      <li data-n="2" tabindex="0"><span class="co" aria-hidden="true">2</span><div><b><span class="visually-hidden">2. </span>Hold prompt</b><p>The only element allowed to animate, which is what makes it readable at the edge of vision.</p></div></li>
-      <li data-n="3" tabindex="0"><span class="co" aria-hidden="true">3</span><div><b><span class="visually-hidden">3. </span>Equipped item</b><p>The oil lamp, with Tab to cycle and I for the satchel.</p></div></li>
-      <li data-n="4" tabindex="0"><span class="co" aria-hidden="true">4</span><div><b><span class="visually-hidden">4. </span>Movement hint</b><p>A keycap and a short verb. Shift to move quietly.</p></div></li>
+      <li data-n="1"><span class="co" aria-hidden="true">1</span><div><b><span class="visually-hidden">1. </span>Objective</b><p>Top left, then fades to 40% after eight seconds. It returns when the objective changes or the player taps Q.</p></div></li>
+      <li data-n="2"><span class="co" aria-hidden="true">2</span><div><b><span class="visually-hidden">2. </span>Hold prompt</b><p>The only element allowed to animate, which is what makes it readable at the edge of vision.</p></div></li>
+      <li data-n="3"><span class="co" aria-hidden="true">3</span><div><b><span class="visually-hidden">3. </span>Equipped item</b><p>The oil lamp, with Tab to cycle and I for the satchel.</p></div></li>
+      <li data-n="4"><span class="co" aria-hidden="true">4</span><div><b><span class="visually-hidden">4. </span>Movement hint</b><p>A keycap and a short verb. Shift to move quietly.</p></div></li>
       </ol>
     </div>
     <p class="plate-cap">The exploration HUD over a placeholder scene. Hover or focus an entry to find it on the screen.</p>

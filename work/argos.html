@@ -9,9 +9,8 @@
 <meta property="og:description" content="Diegetic menus for a narrative Unity adventure: a river title menu with leaves as buttons, and a stopped-watch pause with a field journal.">
 <meta name="theme-color" content="#1450C8">
 <link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:ital,wght@0,400;0,600;0,700;0,800;0,900;1,800;1,900&display=swap">
+<link rel="preload" href="../assets/fonts/schibsted-grotesk-normal-400-900-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../assets/fonts/schibsted-grotesk-italic-800-900-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 <body class="ch-argos">
@@ -59,11 +58,11 @@
       <span class="lead-line" data-n="5" style="--x:90%;--y:83.5%"></span><span class="pin" data-n="5" style="--x:90%;--y:83.5%" aria-hidden="true">5</span><span class="co" data-n="5" style="--x:90%;--y:83.5%" aria-hidden="true">5</span>
       </figure>
       <ol class="legend" aria-label="Screen elements">
-      <li data-n="1" tabindex="0"><span class="co" aria-hidden="true">1</span><div><b><span class="visually-hidden">1. </span>Wake</b><p>Begins the game. It sends three pulses out from the leaf, one for each of Cerberus's barks.</p></div></li>
-      <li data-n="2" tabindex="0"><span class="co" aria-hidden="true">2</span><div><b><span class="visually-hidden">2. </span>Settings</b><p>Subtitles, vibration, motion level, music and effects. The same pages open from the pause.</p></div></li>
-      <li data-n="3" tabindex="0"><span class="co" aria-hidden="true">3</span><div><b><span class="visually-hidden">3. </span>Controls</b><p>Rebinding leaves for keyboard and controller; each leaf's small word is the current key.</p></div></li>
-      <li data-n="4" tabindex="0"><span class="co" aria-hidden="true">4</span><div><b><span class="visually-hidden">4. </span>Credits</b><p>Every leaf is a button: it bobs on the current, lifts when focused and flips when pressed.</p></div></li>
-      <li data-n="5" tabindex="0"><span class="co" aria-hidden="true">5</span><div><b><span class="visually-hidden">5. </span>Sleep</b><p>Quits. Wake and Sleep frame the start and end of the game.</p></div></li>
+      <li data-n="1"><span class="co" aria-hidden="true">1</span><div><b><span class="visually-hidden">1. </span>Wake</b><p>Begins the game. It sends three pulses out from the leaf, one for each of Cerberus's barks.</p></div></li>
+      <li data-n="2"><span class="co" aria-hidden="true">2</span><div><b><span class="visually-hidden">2. </span>Settings</b><p>Subtitles, vibration, motion level, music and effects. The same pages open from the pause.</p></div></li>
+      <li data-n="3"><span class="co" aria-hidden="true">3</span><div><b><span class="visually-hidden">3. </span>Controls</b><p>Rebinding leaves for keyboard and controller; each leaf's small word is the current key.</p></div></li>
+      <li data-n="4"><span class="co" aria-hidden="true">4</span><div><b><span class="visually-hidden">4. </span>Credits</b><p>Every leaf is a button: it bobs on the current, lifts when focused and flips when pressed.</p></div></li>
+      <li data-n="5"><span class="co" aria-hidden="true">5</span><div><b><span class="visually-hidden">5. </span>Sleep</b><p>Quits. Wake and Sleep frame the start and end of the game.</p></div></li>
       </ol>
     </div>
     <p class="plate-cap">The River Menu, Day theme. Hover or focus an entry to find it on the screen.</p>

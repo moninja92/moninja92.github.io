@@ -50,6 +50,22 @@
     });
   });
 
+  // Phone tab bar: start with the current chapter in view, and drop the
+  // right-edge fade once the strip is scrolled to its end.
+  var strip = document.querySelector('.tabs ol');
+  if (strip) {
+    var current = strip.querySelector('[aria-current="page"]');
+    if (current && strip.scrollWidth > strip.clientWidth) {
+      strip.scrollLeft = Math.max(0, current.parentElement.offsetLeft - 8);
+    }
+    var edge = function () {
+      strip.classList.toggle('at-end', strip.scrollLeft + strip.clientWidth >= strip.scrollWidth - 4);
+    };
+    strip.addEventListener('scroll', edge, { passive: true });
+    window.addEventListener('resize', edge);
+    edge();
+  }
+
   var year = document.getElementById('year');
   if (year) year.textContent = new Date().getFullYear();
 })();

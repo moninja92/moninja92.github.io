@@ -9,9 +9,8 @@
 <meta property="og:description" content="Game UI/UX designer who designs menus and HUDs in Figma and ships them in Unity, Godot and TypeScript.">
 <meta name="theme-color" content="#1450C8">
 <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:ital,wght@0,400;0,600;0,700;0,800;0,900;1,800;1,900&display=swap">
+<link rel="preload" href="assets/fonts/schibsted-grotesk-normal-400-900-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/schibsted-grotesk-italic-800-900-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body class="ch-back">
@@ -32,10 +31,10 @@
 
 <main id="main">
 <section class="cover" aria-labelledby="cover-h">
-  <div class="wrap cover-top">
+  <header class="wrap cover-top">
     <a class="wordmark" href="index.html" aria-label="Maurice Birchard, home"><b>Maurice Birchard</b><span>Game UI / UX</span></a>
     <span class="folio">Instruction booklet, 2026</span>
-  </div>
+  </header>
   <div class="wrap cover-grid">
     <div>
       <h1 id="cover-h" class="display">Game UI, designed in Figma, shipped in engine.</h1>
@@ -79,11 +78,11 @@
       <span class="lead-line" data-n="5" style="--x:84%;--y:81%"></span><span class="pin" data-n="5" style="--x:84%;--y:81%" aria-hidden="true">5</span><span class="co" data-n="5" style="--x:84%;--y:81%" aria-hidden="true">5</span>
       </figure>
       <ol class="legend" aria-label="Screen elements">
-      <li data-n="1" tabindex="0"><span class="co" aria-hidden="true">1</span><div><b><span class="visually-hidden">1. </span>Commander portrait</b><p>Shows whose turn it is, so the meter always has a face attached.</p></div></li>
-      <li data-n="2" tabindex="0"><span class="co" aria-hidden="true">2</span><div><b><span class="visually-hidden">2. </span>Kaiju threat meter</b><p>Every kill feeds this shared meter, with a countdown to the Kaiju's arrival. It makes the risk readable at a glance.</p></div></li>
-      <li data-n="3" tabindex="0"><span class="co" aria-hidden="true">3</span><div><b><span class="visually-hidden">3. </span>Unit Inspector</b><p>Explains the next step in plain words: select an ally, then click a reachable tile.</p></div></li>
-      <li data-n="4" tabindex="0"><span class="co" aria-hidden="true">4</span><div><b><span class="visually-hidden">4. </span>Orders</b><p>Attack, Hold, Defend and Retreat for the selected unit. They stay greyed until a unit is selected.</p></div></li>
-      <li data-n="5" tabindex="0"><span class="co" aria-hidden="true">5</span><div><b><span class="visually-hidden">5. </span>Command seal</b><p>Stamped with the faction's emblem. Translucent on hover, full opacity when pressed, lit once every unit has orders.</p></div></li>
+      <li data-n="1"><span class="co" aria-hidden="true">1</span><div><b><span class="visually-hidden">1. </span>Commander portrait</b><p>Shows whose turn it is, so the meter always has a face attached.</p></div></li>
+      <li data-n="2"><span class="co" aria-hidden="true">2</span><div><b><span class="visually-hidden">2. </span>Kaiju threat meter</b><p>Every kill feeds this shared meter, with a countdown to the Kaiju's arrival. It makes the risk readable at a glance.</p></div></li>
+      <li data-n="3"><span class="co" aria-hidden="true">3</span><div><b><span class="visually-hidden">3. </span>Unit Inspector</b><p>Explains the next step in plain words: select an ally, then click a reachable tile.</p></div></li>
+      <li data-n="4"><span class="co" aria-hidden="true">4</span><div><b><span class="visually-hidden">4. </span>Orders</b><p>Attack, Hold, Defend and Retreat for the selected unit. They stay greyed until a unit is selected.</p></div></li>
+      <li data-n="5"><span class="co" aria-hidden="true">5</span><div><b><span class="visually-hidden">5. </span>Command seal</b><p>Stamped with the faction's emblem. Translucent on hover, full opacity when pressed, lit once every unit has orders.</p></div></li>
       </ol>
     </div>
     <p class="plate-cap">Hover or focus a numbered entry to find it on the screen.</p>
