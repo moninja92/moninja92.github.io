@@ -163,7 +163,7 @@ Each chapter owns one process colour, applied by a chapter class that sets `--ch
 - **Coated Stock** (`stock`): page background.
 - **Stock Shade** (`stock-shade`): the tab rail and mobile tab bar ground, `.term` chips, scrollbar track.
 - **Hairline Grey** (`rule`): 1px dividers inside legends, career lists, contact links.
-- **Booklet Ink** (`ink`): text, 2px rules and borders, plate and thumbnail mats, primary buttons, back cover.
+- **Booklet Ink** (`ink`): text, 2px rules and borders, plate and thumbnail mats, primary buttons, and the Contact tab.
 - **Soft Ink** (`ink-soft`): secondary text, captions, folios, spec labels, legend descriptions.
 - **Paper White** (`paper-white`): note boxes, contact card, on-chapter text, text on ink.
 
@@ -204,14 +204,13 @@ Fonts are self-hosted from `assets/fonts/` (woff2, latin and latin-ext subsets, 
 
 A centred column (`max` 1180px) with a fluid `gutter` on each side. On desktop (1000px and wider) the body reserves a 60px right margin for the fixed thumb-tab rail. Below 1000px the rail becomes a fixed bottom bar and the body reserves 64px at the bottom.
 
-Pages follow the booklet order. Home: cover (blue, wordmark and folio top row, headline and cover art in an 11:13 grid, Contents below), then a sample Screen Guide, a Chapters index, a three-column facts strip and the back cover. Chapter pages: running head (wordmark left, folio right, 2px ink rule below), chapter opener band, spec strip, Screen Guide, prose sections, page-turn links, back cover.
+Pages follow the booklet order. Home: cover (blue; wordmark, About and Resume links and folio in the top row; headline and cover art in an 11:13 grid with Argos leading and Titan and Greywater following in chapter order; Contents below; on phones the headline comes first and only the Argos screen shows), then a sample Screen Guide, a Chapters index, a one-line aside linking to About, and the back cover. Chapter pages: running head (wordmark left; About and Resume links and folio right; 2px ink rule below), chapter opener band, spec strip, Screen Guide, prose sections, page-turn links, back cover.
 
 Vertical rhythm is the `section` padding at top and bottom; consecutive sections drop their top padding. Screen Guide spreads are a 7:5 grid (plate left), or 5:7 for portrait screens with the plate capped at 420px and pushed to the gutter.
 
 Responsive rules:
-- **1000px and wider:** vertical thumb-tab rail. When the viewport is also 960px tall or shorter, tabs show only their number or back-matter letter, and the name appears as a flyout label on hover and focus.
-- **Below 1000px:** the tabs become a scrollable bottom bar. It opens scrolled to the current chapter, and its right edge fades out until the strip is scrolled to the end.
-- **Below 1000px:** horizontal, scrollable bottom tab bar (62px tall) with number over name.
+- **1000px and wider:** vertical thumb-tab rail of seven tabs, each showing its number and name. Only on screens 700px tall or shorter do tabs drop to the number (or the mail icon) with the name as a flyout label on hover and focus.
+- **Below 1000px:** a fixed 60px bottom bar that always fits: the six chapter numbers (names kept for screen readers) and a wider Contact tab with its mail icon and label.
 - **860px and below:** the cover stacks with the art first (square collage); Screen Guide spreads stack; gutter discs and leader lines are hidden and the pins grow to 22px numbered discs, so the plate and the legend still match by number.
 - **760px and below:** Chapters entries collapse to tab plus text, with the thumbnail full width below; the back cover stacks.
 - **640px and below:** the opener numeral sits above the title.
@@ -243,10 +242,10 @@ Blunt, inked and square.
 - **Quiet:** transparent with ink text and border. Hover inverts to ink.
 - **On cover:** white fill, deep cover blue text. Hover turns Midas yellow with ink text.
 - **In openers:** on-chapter fill with chapter-colour text. Hover goes transparent; the quiet variant inverts.
-- **Focus:** 3px ink outline, 3px offset (global). It turns white on the blue cover and ink back cover, takes the on-chapter colour on chapter openers, and sits 7px inside each thumb tab in the tab's own text colour.
+- **Focus:** 3px ink outline, 3px offset (global). It turns white on the blue front and back covers, takes the on-chapter colour on chapter openers, and sits 7px inside each thumb tab in the tab's own text colour.
 
 ### Navigation: thumb tabs
-The site navigation is the booklet's thumb-cut edge. There are nine tabs: chapters 01 to 06, then About (A), Resume (R) and Contact (C) in ink. Each tab is a solid block of its chapter colour, 800 weight, with a 900 italic number. On the desktop rail, tabs are vertical text, fill equal heights with 2px gaps, sit 6px off the edge and slide in on hover, focus or current. The current tab also gets the inset double ring. On mobile the tabs form a 62px horizontal bar with a 2px ink top rule, number over name, scrolling sideways.
+The site navigation is the booklet's thumb-cut edge. There are seven tabs: chapters 01 to 06, then Contact in ink with a mail icon. About and Resume are back matter: they sit as plain links in the running head and on the back cover, not on the thumb edge. Each tab is a solid block of its chapter colour, 800 weight, with a 900 italic number. On the desktop rail, tabs are vertical text, fill equal heights with 2px gaps, sit 6px off the edge and slide in on hover, focus or current. The current tab also gets the inset double ring. On mobile the tabs form a 62px horizontal bar with a 2px ink top rule, number over name, scrolling sideways.
 
 ### Cover
 A process-blue field with the registration rule. The top row holds the wordmark (900 italic uppercase name plus "Game UI / UX") and a folio. Below are the Display headline, the lede, one white button, and the cover art: three real screens on ink mats, tilted, captioned "NN Chapter, screen" and linked to their chapters.
@@ -255,7 +254,7 @@ A process-blue field with the registration rule. The top row holds the wordmark 
 A booklet contents page on the cover: a 2px white top rule and a grid of entries in a 900 italic number, chapter name, dotted leader and page number layout, with 1px white hairlines at 22% between rows. Page numbers match the folios printed in each chapter's running head.
 
 ### Chapter opener and specs
-A full-width band in the chapter colour. It holds the giant chapter numeral, the Display title, the lede and optional buttons. Back-matter openers leave the numeral slot empty. Below it sits the spec strip: a definition list between 2px ink rules, auto-fit columns of uppercase label over a 600-weight value.
+A full-width band in the chapter colour. It holds the giant chapter numeral, the Display title, the lede and optional buttons. Back-matter openers (About, Resume, Contact, 404) are set on the paper stock instead, ink on stock with a 2px ink rule below, and have no numeral. Below it sits the spec strip: a definition list between 2px ink rules, auto-fit columns of uppercase label over a 600-weight value.
 
 ### Screen Guide (signature)
 - **Title bar:** 900 italic h2 "Screen Guide: …" with a soft-ink note on the right, over a 2px ink rule.
@@ -264,14 +263,16 @@ A full-width band in the chapter colour. It holds the giant chapter numeral, the
 - **Leader line:** a 1.5px ink hairline from the pin to the gutter, with a white halo.
 - **Gutter disc:** a 30px numbered chapter-colour disc with a 2px ink border, 30px into the gutter, 900 italic tabular number.
 - **Legend:** an ordered list of disc, bold name and soft-ink description, separated by hairlines. Rows are plain list items, not tab stops; the text already names each element.
-- **Linking:** hovering a legend row, pin or disc lights every part with the same number. The disc and pin scale up, the leader line thickens to 3px in the chapter colour, and the legend name gets a 3px chapter-colour underline.
+- **Linking:** hovering a legend row, pin or disc lights every part with the same number and fades the rest of that guide to about 20% (legend rows to 45%). The active disc scales up with a ring in the chapter colour, the leader line thickens to 3px, and the legend name gets a 3px chapter-colour underline. The plate takes about two thirds of the spread on landscape guides.
 - **Motion:** leader lines start at `scaleX(0)` and draw in once (0.9s, expo-out) when 35% of the guide is visible. With no JS they are drawn from the start. With reduced motion they fade in instead of drawing, and hover movement (tab slide, plate lift, thumbnail zoom, disc scale) is dropped while colour feedback stays.
 
 ### Page-turn links
 Two blocks with a 2px gap at the end of each chapter. Each is in the colour of the chapter it leads to, with a small "Previous" or "Next" and a 900 italic uppercase "NN Name". Next aligns right. They stack below 560px.
 
 ### Notes and terms
-A note is a white box with a 2px ink border: a 900 italic title with a 22px inline SVG icon in the chapter colour, then body text. Terms of art (FOCUS, BEAT) are set 900 italic on a stock-shade chip.
+A note is a white box with a 2px ink border: a 900 italic title with a 22px inline SVG icon in the chapter colour, then body text. Terms of art (FOCUS, BEAT) are set 900 italic on a stock-shade chip. On screens 1400px and wider, notes inside prose move into the outer margin as a sidebar: no box, a 4px chapter-colour rule on top.
+
+Case-study prose headings carry chapter.section numbers (2.1, 2.2 and so on) in the chapter colour, hanging in their own column so wrapped headings stay aligned. Back matter has no section numbers.
 
 ### Facts
 A three-column evidence strip under a 2px ink rule: 900 italic title and a short soft-ink paragraph. Plain statements only.
@@ -280,7 +281,7 @@ A three-column evidence strip under a 2px ink rule: 900 italic title and a short
 Ruled rows between 2px ink rules. Each row has a 92px chapter-colour tab with a 900 italic number, an uppercase italic title, a description, an 800-weight meta line (role · engine · context) and a 16:9 thumbnail on a 5px ink mat. On hover the thumbnail zooms to 1.04 and the title gets a 4px chapter-colour underline.
 
 ### Back cover
-The footer is the booklet's back cover: an ink field with a 900 "Contact" heading, the email with a Midas-yellow underline, an availability line, a list of links with arrows separated by 1px dark hairlines, and a colophon.
+The footer is the booklet's back cover: a process-blue field matching the front cover with a 900 "Contact" heading, the email with a Midas-yellow underline, an availability line, a list of links with arrows separated by 1px translucent white hairlines, and a colophon.
 
 ### Pending plates (honest "coming soon")
 When a screen has not been captured, its slot is a dark slate panel (#1B1D22) with a 2px dashed inner outline (#5A5E66, inset 10px). It holds a 900 italic uppercase title and "Screenshot coming soon", marked `role="img"` with an honest label. It keeps the aspect ratio of the image it stands in for. It never shows a mock or stand-in image presented as real.

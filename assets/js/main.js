@@ -10,6 +10,7 @@
       parts.forEach(function (el) {
         if (el.getAttribute('data-n') === n) el.classList.toggle('is-hot', on);
       });
+      guide.classList.toggle('has-hot', on);
     }
     parts.forEach(function (el) {
       var n = el.getAttribute('data-n');

@@ -19,6 +19,7 @@ GW_FONTS = ''
 
 EXT = '<svg viewBox="0 0 16 16" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 11 11 5M6 5h5v5"/></svg>'
 ARR = '<svg viewBox="0 0 16 16" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8h10M9 4l4 4-4 4"/></svg>'
+MAIL = '<svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.4"><rect x="3" y="5" width="18" height="14"/><path d="m3 6 9 7 9-7"/></svg>'
 NOTE = '<svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.4"><circle cx="12" cy="12" r="10"/><path d="M12 7v6M12 16.5v.5"/></svg>'
 
 TABS = [
@@ -43,13 +44,16 @@ def argos(name, w, h, alt, label, p='', extra=''):
         return f'<img src="{p}assets/img/argos/{name}.webp" width="{w}" height="{h}" alt="{alt}"{extra}>'
     return f'<div class="pending" role="img" aria-label="{label}: screenshot coming soon"><span>{label}</span><small>Screenshot coming soon</small></div>'
 
+RAIL = TABS[:6] + [("back", "", "Contact", "contact.html", "32")]
+
 def tabs(p, current):
     items = []
-    for ch, num, name, href, _ in TABS:
+    for ch, num, name, href, _ in RAIL:
         cur = ' aria-current="page"' if href == current else ''
-        n = f'<span class="num">{num}</span>' if num else f'<span class="num back-letter" aria-hidden="true">{name[0]}</span>'
+        n = f'<span class="num">{num}</span>' if num else f'<span class="num icon">{MAIL}</span>'
         label = f'<span class="visually-hidden">Chapter {num}: </span>' if num else ''
-        items.append(f'    <li class="ch-{ch}"><a href="{p}{href}"{cur}>{n}{label}<span class="name">{name}</span></a></li>')
+        cls = f'ch-{ch}' + ('' if num else ' tab-contact')
+        items.append(f'    <li class="{cls}"><a href="{p}{href}"{cur}>{n}{label}<span class="name">{name}</span></a></li>')
     return '<nav class="tabs" aria-label="Chapters">\n  <ol>\n' + '\n'.join(items) + '\n  </ol>\n</nav>'
 
 def backcover(p, minimal=False):
@@ -64,6 +68,7 @@ def backcover(p, minimal=False):
     </div>
     <ul>
       <li><a href="{p}contact.html">All contact options {ARR}</a></li>
+      <li><a href="{p}about.html">About {ARR}</a></li>
       <li><a href="{p}resume.html">Resume {ARR}</a></li>
       <li><a href="https://www.linkedin.com/in/mauricebirchard/" rel="noopener">LinkedIn {EXT}</a></li>
       <li><a href="https://github.com/moninja92" rel="noopener">GitHub {EXT}</a></li>
@@ -77,7 +82,7 @@ def runhead(p, folio):
     return f'''<header class="runhead">
   <div class="wrap">
     <a class="wordmark" href="{p}index.html"><b>Maurice Birchard</b><span>Game UI / UX</span></a>
-    <span class="folio">{folio}</span>
+    <div class="runhead-end"><nav class="backlinks" aria-label="Back matter"><a href="{p}about.html">About</a><a href="{p}resume.html">Resume</a></nav><span class="folio">{folio}</span></div>
   </div>
 </header>'''
 
@@ -135,10 +140,10 @@ def guide(title, sub, img, w, h, alt, cap, points, portrait=False, pixel=False):
 </section>'''
 
 def opener(num, title, lede, buttons=''):
-    chap = f'<span class="chap" aria-hidden="true">{num}</span>' if num else '<span></span>'
+    chap = f'<span class="chap" aria-hidden="true">{num}</span>' if num else ''
     pre = f'<span class="visually-hidden">Chapter {num}: </span>' if num else ''
     return f'''<section class="opener">
-  <div class="wrap">
+  <div class="wrap{'' if num else ' solo'}">
     {chap}
     <div>
       <h1 class="display">{pre}{title}</h1>
@@ -159,37 +164,37 @@ def turn(prev, nxt):
     return f'<nav class="turn" aria-label="Turn the page">{a(prev, "prev", "Previous")}{a(nxt, "next", "Next")}</nav>'
 
 TITAN_POINTS = [
-    (96, 4.2, "Commander portrait", "Shows whose turn it is, so the meter always has a face attached."),
-    (36, 7.6, "Kaiju threat meter", "Every kill feeds this shared meter, with a countdown to the Kaiju's arrival. It makes the risk readable at a glance."),
+    (96, 3.0, "Commander portrait", "Shows whose turn it is, so the meter always has a face attached."),
+    (36, 8.0, "Kaiju threat meter", "Every kill feeds this shared meter, with a countdown to the Kaiju's arrival. It makes the risk readable at a glance."),
     (80, 15.7, "Unit Inspector", "Explains the next step in plain words: select an ally, then click a reachable tile."),
     (84, 43.4, "Orders", "Attack, Hold, Defend and Retreat for the selected unit. They stay greyed until a unit is selected."),
     (84, 81, "Command seal", "Stamped with the faction's emblem. Translucent on hover, full opacity when pressed, lit once every unit has orders."),
 ]
 
 GW_POINTS = [
-    (4.2, 9.5, "Objective", "Top left, then fades to 40% after eight seconds. It returns when the objective changes or the player taps Q."),
+    (3.8, 12.2, "Objective", "Top left, then fades to 40% after eight seconds. It returns when the objective changes or the player taps Q."),
     (50, 75.6, "Hold prompt", "The only element allowed to animate, which is what makes it readable at the edge of vision."),
-    (80, 84.5, "Equipped item", "The oil lamp, with Tab to cycle and I for the satchel."),
-    (4.6, 93, "Movement hint", "A keycap and a short verb. Shift to move quietly."),
+    (77.5, 82.8, "Equipped item", "The oil lamp, with Tab to cycle and I for the satchel."),
+    (6, 96.5, "Movement hint", "A keycap and a short verb. Shift to move quietly."),
 ]
 
 MIDAS_POINTS = [
     (40, 30, "Scene", "The play area keeps the full four-tone palette, so the box below always reads as UI."),
-    (14, 60, "Speaker", "The speaker's name sits on its own line above the text."),
-    (28, 72, "Line", "Short lines in capitals, sized to stay legible at 160&times;144."),
+    (34, 60.4, "Speaker", "The speaker's name sits on its own line above the text."),
+    (73, 71.8, "Line", "Short lines in capitals, sized to stay legible at 160&times;144."),
     (81, 89, "Continue marker", "A small arrow says there is more to read."),
 ]
 DL_POINTS = [
-    (20, 16, "Records request", "Search across events, characters and years, with a keyboard shortcut to jump to it."),
+    (20, 13.9, "Records request", "Search across events, characters and years, with a keyboard shortcut to jump to it."),
     (10, 25, "Category filters", "Colour-coded, with live counts."),
     (34, 35, "Decade histogram", "Shows where history clusters at a glance."),
-    (10, 50, "Entries by decade", "Each entry opens its own numbered case file."),
+    (12.6, 49.7, "Entries by decade", "Each entry opens its own numbered case file."),
 ]
 SL_POINTS = [
-    (45, 16, "Home", "The only starting point."),
-    (61, 30, "Numbered routes", "Seven numbered arrows connect five screens, so a reviewer can walk them step by step."),
-    (12, 62, "Navigation flow", "A legend listing every route."),
-    (40, 83, "Checked items", "Ticked items sink to the bottom of the list."),
+    (45, 12.6, "Home", "The only starting point."),
+    (44.7, 52, "Numbered routes", "Seven numbered arrows connect five screens, so a reviewer can walk them step by step."),
+    (23, 61.5, "Navigation flow", "A legend listing every route."),
+    (40, 87, "Checked items", "Ticked items sink to the bottom of the list."),
 ]
 
 # ---------------- Home ----------------
@@ -200,19 +205,19 @@ CONTENTS = '\n'.join(
 home = f'''<section class="cover" aria-labelledby="cover-h">
   <header class="wrap cover-top">
     <a class="wordmark" href="index.html" aria-label="Maurice Birchard, home"><b>Maurice Birchard</b><span>Game UI / UX</span></a>
-    <span class="folio">Instruction booklet, 2026</span>
+    <div class="runhead-end"><nav class="backlinks" aria-label="Back matter"><a href="about.html">About</a><a href="resume.html">Resume</a></nav><span class="folio">Instruction booklet, 2026</span></div>
   </header>
   <div class="wrap cover-grid">
     <div>
       <h1 id="cover-h" class="display">Game UI, designed in Figma, shipped in engine.</h1>
       <p class="lede">I design and build menus, HUDs and game systems in Unity, Godot and TypeScript. By day I build the screens operators use to run solar plants and industrial systems.</p>
-      <div class="btn-row"><a class="btn" href="#guide-h">Open the Screen Guide {ARR}</a></div>
+      <div class="btn-row"><a class="btn" href="work/argos.html">Start with chapter 01 {ARR}</a></div>
     </div>
     <div>
     <div class="cover-art">
       <figure class="art-a">{argos("river-menu", 2000, 953, "Argos River Menu: a river seen from above, with leaves floating on it as the menu buttons", "Argos River Menu")}<figcaption><b>01 Argos</b>, River Menu</figcaption><a href="work/argos.html" aria-label="Chapter 01, Argos"></a></figure>
-      <figure class="art-b"><img src="assets/img/titan/hud-panel.webp" width="528" height="1248" alt="Project Titan Skirmish HUD: Kaiju threat meter, Unit Inspector and orders"><figcaption><b>02 Titan</b>, HUD</figcaption><a href="work/project-titan.html" aria-label="Chapter 02, Project Titan"></a></figure>
-      <figure class="art-c"><img src="assets/img/greywater/title-menu.webp" width="1282" height="726" alt="Greywater title menu: a paper panel with Continue selected over a dimmed scene"><figcaption><b>03 Greywater</b>, title menu</figcaption><a href="work/greywater.html" aria-label="Chapter 03, Greywater"></a></figure>
+      <figure class="art-b"><img src="assets/img/titan/hud-panel.webp" width="528" height="1248" alt="Project Titan Skirmish HUD: Kaiju threat meter, Unit Inspector and orders"><figcaption><b>02 Titan</b>, Skirmish HUD</figcaption><a href="work/project-titan.html" aria-label="Chapter 02, Project Titan"></a></figure>
+      <figure class="art-c"><img src="assets/img/greywater/menu-panel.webp" width="520" height="721" alt="Greywater title menu: a paper panel with Continue selected"><figcaption><b>03 Greywater</b>, title menu</figcaption><a href="work/greywater.html" aria-label="Chapter 03, Greywater"></a></figure>
     </div>
     </div>
   </div>
@@ -227,7 +232,7 @@ home = f'''<section class="cover" aria-labelledby="cover-h">
 </section>
 
 <div class="ch-titan">
-{guide("Screen Guide: Project Titan", "Skirmish HUD, built in Unity uGUI", "assets/img/titan/hud-panel.webp", 528, 1248, "Project Titan Skirmish HUD in Unity: Kaiju threat meter with commander portrait, Unit Inspector with Attack, Hold, Defend and Retreat orders, and the command seal", "Hover or focus a numbered entry to find it on the screen.", TITAN_POINTS, portrait=True)}
+{guide("Screen Guide: Project Titan", "Skirmish HUD, built in Unity uGUI", "assets/img/titan/hud-panel.webp", 528, 1248, "Project Titan Skirmish HUD in Unity: Kaiju threat meter with commander portrait, Unit Inspector with Attack, Hold, Defend and Retreat orders, and the command seal", "Hover a numbered entry to find it on the screen.", TITAN_POINTS, portrait=True)}
 </div>
 
 <section class="section" id="chapters" aria-labelledby="chapters-h">
@@ -244,14 +249,9 @@ home = f'''<section class="cover" aria-labelledby="cover-h">
   </div>
 </section>
 
-<section class="section" aria-labelledby="habits-h">
+<section class="section flush-top">
   <div class="wrap">
-    <div class="section-head"><h2 id="habits-h">Where the habits come from</h2><p><a href="about.html">About me</a></p></div>
-    <div class="facts">
-      <div><h3>Operator screens</h3><p>SCADA and HMI work for solar sites, and controls roles at Microsoft and Amazon: screens people act on in real time, where clutter costs something.</p></div>
-      <div><h3>Figma to engine</h3><p>Wireframes in Figma, then built in Unity uGUI, Godot or TypeScript, so the design accounts for how the engine actually behaves.</p></div>
-      <div><h3>State before screens</h3><p>Map every phase and state first, then draw only the controls a player can actually use in it.</p></div>
-    </div>
+    <p class="aside-line">The habits come from operator screens: SCADA and HMI work for solar sites, and controls roles at Microsoft and Amazon, where a cluttered screen costs something. <a href="about.html">More about me</a></p>
   </div>
 </section>'''
 
@@ -270,7 +270,7 @@ ARGOS_POINTS = [
 # ---------------- Argos ----------------
 ar = opener("01", "Argos", "Lead UI/UX on a contemplative 3D narrative adventure. Two diegetic menus, designed in Figma and built in Unity: a title menu that looks down into a river, with fallen leaves as buttons, and a pause that stops a pocket watch.") + '\n' + specs([
     ("Role", "Lead UI/UX: design and Unity build"), ("Engine", "Unity 6, uGUI + TextMeshPro, FMOD"), ("Input", "Keyboard and mouse, Xbox and PlayStation controllers"), ("Status", "Vertical slice in development, 2026")]) + '\n' + guide("Screen Guide: River Menu", "Day theme, built in Unity uGUI", "{P}assets/img/argos/river-menu.webp", 2000, 953,
-    "Argos River Menu: fallen autumn leaves floating on a blue-grey river as the buttons Wake, Settings, Controls, Credits and Sleep, with a man reflected in the water", "The River Menu, Day theme. Hover or focus an entry to find it on the screen.", ARGOS_POINTS) + f'''
+    "Argos River Menu: fallen autumn leaves floating on a blue-grey river as the buttons Wake, Settings, Controls, Credits and Sleep, with a man reflected in the water", "The River Menu, Day theme. Hover an entry to find it on the screen.", ARGOS_POINTS) + f'''
 <section class="section flush-top">
   <div class="wrap prose">
     <h2>A title menu you look down into</h2>
@@ -313,9 +313,9 @@ page('work/argos.html', 'Argos | Maurice Birchard',
 
 # ---------------- Titan ----------------
 titan = opener("02", "Project Titan", "Lead designer for the UI and HUD of a tactical skirmish auto battler with a twist.") + '\n' + specs([
-    ("Role", "UI/UX owner, programmer"), ("Engine", "Unity, uGUI + TextMeshPro"), ("Team", "Small team, working in Notion and Discord"), ("Status", "In development, 2026")]) + '\n' + guide(
+    ("Role", "UI/UX lead and programmer"), ("Engine", "Unity, uGUI + TextMeshPro"), ("Team", "Small team, working in Notion and Discord"), ("Status", "In development, 2026")]) + '\n' + guide(
     "Screen Guide: Skirmish HUD", "Built in Unity uGUI", "{P}assets/img/titan/hud-panel.webp", 528, 1248,
-    "Skirmish HUD in Unity: Kaiju threat meter with commander portrait, Unit Inspector with four order buttons, and a riveted command seal", "The Skirmish HUD in engine. Hover or focus an entry to find it on the screen.", TITAN_POINTS, portrait=True) + '''
+    "Skirmish HUD in Unity: Kaiju threat meter with commander portrait, Unit Inspector with four order buttons, and a riveted command seal", "The Skirmish HUD in engine. Hover an entry to find it on the screen.", TITAN_POINTS, portrait=True) + '''
 <section class="section">
   <div class="wrap prose">
     <h2>A HUD that narrates</h2>
@@ -394,7 +394,7 @@ gw = opener("03", "Greywater", "UI/UX for a first-person narrative exploration g
 </section>
 ''' + guide("Screen Guide: Exploration HUD", "Everything inside a 48px safe margin", "{P}assets/img/greywater/hud.webp", 1280, 720,
     "Greywater exploration HUD: objective top left reading Find another way into the chapel, a hold E prompt to pry the shutter at centre, a Shift keycap hint for moving quietly, and the equipped oil lamp bottom right",
-    "The exploration HUD over a placeholder scene. Hover or focus an entry to find it on the screen.", GW_POINTS) + '''
+    "The exploration HUD over a placeholder scene. Hover an entry to find it on the screen.", GW_POINTS) + '''
 <section class="section">
   <div class="wrap prose">
     <h2>Three rules for the whole interface</h2>
@@ -450,7 +450,7 @@ midas = opener("04", "Midas: The Accursed King", "A narrative-driven top-down RP
     f'\n      <div class="btn-row"><a class="btn" href="https://moninja.itch.io/midas-the-accursed-king" rel="noopener">Play in your browser on itch.io {EXT}</a></div>') + '\n' + specs([
     ("My role", "Programming and story"), ("Engine", "Godot, HTML5"), ("Jam", "GBJAM 14, Sept 2026"), ("Constraints", "160&times;144, four colours, Game Boy inputs")]) + '''
 ''' + guide("Screen Guide: Dialogue", "160&times;144, four colours", "{P}assets/img/midas/dialogue.webp", 312, 255,
-    "Forest path with a ghost NPC and a dialogue box reading Ghosty: Oh... good morning!", "Dialogue UI built to fit the Game Boy screen. Hover or focus an entry to find it on the screen.", MIDAS_POINTS, pixel=True) + '''
+    "Forest path with a ghost NPC and a dialogue box reading Ghosty: Oh... good morning!", "Dialogue UI built to fit the Game Boy screen. Hover an entry to find it on the screen.", MIDAS_POINTS, pixel=True) + '''
 <section class="section flush-top">
   <div class="wrap">
     <figure class="figure pixel narrow"><img src="{P}assets/img/midas/village.webp" width="312" height="264" alt="Village with houses, ghosts and a skeleton enemy in a muted four-tone palette" loading="lazy"><figcaption>Village hub in the four-tone palette.</figcaption></figure>
@@ -483,7 +483,7 @@ page('work/midas.html', 'Midas: The Accursed King | Maurice Birchard',
 dl = opener("05", "Dreamland Timeline", "An interactive archive covering 160 years of a fictional world's history, styled as a declassified records system. Built so a writing team can update the lore in a spreadsheet and see it live on the site.",
     f'\n      <div class="btn-row"><a class="btn" href="https://moninja92.github.io/dreamland-timeline/" rel="noopener">Open the live site {EXT}</a><a class="btn btn-quiet" href="https://github.com/moninja92/dreamland-timeline" rel="noopener">View source {EXT}</a></div>') + '\n' + specs([
     ("Role", "Design and development"), ("Stack", "TypeScript, Vite"), ("Data", "Google Sheet via CSV, local fallback"), ("Deploy", "GitHub Actions to Pages")]) + '\n' + guide("Screen Guide: The archive", "Live site, TypeScript and Vite", "{P}assets/img/dreamland/archive.webp", 1600, 876,
-    "Dreamland archive overview with records search, category filters and decade histogram", "The archive overview. Hover or focus an entry to find it on the screen.", DL_POINTS) + '''
+    "Dreamland archive overview with records search, category filters and decade histogram", "The archive overview. Hover an entry to find it on the screen.", DL_POINTS) + '''
 <section class="section tight-top">
   <div class="wrap">
     <figure class="figure"><img src="{P}assets/img/dreamland/file-panel.webp" width="1600" height="997" alt="Dreamland archive with an entry selected, showing a File No. 001 detail panel with start and end dates, length and concurrent events" loading="lazy"><figcaption>Selecting an entry opens its case file: dates, duration, who was alive, what overlapped.</figcaption></figure>
@@ -519,7 +519,7 @@ sl = opener("06", "UI Explorations: Shopping List", "A five-screen mobile flow t
     f'\n      <div class="btn-row"><a class="btn" href="shopping-list-prototype/index.html">Open the prototype full screen {ARR}</a></div>') + '\n' + specs([
     ("Context", "Coursework, CSU Global"), ("Tools", "Figma, React"), ("Screens", "Home, Add, View, Edit, Settings"), ("Deliverable", "Navigation-mapped prototype")]) + '''
 ''' + guide("Screen Guide: Paper prototype", "Five screens, seven routes", "{P}assets/img/shopping/sketch.webp", 904, 832,
-    "Sketched paper prototype: Settings, Home, Add Item, View List and Edit Item screens joined by seven numbered arrows", "Step 1: the paper prototype. Hover or focus an entry to find it on the screen.", SL_POINTS) + '''
+    "Sketched paper prototype: Settings, Home, Add Item, View List and Edit Item screens joined by seven numbered arrows", "Step 1: the paper prototype. Hover an entry to find it on the screen.", SL_POINTS) + '''
 <section class="section flush-top">
   <div class="wrap">
     <figure class="figure w-md"><img src="{P}assets/img/shopping/home-hifi.webp" width="900" height="1150" alt="Refined Home screen titled My Lists with Groceries, Hardware Store and Party Supplies cards and an Add Item button" loading="lazy"><figcaption>Refined Home screen.</figcaption></figure>
@@ -582,7 +582,7 @@ about = opener("", "About the designer", "I'm Maurice Birchard, a systems engine
       <ol class="career">
         <li><span class="when">Apr 2026 &ndash; now</span><div><b>SCADA Engineer, QE Solar</b><span>Custom SCADA platform in Ignition, with dashboards operators can track and update.</span></div></li>
         <li><span class="when">Jul 2025 &ndash; now</span><div><b>Control Systems SME, Microsoft</b><span>OT and ICS systems for datacenters: BMS, EPMS, SCADA and PLCs.</span></div></li>
-        <li><span class="when">Nov 2023 &ndash; Apr 2026</span><div><b>Intelligence Analyst, US Army</b><span>Turned large, messy datasets into clear briefings for leadership.</span></div></li>
+        <li><span class="when">Nov 2023 &ndash; Apr 2026</span><div><b>Intelligence Analyst, US Army</b><span>Served alongside the civilian roles listed here. Turned large, messy datasets into clear briefings for leadership.</span></div></li>
         <li><span class="when">Oct 2024 &ndash; Jul 2025</span><div><b>Control Systems Specialist, HelloFresh</b><span>PLCs for automation and robotics.</span></div></li>
         <li><span class="when">Jun 2023 &ndash; Oct 2024</span><div><b>Controls and robotics, Amazon</b><span>Control Systems Specialist and Maintenance and Robotics Engineer II.</span></div></li>
         <li><span class="when">Jan 2026</span><div><b>BS, Computer Science</b><span>Cybersecurity focus, Colorado State University Global. Master's in AI and Machine Learning in progress.</span></div></li>
